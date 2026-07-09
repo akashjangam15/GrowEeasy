@@ -7,22 +7,25 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "lint": "echo \"No lint configured yet\"",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "test": "vitest run"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "multer": "^1.4.5-lts.2",
-    "papaparse": "^5.5.2"
+    "papaparse": "^5.5.2",
+    "shared-types": "workspace:^"
   },
   "devDependencies": {
     "@types/cors": "^2.8.18",
     "@types/express": "^5.0.0",
     "@types/multer": "^1.4.12",
-    "@types/papaparse": "^5.3.15",
     "@types/node": "^22.15.3",
+    "@types/papaparse": "^5.3.15",
     "ts-node-dev": "^2.0.0",
-    "typescript": "5.9.2"
+    "typescript": "5.9.2",
+    "vitest": "^4.1.10"
   }
 }
