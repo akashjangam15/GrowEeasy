@@ -1,0 +1,1051 @@
+contact_name,contact_email,contact_phone,city,campaign,status,created_date,company,notes
+Vivaan Patel,vivaan.patel1@gmail.com,+919000000001,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-02,Company1,Note for row 1
+Aditya Kumar,aditya.kumar2@gmail.com,+919000000002,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-03,Company2,Note for row 2
+Vihaan Singh,vihaan.singh3@gmail.com,+919000000003,Chennai,Varah Swamy,SALE_DONE,2026-06-04,Company3,Note for row 3
+Arjun Reddy,arjun.reddy4@gmail.com,+919000000004,Hyderabad,Leads on Demand,,2026-06-05,Company4,Note for row 4
+Sai Gupta,sai.gupta5@gmail.com,+919000000005,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-06,Company5,Note for row 5
+Reyansh Nair,reyansh.nair6@gmail.com,+919000000006,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-07,Company6,Note for row 6
+Ayaan Joshi,ayaan.joshi7@gmail.com,+919000000007,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-08,Company7,Note for row 7
+Krishna Desai,krishna.desai8@gmail.com,+919000000008,Kochi,Sarjapur Plots,SALE_DONE,2026-06-09,Company8,Note for row 8
+Ishaan Shah,ishaan.shah9@gmail.com,+919000000009,Jaipur,Varah Swamy,,2026-06-10,Company9,Note for row 9
+Ananya Rao,ananya.rao10@gmail.com,+919000000010,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-11,Company10,Note for row 10
+Diya Menon,diya.menon11@gmail.com,+919000000011,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-12,Company11,Note for row 11
+Myra Das,myra.das12@gmail.com,+919000000012,Delhi,Eden Park,BAD_LEAD,2026-06-13,Company12,Note for row 12
+Sara Iyer,sara.iyer13@gmail.com,+919000000013,Chennai,Meridian Tower,SALE_DONE,2026-06-14,Company13,Note for row 13
+Aadhya Pillai,aadhya.pillai14@gmail.com,+919000000014,Hyderabad,Sarjapur Plots,,2026-06-15,Company14,Note for row 14
+Isha Verma,,+919000000015,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-16,Company15,Note for row 15
+Kiara Malhotra,kiara.malhotra16@gmail.com,+919000000016,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-17,Company16,Note for row 16
+Riya Chauhan,riya.chauhan17@gmail.com,+919000000017,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-18,Company17,Note for row 17
+Pari Bhat,pari.bhat18@gmail.com,+919000000018,Kochi,Eden Park,SALE_DONE,2026-06-19,Company18,Note for row 18
+Aanya Shetty,aanya.shetty19@gmail.com,+919000000019,Jaipur,Meridian Tower,,2026-06-20,Company19,Note for row 19
+Aarav Sharma,aarav.sharma20@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-21,Company20,Note for row 20
+Vivaan Patel,vivaan.patel21@gmail.com,+919000000021,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-22,Company21,Note for row 21
+Aditya Kumar,aditya.kumar22@gmail.com,+919000000022,Delhi,Leads on Demand,BAD_LEAD,2026-06-23,Company22,Note for row 22
+Vihaan Singh,vihaan.singh23@gmail.com,+919000000023,Chennai,General Inquiry,SALE_DONE,2026-06-24,Company23,Note for row 23
+Arjun Reddy,arjun.reddy24@gmail.com,+919000000024,Hyderabad,Eden Park,,2026-06-25,Company24,Note for row 24
+Sai Gupta,sai.gupta25@gmail.com,+919000000025,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-26,Company25,Note for row 25
+Reyansh Nair,reyansh.nair26@gmail.com,+919000000026,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-27,Company26,Note for row 26
+Ayaan Joshi,ayaan.joshi27@gmail.com,+919000000027,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-28,Company27,Note for row 27
+Krishna Desai,krishna.desai28@gmail.com,+919000000028,Kochi,Leads on Demand,SALE_DONE,2026-06-01,Company28,Note for row 28
+Ishaan Shah,ishaan.shah29@gmail.com,+919000000029,Jaipur,General Inquiry,,2026-06-02,Company29,Note for row 29
+Ananya Rao,,+919000000030,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-03,Company30,Note for row 30
+Diya Menon,diya.menon31@gmail.com,+919000000031,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-04,Company31,Note for row 31
+Myra Das,myra.das32@gmail.com,+919000000032,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-05,Company32,Note for row 32
+Sara Iyer,sara.iyer33@gmail.com,+919000000033,Chennai,Varah Swamy,SALE_DONE,2026-06-06,Company33,Note for row 33
+Aadhya Pillai,aadhya.pillai34@gmail.com,+919000000034,Hyderabad,Leads on Demand,,2026-06-07,Company34,Note for row 34
+Isha Verma,isha.verma35@gmail.com,+919000000035,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-08,Company35,Note for row 35
+Kiara Malhotra,kiara.malhotra36@gmail.com,+919000000036,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-09,Company36,Note for row 36
+Riya Chauhan,riya.chauhan37@gmail.com,+919000000037,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-10,Company37,Note for row 37
+Pari Bhat,pari.bhat38@gmail.com,+919000000038,Kochi,Sarjapur Plots,SALE_DONE,2026-06-11,Company38,Note for row 38
+Aanya Shetty,aanya.shetty39@gmail.com,+919000000039,Jaipur,Varah Swamy,,2026-06-12,Company39,Note for row 39
+Aarav Sharma,aarav.sharma40@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-13,Company40,Note for row 40
+Vivaan Patel,vivaan.patel41@gmail.com,+919000000041,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-14,Company41,Note for row 41
+Aditya Kumar,aditya.kumar42@gmail.com,+919000000042,Delhi,Eden Park,BAD_LEAD,2026-06-15,Company42,Note for row 42
+Vihaan Singh,vihaan.singh43@gmail.com,+919000000043,Chennai,Meridian Tower,SALE_DONE,2026-06-16,Company43,Note for row 43
+Arjun Reddy,arjun.reddy44@gmail.com,+919000000044,Hyderabad,Sarjapur Plots,,2026-06-17,Company44,Note for row 44
+Sai Gupta,,+919000000045,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-18,Company45,Note for row 45
+Reyansh Nair,reyansh.nair46@gmail.com,+919000000046,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-19,Company46,Note for row 46
+Ayaan Joshi,ayaan.joshi47@gmail.com,+919000000047,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-20,Company47,Note for row 47
+Krishna Desai,krishna.desai48@gmail.com,+919000000048,Kochi,Eden Park,SALE_DONE,2026-06-21,Company48,Note for row 48
+Ishaan Shah,ishaan.shah49@gmail.com,+919000000049,Jaipur,Meridian Tower,,2026-06-22,Company49,Note for row 49
+Ananya Rao,ananya.rao50@gmail.com,+919000000050,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-23,Company50,Note for row 50
+Diya Menon,diya.menon51@gmail.com,+919000000051,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-24,Company51,Note for row 51
+Myra Das,myra.das52@gmail.com,+919000000052,Delhi,Leads on Demand,BAD_LEAD,2026-06-25,Company52,Note for row 52
+Sara Iyer,sara.iyer53@gmail.com,+919000000053,Chennai,General Inquiry,SALE_DONE,2026-06-26,Company53,Note for row 53
+Aadhya Pillai,aadhya.pillai54@gmail.com,+919000000054,Hyderabad,Eden Park,,2026-06-27,Company54,Note for row 54
+Isha Verma,isha.verma55@gmail.com,+919000000055,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-28,Company55,Note for row 55
+Kiara Malhotra,kiara.malhotra56@gmail.com,+919000000056,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-01,Company56,Note for row 56
+Riya Chauhan,riya.chauhan57@gmail.com,+919000000057,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-02,Company57,Note for row 57
+Pari Bhat,pari.bhat58@gmail.com,+919000000058,Kochi,Leads on Demand,SALE_DONE,2026-06-03,Company58,Note for row 58
+Aanya Shetty,aanya.shetty59@gmail.com,+919000000059,Jaipur,General Inquiry,,2026-06-04,Company59,Note for row 59
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-05,Company60,Note for row 60
+Vivaan Patel,vivaan.patel61@gmail.com,+919000000061,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-06,Company61,Note for row 61
+Aditya Kumar,aditya.kumar62@gmail.com,+919000000062,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-07,Company62,Note for row 62
+Vihaan Singh,vihaan.singh63@gmail.com,+919000000063,Chennai,Varah Swamy,SALE_DONE,2026-06-08,Company63,Note for row 63
+Arjun Reddy,arjun.reddy64@gmail.com,+919000000064,Hyderabad,Leads on Demand,,2026-06-09,Company64,Note for row 64
+Sai Gupta,sai.gupta65@gmail.com,+919000000065,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-10,Company65,Note for row 65
+Reyansh Nair,reyansh.nair66@gmail.com,+919000000066,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-11,Company66,Note for row 66
+Ayaan Joshi,ayaan.joshi67@gmail.com,+919000000067,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-12,Company67,Note for row 67
+Krishna Desai,krishna.desai68@gmail.com,+919000000068,Kochi,Sarjapur Plots,SALE_DONE,2026-06-13,Company68,Note for row 68
+Ishaan Shah,ishaan.shah69@gmail.com,+919000000069,Jaipur,Varah Swamy,,2026-06-14,Company69,Note for row 69
+Ananya Rao,ananya.rao70@gmail.com,+919000000070,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-15,Company70,Note for row 70
+Diya Menon,diya.menon71@gmail.com,+919000000071,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-16,Company71,Note for row 71
+Myra Das,myra.das72@gmail.com,+919000000072,Delhi,Eden Park,BAD_LEAD,2026-06-17,Company72,Note for row 72
+Sara Iyer,sara.iyer73@gmail.com,+919000000073,Chennai,Meridian Tower,SALE_DONE,2026-06-18,Company73,Note for row 73
+Aadhya Pillai,aadhya.pillai74@gmail.com,+919000000074,Hyderabad,Sarjapur Plots,,2026-06-19,Company74,Note for row 74
+Isha Verma,,+919000000075,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-20,Company75,Note for row 75
+Kiara Malhotra,kiara.malhotra76@gmail.com,+919000000076,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-21,Company76,Note for row 76
+Riya Chauhan,riya.chauhan77@gmail.com,+919000000077,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-22,Company77,Note for row 77
+Pari Bhat,pari.bhat78@gmail.com,+919000000078,Kochi,Eden Park,SALE_DONE,2026-06-23,Company78,Note for row 78
+Aanya Shetty,aanya.shetty79@gmail.com,+919000000079,Jaipur,Meridian Tower,,2026-06-24,Company79,Note for row 79
+Aarav Sharma,aarav.sharma80@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-25,Company80,Note for row 80
+Vivaan Patel,vivaan.patel81@gmail.com,+919000000081,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-26,Company81,Note for row 81
+Aditya Kumar,aditya.kumar82@gmail.com,+919000000082,Delhi,Leads on Demand,BAD_LEAD,2026-06-27,Company82,Note for row 82
+Vihaan Singh,vihaan.singh83@gmail.com,+919000000083,Chennai,General Inquiry,SALE_DONE,2026-06-28,Company83,Note for row 83
+Arjun Reddy,arjun.reddy84@gmail.com,+919000000084,Hyderabad,Eden Park,,2026-06-01,Company84,Note for row 84
+Sai Gupta,sai.gupta85@gmail.com,+919000000085,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-02,Company85,Note for row 85
+Reyansh Nair,reyansh.nair86@gmail.com,+919000000086,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-03,Company86,Note for row 86
+Ayaan Joshi,ayaan.joshi87@gmail.com,+919000000087,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-04,Company87,Note for row 87
+Krishna Desai,krishna.desai88@gmail.com,+919000000088,Kochi,Leads on Demand,SALE_DONE,2026-06-05,Company88,Note for row 88
+Ishaan Shah,ishaan.shah89@gmail.com,+919000000089,Jaipur,General Inquiry,,2026-06-06,Company89,Note for row 89
+Ananya Rao,,+919000000090,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-07,Company90,Note for row 90
+Diya Menon,diya.menon91@gmail.com,+919000000091,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-08,Company91,Note for row 91
+Myra Das,myra.das92@gmail.com,+919000000092,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-09,Company92,Note for row 92
+Sara Iyer,sara.iyer93@gmail.com,+919000000093,Chennai,Varah Swamy,SALE_DONE,2026-06-10,Company93,Note for row 93
+Aadhya Pillai,aadhya.pillai94@gmail.com,+919000000094,Hyderabad,Leads on Demand,,2026-06-11,Company94,Note for row 94
+Isha Verma,isha.verma95@gmail.com,+919000000095,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-12,Company95,Note for row 95
+Kiara Malhotra,kiara.malhotra96@gmail.com,+919000000096,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-13,Company96,Note for row 96
+Riya Chauhan,riya.chauhan97@gmail.com,+919000000097,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-14,Company97,Note for row 97
+Pari Bhat,pari.bhat98@gmail.com,+919000000098,Kochi,Sarjapur Plots,SALE_DONE,2026-06-15,Company98,Note for row 98
+Aanya Shetty,aanya.shetty99@gmail.com,+919000000099,Jaipur,Varah Swamy,,2026-06-16,Company99,Note for row 99
+Aarav Sharma,aarav.sharma100@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-17,Company0,Note for row 100
+Vivaan Patel,vivaan.patel101@gmail.com,+919000000101,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-18,Company1,Note for row 101
+Aditya Kumar,aditya.kumar102@gmail.com,+919000000102,Delhi,Eden Park,BAD_LEAD,2026-06-19,Company2,Note for row 102
+Vihaan Singh,vihaan.singh103@gmail.com,+919000000103,Chennai,Meridian Tower,SALE_DONE,2026-06-20,Company3,Note for row 103
+Arjun Reddy,arjun.reddy104@gmail.com,+919000000104,Hyderabad,Sarjapur Plots,,2026-06-21,Company4,Note for row 104
+Sai Gupta,,+919000000105,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-22,Company5,Note for row 105
+Reyansh Nair,reyansh.nair106@gmail.com,+919000000106,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-23,Company6,Note for row 106
+Ayaan Joshi,ayaan.joshi107@gmail.com,+919000000107,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-24,Company7,Note for row 107
+Krishna Desai,krishna.desai108@gmail.com,+919000000108,Kochi,Eden Park,SALE_DONE,2026-06-25,Company8,Note for row 108
+Ishaan Shah,ishaan.shah109@gmail.com,+919000000109,Jaipur,Meridian Tower,,2026-06-26,Company9,Note for row 109
+Ananya Rao,ananya.rao110@gmail.com,+919000000110,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-27,Company10,Note for row 110
+Diya Menon,diya.menon111@gmail.com,+919000000111,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-28,Company11,Note for row 111
+Myra Das,myra.das112@gmail.com,+919000000112,Delhi,Leads on Demand,BAD_LEAD,2026-06-01,Company12,Note for row 112
+Sara Iyer,sara.iyer113@gmail.com,+919000000113,Chennai,General Inquiry,SALE_DONE,2026-06-02,Company13,Note for row 113
+Aadhya Pillai,aadhya.pillai114@gmail.com,+919000000114,Hyderabad,Eden Park,,2026-06-03,Company14,Note for row 114
+Isha Verma,isha.verma115@gmail.com,+919000000115,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-04,Company15,Note for row 115
+Kiara Malhotra,kiara.malhotra116@gmail.com,+919000000116,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-05,Company16,Note for row 116
+Riya Chauhan,riya.chauhan117@gmail.com,+919000000117,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-06,Company17,Note for row 117
+Pari Bhat,pari.bhat118@gmail.com,+919000000118,Kochi,Leads on Demand,SALE_DONE,2026-06-07,Company18,Note for row 118
+Aanya Shetty,aanya.shetty119@gmail.com,+919000000119,Jaipur,General Inquiry,,2026-06-08,Company19,Note for row 119
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-09,Company20,Note for row 120
+Vivaan Patel,vivaan.patel121@gmail.com,+919000000121,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-10,Company21,Note for row 121
+Aditya Kumar,aditya.kumar122@gmail.com,+919000000122,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-11,Company22,Note for row 122
+Vihaan Singh,vihaan.singh123@gmail.com,+919000000123,Chennai,Varah Swamy,SALE_DONE,2026-06-12,Company23,Note for row 123
+Arjun Reddy,arjun.reddy124@gmail.com,+919000000124,Hyderabad,Leads on Demand,,2026-06-13,Company24,Note for row 124
+Sai Gupta,sai.gupta125@gmail.com,+919000000125,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-14,Company25,Note for row 125
+Reyansh Nair,reyansh.nair126@gmail.com,+919000000126,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-15,Company26,Note for row 126
+Ayaan Joshi,ayaan.joshi127@gmail.com,+919000000127,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-16,Company27,Note for row 127
+Krishna Desai,krishna.desai128@gmail.com,+919000000128,Kochi,Sarjapur Plots,SALE_DONE,2026-06-17,Company28,Note for row 128
+Ishaan Shah,ishaan.shah129@gmail.com,+919000000129,Jaipur,Varah Swamy,,2026-06-18,Company29,Note for row 129
+Ananya Rao,ananya.rao130@gmail.com,+919000000130,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-19,Company30,Note for row 130
+Diya Menon,diya.menon131@gmail.com,+919000000131,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-20,Company31,Note for row 131
+Myra Das,myra.das132@gmail.com,+919000000132,Delhi,Eden Park,BAD_LEAD,2026-06-21,Company32,Note for row 132
+Sara Iyer,sara.iyer133@gmail.com,+919000000133,Chennai,Meridian Tower,SALE_DONE,2026-06-22,Company33,Note for row 133
+Aadhya Pillai,aadhya.pillai134@gmail.com,+919000000134,Hyderabad,Sarjapur Plots,,2026-06-23,Company34,Note for row 134
+Isha Verma,,+919000000135,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-24,Company35,Note for row 135
+Kiara Malhotra,kiara.malhotra136@gmail.com,+919000000136,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-25,Company36,Note for row 136
+Riya Chauhan,riya.chauhan137@gmail.com,+919000000137,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-26,Company37,Note for row 137
+Pari Bhat,pari.bhat138@gmail.com,+919000000138,Kochi,Eden Park,SALE_DONE,2026-06-27,Company38,Note for row 138
+Aanya Shetty,aanya.shetty139@gmail.com,+919000000139,Jaipur,Meridian Tower,,2026-06-28,Company39,Note for row 139
+Aarav Sharma,aarav.sharma140@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-01,Company40,Note for row 140
+Vivaan Patel,vivaan.patel141@gmail.com,+919000000141,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-02,Company41,Note for row 141
+Aditya Kumar,aditya.kumar142@gmail.com,+919000000142,Delhi,Leads on Demand,BAD_LEAD,2026-06-03,Company42,Note for row 142
+Vihaan Singh,vihaan.singh143@gmail.com,+919000000143,Chennai,General Inquiry,SALE_DONE,2026-06-04,Company43,Note for row 143
+Arjun Reddy,arjun.reddy144@gmail.com,+919000000144,Hyderabad,Eden Park,,2026-06-05,Company44,Note for row 144
+Sai Gupta,sai.gupta145@gmail.com,+919000000145,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-06,Company45,Note for row 145
+Reyansh Nair,reyansh.nair146@gmail.com,+919000000146,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-07,Company46,Note for row 146
+Ayaan Joshi,ayaan.joshi147@gmail.com,+919000000147,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-08,Company47,Note for row 147
+Krishna Desai,krishna.desai148@gmail.com,+919000000148,Kochi,Leads on Demand,SALE_DONE,2026-06-09,Company48,Note for row 148
+Ishaan Shah,ishaan.shah149@gmail.com,+919000000149,Jaipur,General Inquiry,,2026-06-10,Company49,Note for row 149
+Ananya Rao,,+919000000150,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-11,Company50,Note for row 150
+Diya Menon,diya.menon151@gmail.com,+919000000151,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-12,Company51,Note for row 151
+Myra Das,myra.das152@gmail.com,+919000000152,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-13,Company52,Note for row 152
+Sara Iyer,sara.iyer153@gmail.com,+919000000153,Chennai,Varah Swamy,SALE_DONE,2026-06-14,Company53,Note for row 153
+Aadhya Pillai,aadhya.pillai154@gmail.com,+919000000154,Hyderabad,Leads on Demand,,2026-06-15,Company54,Note for row 154
+Isha Verma,isha.verma155@gmail.com,+919000000155,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-16,Company55,Note for row 155
+Kiara Malhotra,kiara.malhotra156@gmail.com,+919000000156,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-17,Company56,Note for row 156
+Riya Chauhan,riya.chauhan157@gmail.com,+919000000157,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-18,Company57,Note for row 157
+Pari Bhat,pari.bhat158@gmail.com,+919000000158,Kochi,Sarjapur Plots,SALE_DONE,2026-06-19,Company58,Note for row 158
+Aanya Shetty,aanya.shetty159@gmail.com,+919000000159,Jaipur,Varah Swamy,,2026-06-20,Company59,Note for row 159
+Aarav Sharma,aarav.sharma160@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-21,Company60,Note for row 160
+Vivaan Patel,vivaan.patel161@gmail.com,+919000000161,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-22,Company61,Note for row 161
+Aditya Kumar,aditya.kumar162@gmail.com,+919000000162,Delhi,Eden Park,BAD_LEAD,2026-06-23,Company62,Note for row 162
+Vihaan Singh,vihaan.singh163@gmail.com,+919000000163,Chennai,Meridian Tower,SALE_DONE,2026-06-24,Company63,Note for row 163
+Arjun Reddy,arjun.reddy164@gmail.com,+919000000164,Hyderabad,Sarjapur Plots,,2026-06-25,Company64,Note for row 164
+Sai Gupta,,+919000000165,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-26,Company65,Note for row 165
+Reyansh Nair,reyansh.nair166@gmail.com,+919000000166,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-27,Company66,Note for row 166
+Ayaan Joshi,ayaan.joshi167@gmail.com,+919000000167,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-28,Company67,Note for row 167
+Krishna Desai,krishna.desai168@gmail.com,+919000000168,Kochi,Eden Park,SALE_DONE,2026-06-01,Company68,Note for row 168
+Ishaan Shah,ishaan.shah169@gmail.com,+919000000169,Jaipur,Meridian Tower,,2026-06-02,Company69,Note for row 169
+Ananya Rao,ananya.rao170@gmail.com,+919000000170,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-03,Company70,Note for row 170
+Diya Menon,diya.menon171@gmail.com,+919000000171,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-04,Company71,Note for row 171
+Myra Das,myra.das172@gmail.com,+919000000172,Delhi,Leads on Demand,BAD_LEAD,2026-06-05,Company72,Note for row 172
+Sara Iyer,sara.iyer173@gmail.com,+919000000173,Chennai,General Inquiry,SALE_DONE,2026-06-06,Company73,Note for row 173
+Aadhya Pillai,aadhya.pillai174@gmail.com,+919000000174,Hyderabad,Eden Park,,2026-06-07,Company74,Note for row 174
+Isha Verma,isha.verma175@gmail.com,+919000000175,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-08,Company75,Note for row 175
+Kiara Malhotra,kiara.malhotra176@gmail.com,+919000000176,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-09,Company76,Note for row 176
+Riya Chauhan,riya.chauhan177@gmail.com,+919000000177,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-10,Company77,Note for row 177
+Pari Bhat,pari.bhat178@gmail.com,+919000000178,Kochi,Leads on Demand,SALE_DONE,2026-06-11,Company78,Note for row 178
+Aanya Shetty,aanya.shetty179@gmail.com,+919000000179,Jaipur,General Inquiry,,2026-06-12,Company79,Note for row 179
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-13,Company80,Note for row 180
+Vivaan Patel,vivaan.patel181@gmail.com,+919000000181,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-14,Company81,Note for row 181
+Aditya Kumar,aditya.kumar182@gmail.com,+919000000182,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-15,Company82,Note for row 182
+Vihaan Singh,vihaan.singh183@gmail.com,+919000000183,Chennai,Varah Swamy,SALE_DONE,2026-06-16,Company83,Note for row 183
+Arjun Reddy,arjun.reddy184@gmail.com,+919000000184,Hyderabad,Leads on Demand,,2026-06-17,Company84,Note for row 184
+Sai Gupta,sai.gupta185@gmail.com,+919000000185,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-18,Company85,Note for row 185
+Reyansh Nair,reyansh.nair186@gmail.com,+919000000186,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-19,Company86,Note for row 186
+Ayaan Joshi,ayaan.joshi187@gmail.com,+919000000187,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-20,Company87,Note for row 187
+Krishna Desai,krishna.desai188@gmail.com,+919000000188,Kochi,Sarjapur Plots,SALE_DONE,2026-06-21,Company88,Note for row 188
+Ishaan Shah,ishaan.shah189@gmail.com,+919000000189,Jaipur,Varah Swamy,,2026-06-22,Company89,Note for row 189
+Ananya Rao,ananya.rao190@gmail.com,+919000000190,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-23,Company90,Note for row 190
+Diya Menon,diya.menon191@gmail.com,+919000000191,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-24,Company91,Note for row 191
+Myra Das,myra.das192@gmail.com,+919000000192,Delhi,Eden Park,BAD_LEAD,2026-06-25,Company92,Note for row 192
+Sara Iyer,sara.iyer193@gmail.com,+919000000193,Chennai,Meridian Tower,SALE_DONE,2026-06-26,Company93,Note for row 193
+Aadhya Pillai,aadhya.pillai194@gmail.com,+919000000194,Hyderabad,Sarjapur Plots,,2026-06-27,Company94,Note for row 194
+Isha Verma,,+919000000195,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-28,Company95,Note for row 195
+Kiara Malhotra,kiara.malhotra196@gmail.com,+919000000196,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-01,Company96,Note for row 196
+Riya Chauhan,riya.chauhan197@gmail.com,+919000000197,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-02,Company97,Note for row 197
+Pari Bhat,pari.bhat198@gmail.com,+919000000198,Kochi,Eden Park,SALE_DONE,2026-06-03,Company98,Note for row 198
+Aanya Shetty,aanya.shetty199@gmail.com,+919000000199,Jaipur,Meridian Tower,,2026-06-04,Company99,Note for row 199
+Aarav Sharma,aarav.sharma200@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-05,Company0,Note for row 200
+Vivaan Patel,vivaan.patel201@gmail.com,+919000000201,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-06,Company1,Note for row 201
+Aditya Kumar,aditya.kumar202@gmail.com,+919000000202,Delhi,Leads on Demand,BAD_LEAD,2026-06-07,Company2,Note for row 202
+Vihaan Singh,vihaan.singh203@gmail.com,+919000000203,Chennai,General Inquiry,SALE_DONE,2026-06-08,Company3,Note for row 203
+Arjun Reddy,arjun.reddy204@gmail.com,+919000000204,Hyderabad,Eden Park,,2026-06-09,Company4,Note for row 204
+Sai Gupta,sai.gupta205@gmail.com,+919000000205,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-10,Company5,Note for row 205
+Reyansh Nair,reyansh.nair206@gmail.com,+919000000206,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-11,Company6,Note for row 206
+Ayaan Joshi,ayaan.joshi207@gmail.com,+919000000207,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-12,Company7,Note for row 207
+Krishna Desai,krishna.desai208@gmail.com,+919000000208,Kochi,Leads on Demand,SALE_DONE,2026-06-13,Company8,Note for row 208
+Ishaan Shah,ishaan.shah209@gmail.com,+919000000209,Jaipur,General Inquiry,,2026-06-14,Company9,Note for row 209
+Ananya Rao,,+919000000210,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-15,Company10,Note for row 210
+Diya Menon,diya.menon211@gmail.com,+919000000211,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-16,Company11,Note for row 211
+Myra Das,myra.das212@gmail.com,+919000000212,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-17,Company12,Note for row 212
+Sara Iyer,sara.iyer213@gmail.com,+919000000213,Chennai,Varah Swamy,SALE_DONE,2026-06-18,Company13,Note for row 213
+Aadhya Pillai,aadhya.pillai214@gmail.com,+919000000214,Hyderabad,Leads on Demand,,2026-06-19,Company14,Note for row 214
+Isha Verma,isha.verma215@gmail.com,+919000000215,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-20,Company15,Note for row 215
+Kiara Malhotra,kiara.malhotra216@gmail.com,+919000000216,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-21,Company16,Note for row 216
+Riya Chauhan,riya.chauhan217@gmail.com,+919000000217,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-22,Company17,Note for row 217
+Pari Bhat,pari.bhat218@gmail.com,+919000000218,Kochi,Sarjapur Plots,SALE_DONE,2026-06-23,Company18,Note for row 218
+Aanya Shetty,aanya.shetty219@gmail.com,+919000000219,Jaipur,Varah Swamy,,2026-06-24,Company19,Note for row 219
+Aarav Sharma,aarav.sharma220@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-25,Company20,Note for row 220
+Vivaan Patel,vivaan.patel221@gmail.com,+919000000221,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-26,Company21,Note for row 221
+Aditya Kumar,aditya.kumar222@gmail.com,+919000000222,Delhi,Eden Park,BAD_LEAD,2026-06-27,Company22,Note for row 222
+Vihaan Singh,vihaan.singh223@gmail.com,+919000000223,Chennai,Meridian Tower,SALE_DONE,2026-06-28,Company23,Note for row 223
+Arjun Reddy,arjun.reddy224@gmail.com,+919000000224,Hyderabad,Sarjapur Plots,,2026-06-01,Company24,Note for row 224
+Sai Gupta,,+919000000225,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-02,Company25,Note for row 225
+Reyansh Nair,reyansh.nair226@gmail.com,+919000000226,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-03,Company26,Note for row 226
+Ayaan Joshi,ayaan.joshi227@gmail.com,+919000000227,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-04,Company27,Note for row 227
+Krishna Desai,krishna.desai228@gmail.com,+919000000228,Kochi,Eden Park,SALE_DONE,2026-06-05,Company28,Note for row 228
+Ishaan Shah,ishaan.shah229@gmail.com,+919000000229,Jaipur,Meridian Tower,,2026-06-06,Company29,Note for row 229
+Ananya Rao,ananya.rao230@gmail.com,+919000000230,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-07,Company30,Note for row 230
+Diya Menon,diya.menon231@gmail.com,+919000000231,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-08,Company31,Note for row 231
+Myra Das,myra.das232@gmail.com,+919000000232,Delhi,Leads on Demand,BAD_LEAD,2026-06-09,Company32,Note for row 232
+Sara Iyer,sara.iyer233@gmail.com,+919000000233,Chennai,General Inquiry,SALE_DONE,2026-06-10,Company33,Note for row 233
+Aadhya Pillai,aadhya.pillai234@gmail.com,+919000000234,Hyderabad,Eden Park,,2026-06-11,Company34,Note for row 234
+Isha Verma,isha.verma235@gmail.com,+919000000235,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-12,Company35,Note for row 235
+Kiara Malhotra,kiara.malhotra236@gmail.com,+919000000236,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-13,Company36,Note for row 236
+Riya Chauhan,riya.chauhan237@gmail.com,+919000000237,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-14,Company37,Note for row 237
+Pari Bhat,pari.bhat238@gmail.com,+919000000238,Kochi,Leads on Demand,SALE_DONE,2026-06-15,Company38,Note for row 238
+Aanya Shetty,aanya.shetty239@gmail.com,+919000000239,Jaipur,General Inquiry,,2026-06-16,Company39,Note for row 239
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-17,Company40,Note for row 240
+Vivaan Patel,vivaan.patel241@gmail.com,+919000000241,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-18,Company41,Note for row 241
+Aditya Kumar,aditya.kumar242@gmail.com,+919000000242,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-19,Company42,Note for row 242
+Vihaan Singh,vihaan.singh243@gmail.com,+919000000243,Chennai,Varah Swamy,SALE_DONE,2026-06-20,Company43,Note for row 243
+Arjun Reddy,arjun.reddy244@gmail.com,+919000000244,Hyderabad,Leads on Demand,,2026-06-21,Company44,Note for row 244
+Sai Gupta,sai.gupta245@gmail.com,+919000000245,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-22,Company45,Note for row 245
+Reyansh Nair,reyansh.nair246@gmail.com,+919000000246,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-23,Company46,Note for row 246
+Ayaan Joshi,ayaan.joshi247@gmail.com,+919000000247,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-24,Company47,Note for row 247
+Krishna Desai,krishna.desai248@gmail.com,+919000000248,Kochi,Sarjapur Plots,SALE_DONE,2026-06-25,Company48,Note for row 248
+Ishaan Shah,ishaan.shah249@gmail.com,+919000000249,Jaipur,Varah Swamy,,2026-06-26,Company49,Note for row 249
+Ananya Rao,ananya.rao250@gmail.com,+919000000250,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-27,Company50,Note for row 250
+Diya Menon,diya.menon251@gmail.com,+919000000251,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-28,Company51,Note for row 251
+Myra Das,myra.das252@gmail.com,+919000000252,Delhi,Eden Park,BAD_LEAD,2026-06-01,Company52,Note for row 252
+Sara Iyer,sara.iyer253@gmail.com,+919000000253,Chennai,Meridian Tower,SALE_DONE,2026-06-02,Company53,Note for row 253
+Aadhya Pillai,aadhya.pillai254@gmail.com,+919000000254,Hyderabad,Sarjapur Plots,,2026-06-03,Company54,Note for row 254
+Isha Verma,,+919000000255,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-04,Company55,Note for row 255
+Kiara Malhotra,kiara.malhotra256@gmail.com,+919000000256,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-05,Company56,Note for row 256
+Riya Chauhan,riya.chauhan257@gmail.com,+919000000257,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-06,Company57,Note for row 257
+Pari Bhat,pari.bhat258@gmail.com,+919000000258,Kochi,Eden Park,SALE_DONE,2026-06-07,Company58,Note for row 258
+Aanya Shetty,aanya.shetty259@gmail.com,+919000000259,Jaipur,Meridian Tower,,2026-06-08,Company59,Note for row 259
+Aarav Sharma,aarav.sharma260@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-09,Company60,Note for row 260
+Vivaan Patel,vivaan.patel261@gmail.com,+919000000261,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-10,Company61,Note for row 261
+Aditya Kumar,aditya.kumar262@gmail.com,+919000000262,Delhi,Leads on Demand,BAD_LEAD,2026-06-11,Company62,Note for row 262
+Vihaan Singh,vihaan.singh263@gmail.com,+919000000263,Chennai,General Inquiry,SALE_DONE,2026-06-12,Company63,Note for row 263
+Arjun Reddy,arjun.reddy264@gmail.com,+919000000264,Hyderabad,Eden Park,,2026-06-13,Company64,Note for row 264
+Sai Gupta,sai.gupta265@gmail.com,+919000000265,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-14,Company65,Note for row 265
+Reyansh Nair,reyansh.nair266@gmail.com,+919000000266,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-15,Company66,Note for row 266
+Ayaan Joshi,ayaan.joshi267@gmail.com,+919000000267,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-16,Company67,Note for row 267
+Krishna Desai,krishna.desai268@gmail.com,+919000000268,Kochi,Leads on Demand,SALE_DONE,2026-06-17,Company68,Note for row 268
+Ishaan Shah,ishaan.shah269@gmail.com,+919000000269,Jaipur,General Inquiry,,2026-06-18,Company69,Note for row 269
+Ananya Rao,,+919000000270,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-19,Company70,Note for row 270
+Diya Menon,diya.menon271@gmail.com,+919000000271,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-20,Company71,Note for row 271
+Myra Das,myra.das272@gmail.com,+919000000272,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-21,Company72,Note for row 272
+Sara Iyer,sara.iyer273@gmail.com,+919000000273,Chennai,Varah Swamy,SALE_DONE,2026-06-22,Company73,Note for row 273
+Aadhya Pillai,aadhya.pillai274@gmail.com,+919000000274,Hyderabad,Leads on Demand,,2026-06-23,Company74,Note for row 274
+Isha Verma,isha.verma275@gmail.com,+919000000275,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-24,Company75,Note for row 275
+Kiara Malhotra,kiara.malhotra276@gmail.com,+919000000276,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-25,Company76,Note for row 276
+Riya Chauhan,riya.chauhan277@gmail.com,+919000000277,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-26,Company77,Note for row 277
+Pari Bhat,pari.bhat278@gmail.com,+919000000278,Kochi,Sarjapur Plots,SALE_DONE,2026-06-27,Company78,Note for row 278
+Aanya Shetty,aanya.shetty279@gmail.com,+919000000279,Jaipur,Varah Swamy,,2026-06-28,Company79,Note for row 279
+Aarav Sharma,aarav.sharma280@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-01,Company80,Note for row 280
+Vivaan Patel,vivaan.patel281@gmail.com,+919000000281,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-02,Company81,Note for row 281
+Aditya Kumar,aditya.kumar282@gmail.com,+919000000282,Delhi,Eden Park,BAD_LEAD,2026-06-03,Company82,Note for row 282
+Vihaan Singh,vihaan.singh283@gmail.com,+919000000283,Chennai,Meridian Tower,SALE_DONE,2026-06-04,Company83,Note for row 283
+Arjun Reddy,arjun.reddy284@gmail.com,+919000000284,Hyderabad,Sarjapur Plots,,2026-06-05,Company84,Note for row 284
+Sai Gupta,,+919000000285,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-06,Company85,Note for row 285
+Reyansh Nair,reyansh.nair286@gmail.com,+919000000286,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-07,Company86,Note for row 286
+Ayaan Joshi,ayaan.joshi287@gmail.com,+919000000287,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-08,Company87,Note for row 287
+Krishna Desai,krishna.desai288@gmail.com,+919000000288,Kochi,Eden Park,SALE_DONE,2026-06-09,Company88,Note for row 288
+Ishaan Shah,ishaan.shah289@gmail.com,+919000000289,Jaipur,Meridian Tower,,2026-06-10,Company89,Note for row 289
+Ananya Rao,ananya.rao290@gmail.com,+919000000290,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-11,Company90,Note for row 290
+Diya Menon,diya.menon291@gmail.com,+919000000291,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-12,Company91,Note for row 291
+Myra Das,myra.das292@gmail.com,+919000000292,Delhi,Leads on Demand,BAD_LEAD,2026-06-13,Company92,Note for row 292
+Sara Iyer,sara.iyer293@gmail.com,+919000000293,Chennai,General Inquiry,SALE_DONE,2026-06-14,Company93,Note for row 293
+Aadhya Pillai,aadhya.pillai294@gmail.com,+919000000294,Hyderabad,Eden Park,,2026-06-15,Company94,Note for row 294
+Isha Verma,isha.verma295@gmail.com,+919000000295,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-16,Company95,Note for row 295
+Kiara Malhotra,kiara.malhotra296@gmail.com,+919000000296,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-17,Company96,Note for row 296
+Riya Chauhan,riya.chauhan297@gmail.com,+919000000297,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-18,Company97,Note for row 297
+Pari Bhat,pari.bhat298@gmail.com,+919000000298,Kochi,Leads on Demand,SALE_DONE,2026-06-19,Company98,Note for row 298
+Aanya Shetty,aanya.shetty299@gmail.com,+919000000299,Jaipur,General Inquiry,,2026-06-20,Company99,Note for row 299
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-21,Company0,Note for row 300
+Vivaan Patel,vivaan.patel301@gmail.com,+919000000301,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-22,Company1,Note for row 301
+Aditya Kumar,aditya.kumar302@gmail.com,+919000000302,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-23,Company2,Note for row 302
+Vihaan Singh,vihaan.singh303@gmail.com,+919000000303,Chennai,Varah Swamy,SALE_DONE,2026-06-24,Company3,Note for row 303
+Arjun Reddy,arjun.reddy304@gmail.com,+919000000304,Hyderabad,Leads on Demand,,2026-06-25,Company4,Note for row 304
+Sai Gupta,sai.gupta305@gmail.com,+919000000305,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-26,Company5,Note for row 305
+Reyansh Nair,reyansh.nair306@gmail.com,+919000000306,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-27,Company6,Note for row 306
+Ayaan Joshi,ayaan.joshi307@gmail.com,+919000000307,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-28,Company7,Note for row 307
+Krishna Desai,krishna.desai308@gmail.com,+919000000308,Kochi,Sarjapur Plots,SALE_DONE,2026-06-01,Company8,Note for row 308
+Ishaan Shah,ishaan.shah309@gmail.com,+919000000309,Jaipur,Varah Swamy,,2026-06-02,Company9,Note for row 309
+Ananya Rao,ananya.rao310@gmail.com,+919000000310,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-03,Company10,Note for row 310
+Diya Menon,diya.menon311@gmail.com,+919000000311,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-04,Company11,Note for row 311
+Myra Das,myra.das312@gmail.com,+919000000312,Delhi,Eden Park,BAD_LEAD,2026-06-05,Company12,Note for row 312
+Sara Iyer,sara.iyer313@gmail.com,+919000000313,Chennai,Meridian Tower,SALE_DONE,2026-06-06,Company13,Note for row 313
+Aadhya Pillai,aadhya.pillai314@gmail.com,+919000000314,Hyderabad,Sarjapur Plots,,2026-06-07,Company14,Note for row 314
+Isha Verma,,+919000000315,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-08,Company15,Note for row 315
+Kiara Malhotra,kiara.malhotra316@gmail.com,+919000000316,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-09,Company16,Note for row 316
+Riya Chauhan,riya.chauhan317@gmail.com,+919000000317,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-10,Company17,Note for row 317
+Pari Bhat,pari.bhat318@gmail.com,+919000000318,Kochi,Eden Park,SALE_DONE,2026-06-11,Company18,Note for row 318
+Aanya Shetty,aanya.shetty319@gmail.com,+919000000319,Jaipur,Meridian Tower,,2026-06-12,Company19,Note for row 319
+Aarav Sharma,aarav.sharma320@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-13,Company20,Note for row 320
+Vivaan Patel,vivaan.patel321@gmail.com,+919000000321,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-14,Company21,Note for row 321
+Aditya Kumar,aditya.kumar322@gmail.com,+919000000322,Delhi,Leads on Demand,BAD_LEAD,2026-06-15,Company22,Note for row 322
+Vihaan Singh,vihaan.singh323@gmail.com,+919000000323,Chennai,General Inquiry,SALE_DONE,2026-06-16,Company23,Note for row 323
+Arjun Reddy,arjun.reddy324@gmail.com,+919000000324,Hyderabad,Eden Park,,2026-06-17,Company24,Note for row 324
+Sai Gupta,sai.gupta325@gmail.com,+919000000325,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-18,Company25,Note for row 325
+Reyansh Nair,reyansh.nair326@gmail.com,+919000000326,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-19,Company26,Note for row 326
+Ayaan Joshi,ayaan.joshi327@gmail.com,+919000000327,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-20,Company27,Note for row 327
+Krishna Desai,krishna.desai328@gmail.com,+919000000328,Kochi,Leads on Demand,SALE_DONE,2026-06-21,Company28,Note for row 328
+Ishaan Shah,ishaan.shah329@gmail.com,+919000000329,Jaipur,General Inquiry,,2026-06-22,Company29,Note for row 329
+Ananya Rao,,+919000000330,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-23,Company30,Note for row 330
+Diya Menon,diya.menon331@gmail.com,+919000000331,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-24,Company31,Note for row 331
+Myra Das,myra.das332@gmail.com,+919000000332,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-25,Company32,Note for row 332
+Sara Iyer,sara.iyer333@gmail.com,+919000000333,Chennai,Varah Swamy,SALE_DONE,2026-06-26,Company33,Note for row 333
+Aadhya Pillai,aadhya.pillai334@gmail.com,+919000000334,Hyderabad,Leads on Demand,,2026-06-27,Company34,Note for row 334
+Isha Verma,isha.verma335@gmail.com,+919000000335,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-28,Company35,Note for row 335
+Kiara Malhotra,kiara.malhotra336@gmail.com,+919000000336,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-01,Company36,Note for row 336
+Riya Chauhan,riya.chauhan337@gmail.com,+919000000337,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-02,Company37,Note for row 337
+Pari Bhat,pari.bhat338@gmail.com,+919000000338,Kochi,Sarjapur Plots,SALE_DONE,2026-06-03,Company38,Note for row 338
+Aanya Shetty,aanya.shetty339@gmail.com,+919000000339,Jaipur,Varah Swamy,,2026-06-04,Company39,Note for row 339
+Aarav Sharma,aarav.sharma340@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-05,Company40,Note for row 340
+Vivaan Patel,vivaan.patel341@gmail.com,+919000000341,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-06,Company41,Note for row 341
+Aditya Kumar,aditya.kumar342@gmail.com,+919000000342,Delhi,Eden Park,BAD_LEAD,2026-06-07,Company42,Note for row 342
+Vihaan Singh,vihaan.singh343@gmail.com,+919000000343,Chennai,Meridian Tower,SALE_DONE,2026-06-08,Company43,Note for row 343
+Arjun Reddy,arjun.reddy344@gmail.com,+919000000344,Hyderabad,Sarjapur Plots,,2026-06-09,Company44,Note for row 344
+Sai Gupta,,+919000000345,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-10,Company45,Note for row 345
+Reyansh Nair,reyansh.nair346@gmail.com,+919000000346,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-11,Company46,Note for row 346
+Ayaan Joshi,ayaan.joshi347@gmail.com,+919000000347,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-12,Company47,Note for row 347
+Krishna Desai,krishna.desai348@gmail.com,+919000000348,Kochi,Eden Park,SALE_DONE,2026-06-13,Company48,Note for row 348
+Ishaan Shah,ishaan.shah349@gmail.com,+919000000349,Jaipur,Meridian Tower,,2026-06-14,Company49,Note for row 349
+Ananya Rao,ananya.rao350@gmail.com,+919000000350,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-15,Company50,Note for row 350
+Diya Menon,diya.menon351@gmail.com,+919000000351,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-16,Company51,Note for row 351
+Myra Das,myra.das352@gmail.com,+919000000352,Delhi,Leads on Demand,BAD_LEAD,2026-06-17,Company52,Note for row 352
+Sara Iyer,sara.iyer353@gmail.com,+919000000353,Chennai,General Inquiry,SALE_DONE,2026-06-18,Company53,Note for row 353
+Aadhya Pillai,aadhya.pillai354@gmail.com,+919000000354,Hyderabad,Eden Park,,2026-06-19,Company54,Note for row 354
+Isha Verma,isha.verma355@gmail.com,+919000000355,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-20,Company55,Note for row 355
+Kiara Malhotra,kiara.malhotra356@gmail.com,+919000000356,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-21,Company56,Note for row 356
+Riya Chauhan,riya.chauhan357@gmail.com,+919000000357,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-22,Company57,Note for row 357
+Pari Bhat,pari.bhat358@gmail.com,+919000000358,Kochi,Leads on Demand,SALE_DONE,2026-06-23,Company58,Note for row 358
+Aanya Shetty,aanya.shetty359@gmail.com,+919000000359,Jaipur,General Inquiry,,2026-06-24,Company59,Note for row 359
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-25,Company60,Note for row 360
+Vivaan Patel,vivaan.patel361@gmail.com,+919000000361,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-26,Company61,Note for row 361
+Aditya Kumar,aditya.kumar362@gmail.com,+919000000362,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-27,Company62,Note for row 362
+Vihaan Singh,vihaan.singh363@gmail.com,+919000000363,Chennai,Varah Swamy,SALE_DONE,2026-06-28,Company63,Note for row 363
+Arjun Reddy,arjun.reddy364@gmail.com,+919000000364,Hyderabad,Leads on Demand,,2026-06-01,Company64,Note for row 364
+Sai Gupta,sai.gupta365@gmail.com,+919000000365,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-02,Company65,Note for row 365
+Reyansh Nair,reyansh.nair366@gmail.com,+919000000366,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-03,Company66,Note for row 366
+Ayaan Joshi,ayaan.joshi367@gmail.com,+919000000367,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-04,Company67,Note for row 367
+Krishna Desai,krishna.desai368@gmail.com,+919000000368,Kochi,Sarjapur Plots,SALE_DONE,2026-06-05,Company68,Note for row 368
+Ishaan Shah,ishaan.shah369@gmail.com,+919000000369,Jaipur,Varah Swamy,,2026-06-06,Company69,Note for row 369
+Ananya Rao,ananya.rao370@gmail.com,+919000000370,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-07,Company70,Note for row 370
+Diya Menon,diya.menon371@gmail.com,+919000000371,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-08,Company71,Note for row 371
+Myra Das,myra.das372@gmail.com,+919000000372,Delhi,Eden Park,BAD_LEAD,2026-06-09,Company72,Note for row 372
+Sara Iyer,sara.iyer373@gmail.com,+919000000373,Chennai,Meridian Tower,SALE_DONE,2026-06-10,Company73,Note for row 373
+Aadhya Pillai,aadhya.pillai374@gmail.com,+919000000374,Hyderabad,Sarjapur Plots,,2026-06-11,Company74,Note for row 374
+Isha Verma,,+919000000375,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-12,Company75,Note for row 375
+Kiara Malhotra,kiara.malhotra376@gmail.com,+919000000376,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-13,Company76,Note for row 376
+Riya Chauhan,riya.chauhan377@gmail.com,+919000000377,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-14,Company77,Note for row 377
+Pari Bhat,pari.bhat378@gmail.com,+919000000378,Kochi,Eden Park,SALE_DONE,2026-06-15,Company78,Note for row 378
+Aanya Shetty,aanya.shetty379@gmail.com,+919000000379,Jaipur,Meridian Tower,,2026-06-16,Company79,Note for row 379
+Aarav Sharma,aarav.sharma380@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-17,Company80,Note for row 380
+Vivaan Patel,vivaan.patel381@gmail.com,+919000000381,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-18,Company81,Note for row 381
+Aditya Kumar,aditya.kumar382@gmail.com,+919000000382,Delhi,Leads on Demand,BAD_LEAD,2026-06-19,Company82,Note for row 382
+Vihaan Singh,vihaan.singh383@gmail.com,+919000000383,Chennai,General Inquiry,SALE_DONE,2026-06-20,Company83,Note for row 383
+Arjun Reddy,arjun.reddy384@gmail.com,+919000000384,Hyderabad,Eden Park,,2026-06-21,Company84,Note for row 384
+Sai Gupta,sai.gupta385@gmail.com,+919000000385,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-22,Company85,Note for row 385
+Reyansh Nair,reyansh.nair386@gmail.com,+919000000386,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-23,Company86,Note for row 386
+Ayaan Joshi,ayaan.joshi387@gmail.com,+919000000387,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-24,Company87,Note for row 387
+Krishna Desai,krishna.desai388@gmail.com,+919000000388,Kochi,Leads on Demand,SALE_DONE,2026-06-25,Company88,Note for row 388
+Ishaan Shah,ishaan.shah389@gmail.com,+919000000389,Jaipur,General Inquiry,,2026-06-26,Company89,Note for row 389
+Ananya Rao,,+919000000390,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-27,Company90,Note for row 390
+Diya Menon,diya.menon391@gmail.com,+919000000391,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-28,Company91,Note for row 391
+Myra Das,myra.das392@gmail.com,+919000000392,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-01,Company92,Note for row 392
+Sara Iyer,sara.iyer393@gmail.com,+919000000393,Chennai,Varah Swamy,SALE_DONE,2026-06-02,Company93,Note for row 393
+Aadhya Pillai,aadhya.pillai394@gmail.com,+919000000394,Hyderabad,Leads on Demand,,2026-06-03,Company94,Note for row 394
+Isha Verma,isha.verma395@gmail.com,+919000000395,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-04,Company95,Note for row 395
+Kiara Malhotra,kiara.malhotra396@gmail.com,+919000000396,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-05,Company96,Note for row 396
+Riya Chauhan,riya.chauhan397@gmail.com,+919000000397,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-06,Company97,Note for row 397
+Pari Bhat,pari.bhat398@gmail.com,+919000000398,Kochi,Sarjapur Plots,SALE_DONE,2026-06-07,Company98,Note for row 398
+Aanya Shetty,aanya.shetty399@gmail.com,+919000000399,Jaipur,Varah Swamy,,2026-06-08,Company99,Note for row 399
+Aarav Sharma,aarav.sharma400@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-09,Company0,Note for row 400
+Vivaan Patel,vivaan.patel401@gmail.com,+919000000401,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-10,Company1,Note for row 401
+Aditya Kumar,aditya.kumar402@gmail.com,+919000000402,Delhi,Eden Park,BAD_LEAD,2026-06-11,Company2,Note for row 402
+Vihaan Singh,vihaan.singh403@gmail.com,+919000000403,Chennai,Meridian Tower,SALE_DONE,2026-06-12,Company3,Note for row 403
+Arjun Reddy,arjun.reddy404@gmail.com,+919000000404,Hyderabad,Sarjapur Plots,,2026-06-13,Company4,Note for row 404
+Sai Gupta,,+919000000405,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-14,Company5,Note for row 405
+Reyansh Nair,reyansh.nair406@gmail.com,+919000000406,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-15,Company6,Note for row 406
+Ayaan Joshi,ayaan.joshi407@gmail.com,+919000000407,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-16,Company7,Note for row 407
+Krishna Desai,krishna.desai408@gmail.com,+919000000408,Kochi,Eden Park,SALE_DONE,2026-06-17,Company8,Note for row 408
+Ishaan Shah,ishaan.shah409@gmail.com,+919000000409,Jaipur,Meridian Tower,,2026-06-18,Company9,Note for row 409
+Ananya Rao,ananya.rao410@gmail.com,+919000000410,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-19,Company10,Note for row 410
+Diya Menon,diya.menon411@gmail.com,+919000000411,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-20,Company11,Note for row 411
+Myra Das,myra.das412@gmail.com,+919000000412,Delhi,Leads on Demand,BAD_LEAD,2026-06-21,Company12,Note for row 412
+Sara Iyer,sara.iyer413@gmail.com,+919000000413,Chennai,General Inquiry,SALE_DONE,2026-06-22,Company13,Note for row 413
+Aadhya Pillai,aadhya.pillai414@gmail.com,+919000000414,Hyderabad,Eden Park,,2026-06-23,Company14,Note for row 414
+Isha Verma,isha.verma415@gmail.com,+919000000415,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-24,Company15,Note for row 415
+Kiara Malhotra,kiara.malhotra416@gmail.com,+919000000416,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-25,Company16,Note for row 416
+Riya Chauhan,riya.chauhan417@gmail.com,+919000000417,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-26,Company17,Note for row 417
+Pari Bhat,pari.bhat418@gmail.com,+919000000418,Kochi,Leads on Demand,SALE_DONE,2026-06-27,Company18,Note for row 418
+Aanya Shetty,aanya.shetty419@gmail.com,+919000000419,Jaipur,General Inquiry,,2026-06-28,Company19,Note for row 419
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-01,Company20,Note for row 420
+Vivaan Patel,vivaan.patel421@gmail.com,+919000000421,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-02,Company21,Note for row 421
+Aditya Kumar,aditya.kumar422@gmail.com,+919000000422,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-03,Company22,Note for row 422
+Vihaan Singh,vihaan.singh423@gmail.com,+919000000423,Chennai,Varah Swamy,SALE_DONE,2026-06-04,Company23,Note for row 423
+Arjun Reddy,arjun.reddy424@gmail.com,+919000000424,Hyderabad,Leads on Demand,,2026-06-05,Company24,Note for row 424
+Sai Gupta,sai.gupta425@gmail.com,+919000000425,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-06,Company25,Note for row 425
+Reyansh Nair,reyansh.nair426@gmail.com,+919000000426,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-07,Company26,Note for row 426
+Ayaan Joshi,ayaan.joshi427@gmail.com,+919000000427,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-08,Company27,Note for row 427
+Krishna Desai,krishna.desai428@gmail.com,+919000000428,Kochi,Sarjapur Plots,SALE_DONE,2026-06-09,Company28,Note for row 428
+Ishaan Shah,ishaan.shah429@gmail.com,+919000000429,Jaipur,Varah Swamy,,2026-06-10,Company29,Note for row 429
+Ananya Rao,ananya.rao430@gmail.com,+919000000430,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-11,Company30,Note for row 430
+Diya Menon,diya.menon431@gmail.com,+919000000431,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-12,Company31,Note for row 431
+Myra Das,myra.das432@gmail.com,+919000000432,Delhi,Eden Park,BAD_LEAD,2026-06-13,Company32,Note for row 432
+Sara Iyer,sara.iyer433@gmail.com,+919000000433,Chennai,Meridian Tower,SALE_DONE,2026-06-14,Company33,Note for row 433
+Aadhya Pillai,aadhya.pillai434@gmail.com,+919000000434,Hyderabad,Sarjapur Plots,,2026-06-15,Company34,Note for row 434
+Isha Verma,,+919000000435,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-16,Company35,Note for row 435
+Kiara Malhotra,kiara.malhotra436@gmail.com,+919000000436,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-17,Company36,Note for row 436
+Riya Chauhan,riya.chauhan437@gmail.com,+919000000437,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-18,Company37,Note for row 437
+Pari Bhat,pari.bhat438@gmail.com,+919000000438,Kochi,Eden Park,SALE_DONE,2026-06-19,Company38,Note for row 438
+Aanya Shetty,aanya.shetty439@gmail.com,+919000000439,Jaipur,Meridian Tower,,2026-06-20,Company39,Note for row 439
+Aarav Sharma,aarav.sharma440@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-21,Company40,Note for row 440
+Vivaan Patel,vivaan.patel441@gmail.com,+919000000441,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-22,Company41,Note for row 441
+Aditya Kumar,aditya.kumar442@gmail.com,+919000000442,Delhi,Leads on Demand,BAD_LEAD,2026-06-23,Company42,Note for row 442
+Vihaan Singh,vihaan.singh443@gmail.com,+919000000443,Chennai,General Inquiry,SALE_DONE,2026-06-24,Company43,Note for row 443
+Arjun Reddy,arjun.reddy444@gmail.com,+919000000444,Hyderabad,Eden Park,,2026-06-25,Company44,Note for row 444
+Sai Gupta,sai.gupta445@gmail.com,+919000000445,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-26,Company45,Note for row 445
+Reyansh Nair,reyansh.nair446@gmail.com,+919000000446,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-27,Company46,Note for row 446
+Ayaan Joshi,ayaan.joshi447@gmail.com,+919000000447,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-28,Company47,Note for row 447
+Krishna Desai,krishna.desai448@gmail.com,+919000000448,Kochi,Leads on Demand,SALE_DONE,2026-06-01,Company48,Note for row 448
+Ishaan Shah,ishaan.shah449@gmail.com,+919000000449,Jaipur,General Inquiry,,2026-06-02,Company49,Note for row 449
+Ananya Rao,,+919000000450,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-03,Company50,Note for row 450
+Diya Menon,diya.menon451@gmail.com,+919000000451,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-04,Company51,Note for row 451
+Myra Das,myra.das452@gmail.com,+919000000452,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-05,Company52,Note for row 452
+Sara Iyer,sara.iyer453@gmail.com,+919000000453,Chennai,Varah Swamy,SALE_DONE,2026-06-06,Company53,Note for row 453
+Aadhya Pillai,aadhya.pillai454@gmail.com,+919000000454,Hyderabad,Leads on Demand,,2026-06-07,Company54,Note for row 454
+Isha Verma,isha.verma455@gmail.com,+919000000455,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-08,Company55,Note for row 455
+Kiara Malhotra,kiara.malhotra456@gmail.com,+919000000456,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-09,Company56,Note for row 456
+Riya Chauhan,riya.chauhan457@gmail.com,+919000000457,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-10,Company57,Note for row 457
+Pari Bhat,pari.bhat458@gmail.com,+919000000458,Kochi,Sarjapur Plots,SALE_DONE,2026-06-11,Company58,Note for row 458
+Aanya Shetty,aanya.shetty459@gmail.com,+919000000459,Jaipur,Varah Swamy,,2026-06-12,Company59,Note for row 459
+Aarav Sharma,aarav.sharma460@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-13,Company60,Note for row 460
+Vivaan Patel,vivaan.patel461@gmail.com,+919000000461,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-14,Company61,Note for row 461
+Aditya Kumar,aditya.kumar462@gmail.com,+919000000462,Delhi,Eden Park,BAD_LEAD,2026-06-15,Company62,Note for row 462
+Vihaan Singh,vihaan.singh463@gmail.com,+919000000463,Chennai,Meridian Tower,SALE_DONE,2026-06-16,Company63,Note for row 463
+Arjun Reddy,arjun.reddy464@gmail.com,+919000000464,Hyderabad,Sarjapur Plots,,2026-06-17,Company64,Note for row 464
+Sai Gupta,,+919000000465,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-18,Company65,Note for row 465
+Reyansh Nair,reyansh.nair466@gmail.com,+919000000466,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-19,Company66,Note for row 466
+Ayaan Joshi,ayaan.joshi467@gmail.com,+919000000467,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-20,Company67,Note for row 467
+Krishna Desai,krishna.desai468@gmail.com,+919000000468,Kochi,Eden Park,SALE_DONE,2026-06-21,Company68,Note for row 468
+Ishaan Shah,ishaan.shah469@gmail.com,+919000000469,Jaipur,Meridian Tower,,2026-06-22,Company69,Note for row 469
+Ananya Rao,ananya.rao470@gmail.com,+919000000470,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-23,Company70,Note for row 470
+Diya Menon,diya.menon471@gmail.com,+919000000471,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-24,Company71,Note for row 471
+Myra Das,myra.das472@gmail.com,+919000000472,Delhi,Leads on Demand,BAD_LEAD,2026-06-25,Company72,Note for row 472
+Sara Iyer,sara.iyer473@gmail.com,+919000000473,Chennai,General Inquiry,SALE_DONE,2026-06-26,Company73,Note for row 473
+Aadhya Pillai,aadhya.pillai474@gmail.com,+919000000474,Hyderabad,Eden Park,,2026-06-27,Company74,Note for row 474
+Isha Verma,isha.verma475@gmail.com,+919000000475,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-28,Company75,Note for row 475
+Kiara Malhotra,kiara.malhotra476@gmail.com,+919000000476,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-01,Company76,Note for row 476
+Riya Chauhan,riya.chauhan477@gmail.com,+919000000477,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-02,Company77,Note for row 477
+Pari Bhat,pari.bhat478@gmail.com,+919000000478,Kochi,Leads on Demand,SALE_DONE,2026-06-03,Company78,Note for row 478
+Aanya Shetty,aanya.shetty479@gmail.com,+919000000479,Jaipur,General Inquiry,,2026-06-04,Company79,Note for row 479
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-05,Company80,Note for row 480
+Vivaan Patel,vivaan.patel481@gmail.com,+919000000481,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-06,Company81,Note for row 481
+Aditya Kumar,aditya.kumar482@gmail.com,+919000000482,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-07,Company82,Note for row 482
+Vihaan Singh,vihaan.singh483@gmail.com,+919000000483,Chennai,Varah Swamy,SALE_DONE,2026-06-08,Company83,Note for row 483
+Arjun Reddy,arjun.reddy484@gmail.com,+919000000484,Hyderabad,Leads on Demand,,2026-06-09,Company84,Note for row 484
+Sai Gupta,sai.gupta485@gmail.com,+919000000485,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-10,Company85,Note for row 485
+Reyansh Nair,reyansh.nair486@gmail.com,+919000000486,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-11,Company86,Note for row 486
+Ayaan Joshi,ayaan.joshi487@gmail.com,+919000000487,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-12,Company87,Note for row 487
+Krishna Desai,krishna.desai488@gmail.com,+919000000488,Kochi,Sarjapur Plots,SALE_DONE,2026-06-13,Company88,Note for row 488
+Ishaan Shah,ishaan.shah489@gmail.com,+919000000489,Jaipur,Varah Swamy,,2026-06-14,Company89,Note for row 489
+Ananya Rao,ananya.rao490@gmail.com,+919000000490,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-15,Company90,Note for row 490
+Diya Menon,diya.menon491@gmail.com,+919000000491,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-16,Company91,Note for row 491
+Myra Das,myra.das492@gmail.com,+919000000492,Delhi,Eden Park,BAD_LEAD,2026-06-17,Company92,Note for row 492
+Sara Iyer,sara.iyer493@gmail.com,+919000000493,Chennai,Meridian Tower,SALE_DONE,2026-06-18,Company93,Note for row 493
+Aadhya Pillai,aadhya.pillai494@gmail.com,+919000000494,Hyderabad,Sarjapur Plots,,2026-06-19,Company94,Note for row 494
+Isha Verma,,+919000000495,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-20,Company95,Note for row 495
+Kiara Malhotra,kiara.malhotra496@gmail.com,+919000000496,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-21,Company96,Note for row 496
+Riya Chauhan,riya.chauhan497@gmail.com,+919000000497,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-22,Company97,Note for row 497
+Pari Bhat,pari.bhat498@gmail.com,+919000000498,Kochi,Eden Park,SALE_DONE,2026-06-23,Company98,Note for row 498
+Aanya Shetty,aanya.shetty499@gmail.com,+919000000499,Jaipur,Meridian Tower,,2026-06-24,Company99,Note for row 499
+Aarav Sharma,aarav.sharma500@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-25,Company0,Note for row 500
+Vivaan Patel,vivaan.patel501@gmail.com,+919000000501,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-26,Company1,Note for row 501
+Aditya Kumar,aditya.kumar502@gmail.com,+919000000502,Delhi,Leads on Demand,BAD_LEAD,2026-06-27,Company2,Note for row 502
+Vihaan Singh,vihaan.singh503@gmail.com,+919000000503,Chennai,General Inquiry,SALE_DONE,2026-06-28,Company3,Note for row 503
+Arjun Reddy,arjun.reddy504@gmail.com,+919000000504,Hyderabad,Eden Park,,2026-06-01,Company4,Note for row 504
+Sai Gupta,sai.gupta505@gmail.com,+919000000505,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-02,Company5,Note for row 505
+Reyansh Nair,reyansh.nair506@gmail.com,+919000000506,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-03,Company6,Note for row 506
+Ayaan Joshi,ayaan.joshi507@gmail.com,+919000000507,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-04,Company7,Note for row 507
+Krishna Desai,krishna.desai508@gmail.com,+919000000508,Kochi,Leads on Demand,SALE_DONE,2026-06-05,Company8,Note for row 508
+Ishaan Shah,ishaan.shah509@gmail.com,+919000000509,Jaipur,General Inquiry,,2026-06-06,Company9,Note for row 509
+Ananya Rao,,+919000000510,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-07,Company10,Note for row 510
+Diya Menon,diya.menon511@gmail.com,+919000000511,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-08,Company11,Note for row 511
+Myra Das,myra.das512@gmail.com,+919000000512,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-09,Company12,Note for row 512
+Sara Iyer,sara.iyer513@gmail.com,+919000000513,Chennai,Varah Swamy,SALE_DONE,2026-06-10,Company13,Note for row 513
+Aadhya Pillai,aadhya.pillai514@gmail.com,+919000000514,Hyderabad,Leads on Demand,,2026-06-11,Company14,Note for row 514
+Isha Verma,isha.verma515@gmail.com,+919000000515,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-12,Company15,Note for row 515
+Kiara Malhotra,kiara.malhotra516@gmail.com,+919000000516,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-13,Company16,Note for row 516
+Riya Chauhan,riya.chauhan517@gmail.com,+919000000517,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-14,Company17,Note for row 517
+Pari Bhat,pari.bhat518@gmail.com,+919000000518,Kochi,Sarjapur Plots,SALE_DONE,2026-06-15,Company18,Note for row 518
+Aanya Shetty,aanya.shetty519@gmail.com,+919000000519,Jaipur,Varah Swamy,,2026-06-16,Company19,Note for row 519
+Aarav Sharma,aarav.sharma520@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-17,Company20,Note for row 520
+Vivaan Patel,vivaan.patel521@gmail.com,+919000000521,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-18,Company21,Note for row 521
+Aditya Kumar,aditya.kumar522@gmail.com,+919000000522,Delhi,Eden Park,BAD_LEAD,2026-06-19,Company22,Note for row 522
+Vihaan Singh,vihaan.singh523@gmail.com,+919000000523,Chennai,Meridian Tower,SALE_DONE,2026-06-20,Company23,Note for row 523
+Arjun Reddy,arjun.reddy524@gmail.com,+919000000524,Hyderabad,Sarjapur Plots,,2026-06-21,Company24,Note for row 524
+Sai Gupta,,+919000000525,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-22,Company25,Note for row 525
+Reyansh Nair,reyansh.nair526@gmail.com,+919000000526,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-23,Company26,Note for row 526
+Ayaan Joshi,ayaan.joshi527@gmail.com,+919000000527,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-24,Company27,Note for row 527
+Krishna Desai,krishna.desai528@gmail.com,+919000000528,Kochi,Eden Park,SALE_DONE,2026-06-25,Company28,Note for row 528
+Ishaan Shah,ishaan.shah529@gmail.com,+919000000529,Jaipur,Meridian Tower,,2026-06-26,Company29,Note for row 529
+Ananya Rao,ananya.rao530@gmail.com,+919000000530,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-27,Company30,Note for row 530
+Diya Menon,diya.menon531@gmail.com,+919000000531,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-28,Company31,Note for row 531
+Myra Das,myra.das532@gmail.com,+919000000532,Delhi,Leads on Demand,BAD_LEAD,2026-06-01,Company32,Note for row 532
+Sara Iyer,sara.iyer533@gmail.com,+919000000533,Chennai,General Inquiry,SALE_DONE,2026-06-02,Company33,Note for row 533
+Aadhya Pillai,aadhya.pillai534@gmail.com,+919000000534,Hyderabad,Eden Park,,2026-06-03,Company34,Note for row 534
+Isha Verma,isha.verma535@gmail.com,+919000000535,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-04,Company35,Note for row 535
+Kiara Malhotra,kiara.malhotra536@gmail.com,+919000000536,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-05,Company36,Note for row 536
+Riya Chauhan,riya.chauhan537@gmail.com,+919000000537,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-06,Company37,Note for row 537
+Pari Bhat,pari.bhat538@gmail.com,+919000000538,Kochi,Leads on Demand,SALE_DONE,2026-06-07,Company38,Note for row 538
+Aanya Shetty,aanya.shetty539@gmail.com,+919000000539,Jaipur,General Inquiry,,2026-06-08,Company39,Note for row 539
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-09,Company40,Note for row 540
+Vivaan Patel,vivaan.patel541@gmail.com,+919000000541,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-10,Company41,Note for row 541
+Aditya Kumar,aditya.kumar542@gmail.com,+919000000542,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-11,Company42,Note for row 542
+Vihaan Singh,vihaan.singh543@gmail.com,+919000000543,Chennai,Varah Swamy,SALE_DONE,2026-06-12,Company43,Note for row 543
+Arjun Reddy,arjun.reddy544@gmail.com,+919000000544,Hyderabad,Leads on Demand,,2026-06-13,Company44,Note for row 544
+Sai Gupta,sai.gupta545@gmail.com,+919000000545,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-14,Company45,Note for row 545
+Reyansh Nair,reyansh.nair546@gmail.com,+919000000546,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-15,Company46,Note for row 546
+Ayaan Joshi,ayaan.joshi547@gmail.com,+919000000547,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-16,Company47,Note for row 547
+Krishna Desai,krishna.desai548@gmail.com,+919000000548,Kochi,Sarjapur Plots,SALE_DONE,2026-06-17,Company48,Note for row 548
+Ishaan Shah,ishaan.shah549@gmail.com,+919000000549,Jaipur,Varah Swamy,,2026-06-18,Company49,Note for row 549
+Ananya Rao,ananya.rao550@gmail.com,+919000000550,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-19,Company50,Note for row 550
+Diya Menon,diya.menon551@gmail.com,+919000000551,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-20,Company51,Note for row 551
+Myra Das,myra.das552@gmail.com,+919000000552,Delhi,Eden Park,BAD_LEAD,2026-06-21,Company52,Note for row 552
+Sara Iyer,sara.iyer553@gmail.com,+919000000553,Chennai,Meridian Tower,SALE_DONE,2026-06-22,Company53,Note for row 553
+Aadhya Pillai,aadhya.pillai554@gmail.com,+919000000554,Hyderabad,Sarjapur Plots,,2026-06-23,Company54,Note for row 554
+Isha Verma,,+919000000555,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-24,Company55,Note for row 555
+Kiara Malhotra,kiara.malhotra556@gmail.com,+919000000556,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-25,Company56,Note for row 556
+Riya Chauhan,riya.chauhan557@gmail.com,+919000000557,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-26,Company57,Note for row 557
+Pari Bhat,pari.bhat558@gmail.com,+919000000558,Kochi,Eden Park,SALE_DONE,2026-06-27,Company58,Note for row 558
+Aanya Shetty,aanya.shetty559@gmail.com,+919000000559,Jaipur,Meridian Tower,,2026-06-28,Company59,Note for row 559
+Aarav Sharma,aarav.sharma560@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-01,Company60,Note for row 560
+Vivaan Patel,vivaan.patel561@gmail.com,+919000000561,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-02,Company61,Note for row 561
+Aditya Kumar,aditya.kumar562@gmail.com,+919000000562,Delhi,Leads on Demand,BAD_LEAD,2026-06-03,Company62,Note for row 562
+Vihaan Singh,vihaan.singh563@gmail.com,+919000000563,Chennai,General Inquiry,SALE_DONE,2026-06-04,Company63,Note for row 563
+Arjun Reddy,arjun.reddy564@gmail.com,+919000000564,Hyderabad,Eden Park,,2026-06-05,Company64,Note for row 564
+Sai Gupta,sai.gupta565@gmail.com,+919000000565,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-06,Company65,Note for row 565
+Reyansh Nair,reyansh.nair566@gmail.com,+919000000566,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-07,Company66,Note for row 566
+Ayaan Joshi,ayaan.joshi567@gmail.com,+919000000567,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-08,Company67,Note for row 567
+Krishna Desai,krishna.desai568@gmail.com,+919000000568,Kochi,Leads on Demand,SALE_DONE,2026-06-09,Company68,Note for row 568
+Ishaan Shah,ishaan.shah569@gmail.com,+919000000569,Jaipur,General Inquiry,,2026-06-10,Company69,Note for row 569
+Ananya Rao,,+919000000570,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-11,Company70,Note for row 570
+Diya Menon,diya.menon571@gmail.com,+919000000571,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-12,Company71,Note for row 571
+Myra Das,myra.das572@gmail.com,+919000000572,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-13,Company72,Note for row 572
+Sara Iyer,sara.iyer573@gmail.com,+919000000573,Chennai,Varah Swamy,SALE_DONE,2026-06-14,Company73,Note for row 573
+Aadhya Pillai,aadhya.pillai574@gmail.com,+919000000574,Hyderabad,Leads on Demand,,2026-06-15,Company74,Note for row 574
+Isha Verma,isha.verma575@gmail.com,+919000000575,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-16,Company75,Note for row 575
+Kiara Malhotra,kiara.malhotra576@gmail.com,+919000000576,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-17,Company76,Note for row 576
+Riya Chauhan,riya.chauhan577@gmail.com,+919000000577,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-18,Company77,Note for row 577
+Pari Bhat,pari.bhat578@gmail.com,+919000000578,Kochi,Sarjapur Plots,SALE_DONE,2026-06-19,Company78,Note for row 578
+Aanya Shetty,aanya.shetty579@gmail.com,+919000000579,Jaipur,Varah Swamy,,2026-06-20,Company79,Note for row 579
+Aarav Sharma,aarav.sharma580@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-21,Company80,Note for row 580
+Vivaan Patel,vivaan.patel581@gmail.com,+919000000581,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-22,Company81,Note for row 581
+Aditya Kumar,aditya.kumar582@gmail.com,+919000000582,Delhi,Eden Park,BAD_LEAD,2026-06-23,Company82,Note for row 582
+Vihaan Singh,vihaan.singh583@gmail.com,+919000000583,Chennai,Meridian Tower,SALE_DONE,2026-06-24,Company83,Note for row 583
+Arjun Reddy,arjun.reddy584@gmail.com,+919000000584,Hyderabad,Sarjapur Plots,,2026-06-25,Company84,Note for row 584
+Sai Gupta,,+919000000585,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-26,Company85,Note for row 585
+Reyansh Nair,reyansh.nair586@gmail.com,+919000000586,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-27,Company86,Note for row 586
+Ayaan Joshi,ayaan.joshi587@gmail.com,+919000000587,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-28,Company87,Note for row 587
+Krishna Desai,krishna.desai588@gmail.com,+919000000588,Kochi,Eden Park,SALE_DONE,2026-06-01,Company88,Note for row 588
+Ishaan Shah,ishaan.shah589@gmail.com,+919000000589,Jaipur,Meridian Tower,,2026-06-02,Company89,Note for row 589
+Ananya Rao,ananya.rao590@gmail.com,+919000000590,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-03,Company90,Note for row 590
+Diya Menon,diya.menon591@gmail.com,+919000000591,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-04,Company91,Note for row 591
+Myra Das,myra.das592@gmail.com,+919000000592,Delhi,Leads on Demand,BAD_LEAD,2026-06-05,Company92,Note for row 592
+Sara Iyer,sara.iyer593@gmail.com,+919000000593,Chennai,General Inquiry,SALE_DONE,2026-06-06,Company93,Note for row 593
+Aadhya Pillai,aadhya.pillai594@gmail.com,+919000000594,Hyderabad,Eden Park,,2026-06-07,Company94,Note for row 594
+Isha Verma,isha.verma595@gmail.com,+919000000595,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-08,Company95,Note for row 595
+Kiara Malhotra,kiara.malhotra596@gmail.com,+919000000596,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-09,Company96,Note for row 596
+Riya Chauhan,riya.chauhan597@gmail.com,+919000000597,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-10,Company97,Note for row 597
+Pari Bhat,pari.bhat598@gmail.com,+919000000598,Kochi,Leads on Demand,SALE_DONE,2026-06-11,Company98,Note for row 598
+Aanya Shetty,aanya.shetty599@gmail.com,+919000000599,Jaipur,General Inquiry,,2026-06-12,Company99,Note for row 599
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-13,Company0,Note for row 600
+Vivaan Patel,vivaan.patel601@gmail.com,+919000000601,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-14,Company1,Note for row 601
+Aditya Kumar,aditya.kumar602@gmail.com,+919000000602,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-15,Company2,Note for row 602
+Vihaan Singh,vihaan.singh603@gmail.com,+919000000603,Chennai,Varah Swamy,SALE_DONE,2026-06-16,Company3,Note for row 603
+Arjun Reddy,arjun.reddy604@gmail.com,+919000000604,Hyderabad,Leads on Demand,,2026-06-17,Company4,Note for row 604
+Sai Gupta,sai.gupta605@gmail.com,+919000000605,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-18,Company5,Note for row 605
+Reyansh Nair,reyansh.nair606@gmail.com,+919000000606,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-19,Company6,Note for row 606
+Ayaan Joshi,ayaan.joshi607@gmail.com,+919000000607,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-20,Company7,Note for row 607
+Krishna Desai,krishna.desai608@gmail.com,+919000000608,Kochi,Sarjapur Plots,SALE_DONE,2026-06-21,Company8,Note for row 608
+Ishaan Shah,ishaan.shah609@gmail.com,+919000000609,Jaipur,Varah Swamy,,2026-06-22,Company9,Note for row 609
+Ananya Rao,ananya.rao610@gmail.com,+919000000610,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-23,Company10,Note for row 610
+Diya Menon,diya.menon611@gmail.com,+919000000611,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-24,Company11,Note for row 611
+Myra Das,myra.das612@gmail.com,+919000000612,Delhi,Eden Park,BAD_LEAD,2026-06-25,Company12,Note for row 612
+Sara Iyer,sara.iyer613@gmail.com,+919000000613,Chennai,Meridian Tower,SALE_DONE,2026-06-26,Company13,Note for row 613
+Aadhya Pillai,aadhya.pillai614@gmail.com,+919000000614,Hyderabad,Sarjapur Plots,,2026-06-27,Company14,Note for row 614
+Isha Verma,,+919000000615,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-28,Company15,Note for row 615
+Kiara Malhotra,kiara.malhotra616@gmail.com,+919000000616,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-01,Company16,Note for row 616
+Riya Chauhan,riya.chauhan617@gmail.com,+919000000617,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-02,Company17,Note for row 617
+Pari Bhat,pari.bhat618@gmail.com,+919000000618,Kochi,Eden Park,SALE_DONE,2026-06-03,Company18,Note for row 618
+Aanya Shetty,aanya.shetty619@gmail.com,+919000000619,Jaipur,Meridian Tower,,2026-06-04,Company19,Note for row 619
+Aarav Sharma,aarav.sharma620@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-05,Company20,Note for row 620
+Vivaan Patel,vivaan.patel621@gmail.com,+919000000621,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-06,Company21,Note for row 621
+Aditya Kumar,aditya.kumar622@gmail.com,+919000000622,Delhi,Leads on Demand,BAD_LEAD,2026-06-07,Company22,Note for row 622
+Vihaan Singh,vihaan.singh623@gmail.com,+919000000623,Chennai,General Inquiry,SALE_DONE,2026-06-08,Company23,Note for row 623
+Arjun Reddy,arjun.reddy624@gmail.com,+919000000624,Hyderabad,Eden Park,,2026-06-09,Company24,Note for row 624
+Sai Gupta,sai.gupta625@gmail.com,+919000000625,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-10,Company25,Note for row 625
+Reyansh Nair,reyansh.nair626@gmail.com,+919000000626,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-11,Company26,Note for row 626
+Ayaan Joshi,ayaan.joshi627@gmail.com,+919000000627,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-12,Company27,Note for row 627
+Krishna Desai,krishna.desai628@gmail.com,+919000000628,Kochi,Leads on Demand,SALE_DONE,2026-06-13,Company28,Note for row 628
+Ishaan Shah,ishaan.shah629@gmail.com,+919000000629,Jaipur,General Inquiry,,2026-06-14,Company29,Note for row 629
+Ananya Rao,,+919000000630,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-15,Company30,Note for row 630
+Diya Menon,diya.menon631@gmail.com,+919000000631,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-16,Company31,Note for row 631
+Myra Das,myra.das632@gmail.com,+919000000632,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-17,Company32,Note for row 632
+Sara Iyer,sara.iyer633@gmail.com,+919000000633,Chennai,Varah Swamy,SALE_DONE,2026-06-18,Company33,Note for row 633
+Aadhya Pillai,aadhya.pillai634@gmail.com,+919000000634,Hyderabad,Leads on Demand,,2026-06-19,Company34,Note for row 634
+Isha Verma,isha.verma635@gmail.com,+919000000635,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-20,Company35,Note for row 635
+Kiara Malhotra,kiara.malhotra636@gmail.com,+919000000636,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-21,Company36,Note for row 636
+Riya Chauhan,riya.chauhan637@gmail.com,+919000000637,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-22,Company37,Note for row 637
+Pari Bhat,pari.bhat638@gmail.com,+919000000638,Kochi,Sarjapur Plots,SALE_DONE,2026-06-23,Company38,Note for row 638
+Aanya Shetty,aanya.shetty639@gmail.com,+919000000639,Jaipur,Varah Swamy,,2026-06-24,Company39,Note for row 639
+Aarav Sharma,aarav.sharma640@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-25,Company40,Note for row 640
+Vivaan Patel,vivaan.patel641@gmail.com,+919000000641,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-26,Company41,Note for row 641
+Aditya Kumar,aditya.kumar642@gmail.com,+919000000642,Delhi,Eden Park,BAD_LEAD,2026-06-27,Company42,Note for row 642
+Vihaan Singh,vihaan.singh643@gmail.com,+919000000643,Chennai,Meridian Tower,SALE_DONE,2026-06-28,Company43,Note for row 643
+Arjun Reddy,arjun.reddy644@gmail.com,+919000000644,Hyderabad,Sarjapur Plots,,2026-06-01,Company44,Note for row 644
+Sai Gupta,,+919000000645,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-02,Company45,Note for row 645
+Reyansh Nair,reyansh.nair646@gmail.com,+919000000646,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-03,Company46,Note for row 646
+Ayaan Joshi,ayaan.joshi647@gmail.com,+919000000647,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-04,Company47,Note for row 647
+Krishna Desai,krishna.desai648@gmail.com,+919000000648,Kochi,Eden Park,SALE_DONE,2026-06-05,Company48,Note for row 648
+Ishaan Shah,ishaan.shah649@gmail.com,+919000000649,Jaipur,Meridian Tower,,2026-06-06,Company49,Note for row 649
+Ananya Rao,ananya.rao650@gmail.com,+919000000650,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-07,Company50,Note for row 650
+Diya Menon,diya.menon651@gmail.com,+919000000651,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-08,Company51,Note for row 651
+Myra Das,myra.das652@gmail.com,+919000000652,Delhi,Leads on Demand,BAD_LEAD,2026-06-09,Company52,Note for row 652
+Sara Iyer,sara.iyer653@gmail.com,+919000000653,Chennai,General Inquiry,SALE_DONE,2026-06-10,Company53,Note for row 653
+Aadhya Pillai,aadhya.pillai654@gmail.com,+919000000654,Hyderabad,Eden Park,,2026-06-11,Company54,Note for row 654
+Isha Verma,isha.verma655@gmail.com,+919000000655,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-12,Company55,Note for row 655
+Kiara Malhotra,kiara.malhotra656@gmail.com,+919000000656,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-13,Company56,Note for row 656
+Riya Chauhan,riya.chauhan657@gmail.com,+919000000657,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-14,Company57,Note for row 657
+Pari Bhat,pari.bhat658@gmail.com,+919000000658,Kochi,Leads on Demand,SALE_DONE,2026-06-15,Company58,Note for row 658
+Aanya Shetty,aanya.shetty659@gmail.com,+919000000659,Jaipur,General Inquiry,,2026-06-16,Company59,Note for row 659
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-17,Company60,Note for row 660
+Vivaan Patel,vivaan.patel661@gmail.com,+919000000661,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-18,Company61,Note for row 661
+Aditya Kumar,aditya.kumar662@gmail.com,+919000000662,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-19,Company62,Note for row 662
+Vihaan Singh,vihaan.singh663@gmail.com,+919000000663,Chennai,Varah Swamy,SALE_DONE,2026-06-20,Company63,Note for row 663
+Arjun Reddy,arjun.reddy664@gmail.com,+919000000664,Hyderabad,Leads on Demand,,2026-06-21,Company64,Note for row 664
+Sai Gupta,sai.gupta665@gmail.com,+919000000665,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-22,Company65,Note for row 665
+Reyansh Nair,reyansh.nair666@gmail.com,+919000000666,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-23,Company66,Note for row 666
+Ayaan Joshi,ayaan.joshi667@gmail.com,+919000000667,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-24,Company67,Note for row 667
+Krishna Desai,krishna.desai668@gmail.com,+919000000668,Kochi,Sarjapur Plots,SALE_DONE,2026-06-25,Company68,Note for row 668
+Ishaan Shah,ishaan.shah669@gmail.com,+919000000669,Jaipur,Varah Swamy,,2026-06-26,Company69,Note for row 669
+Ananya Rao,ananya.rao670@gmail.com,+919000000670,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-27,Company70,Note for row 670
+Diya Menon,diya.menon671@gmail.com,+919000000671,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-28,Company71,Note for row 671
+Myra Das,myra.das672@gmail.com,+919000000672,Delhi,Eden Park,BAD_LEAD,2026-06-01,Company72,Note for row 672
+Sara Iyer,sara.iyer673@gmail.com,+919000000673,Chennai,Meridian Tower,SALE_DONE,2026-06-02,Company73,Note for row 673
+Aadhya Pillai,aadhya.pillai674@gmail.com,+919000000674,Hyderabad,Sarjapur Plots,,2026-06-03,Company74,Note for row 674
+Isha Verma,,+919000000675,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-04,Company75,Note for row 675
+Kiara Malhotra,kiara.malhotra676@gmail.com,+919000000676,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-05,Company76,Note for row 676
+Riya Chauhan,riya.chauhan677@gmail.com,+919000000677,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-06,Company77,Note for row 677
+Pari Bhat,pari.bhat678@gmail.com,+919000000678,Kochi,Eden Park,SALE_DONE,2026-06-07,Company78,Note for row 678
+Aanya Shetty,aanya.shetty679@gmail.com,+919000000679,Jaipur,Meridian Tower,,2026-06-08,Company79,Note for row 679
+Aarav Sharma,aarav.sharma680@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-09,Company80,Note for row 680
+Vivaan Patel,vivaan.patel681@gmail.com,+919000000681,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-10,Company81,Note for row 681
+Aditya Kumar,aditya.kumar682@gmail.com,+919000000682,Delhi,Leads on Demand,BAD_LEAD,2026-06-11,Company82,Note for row 682
+Vihaan Singh,vihaan.singh683@gmail.com,+919000000683,Chennai,General Inquiry,SALE_DONE,2026-06-12,Company83,Note for row 683
+Arjun Reddy,arjun.reddy684@gmail.com,+919000000684,Hyderabad,Eden Park,,2026-06-13,Company84,Note for row 684
+Sai Gupta,sai.gupta685@gmail.com,+919000000685,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-14,Company85,Note for row 685
+Reyansh Nair,reyansh.nair686@gmail.com,+919000000686,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-15,Company86,Note for row 686
+Ayaan Joshi,ayaan.joshi687@gmail.com,+919000000687,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-16,Company87,Note for row 687
+Krishna Desai,krishna.desai688@gmail.com,+919000000688,Kochi,Leads on Demand,SALE_DONE,2026-06-17,Company88,Note for row 688
+Ishaan Shah,ishaan.shah689@gmail.com,+919000000689,Jaipur,General Inquiry,,2026-06-18,Company89,Note for row 689
+Ananya Rao,,+919000000690,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-19,Company90,Note for row 690
+Diya Menon,diya.menon691@gmail.com,+919000000691,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-20,Company91,Note for row 691
+Myra Das,myra.das692@gmail.com,+919000000692,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-21,Company92,Note for row 692
+Sara Iyer,sara.iyer693@gmail.com,+919000000693,Chennai,Varah Swamy,SALE_DONE,2026-06-22,Company93,Note for row 693
+Aadhya Pillai,aadhya.pillai694@gmail.com,+919000000694,Hyderabad,Leads on Demand,,2026-06-23,Company94,Note for row 694
+Isha Verma,isha.verma695@gmail.com,+919000000695,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-24,Company95,Note for row 695
+Kiara Malhotra,kiara.malhotra696@gmail.com,+919000000696,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-25,Company96,Note for row 696
+Riya Chauhan,riya.chauhan697@gmail.com,+919000000697,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-26,Company97,Note for row 697
+Pari Bhat,pari.bhat698@gmail.com,+919000000698,Kochi,Sarjapur Plots,SALE_DONE,2026-06-27,Company98,Note for row 698
+Aanya Shetty,aanya.shetty699@gmail.com,+919000000699,Jaipur,Varah Swamy,,2026-06-28,Company99,Note for row 699
+Aarav Sharma,aarav.sharma700@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-01,Company0,Note for row 700
+Vivaan Patel,vivaan.patel701@gmail.com,+919000000701,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-02,Company1,Note for row 701
+Aditya Kumar,aditya.kumar702@gmail.com,+919000000702,Delhi,Eden Park,BAD_LEAD,2026-06-03,Company2,Note for row 702
+Vihaan Singh,vihaan.singh703@gmail.com,+919000000703,Chennai,Meridian Tower,SALE_DONE,2026-06-04,Company3,Note for row 703
+Arjun Reddy,arjun.reddy704@gmail.com,+919000000704,Hyderabad,Sarjapur Plots,,2026-06-05,Company4,Note for row 704
+Sai Gupta,,+919000000705,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-06,Company5,Note for row 705
+Reyansh Nair,reyansh.nair706@gmail.com,+919000000706,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-07,Company6,Note for row 706
+Ayaan Joshi,ayaan.joshi707@gmail.com,+919000000707,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-08,Company7,Note for row 707
+Krishna Desai,krishna.desai708@gmail.com,+919000000708,Kochi,Eden Park,SALE_DONE,2026-06-09,Company8,Note for row 708
+Ishaan Shah,ishaan.shah709@gmail.com,+919000000709,Jaipur,Meridian Tower,,2026-06-10,Company9,Note for row 709
+Ananya Rao,ananya.rao710@gmail.com,+919000000710,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-11,Company10,Note for row 710
+Diya Menon,diya.menon711@gmail.com,+919000000711,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-12,Company11,Note for row 711
+Myra Das,myra.das712@gmail.com,+919000000712,Delhi,Leads on Demand,BAD_LEAD,2026-06-13,Company12,Note for row 712
+Sara Iyer,sara.iyer713@gmail.com,+919000000713,Chennai,General Inquiry,SALE_DONE,2026-06-14,Company13,Note for row 713
+Aadhya Pillai,aadhya.pillai714@gmail.com,+919000000714,Hyderabad,Eden Park,,2026-06-15,Company14,Note for row 714
+Isha Verma,isha.verma715@gmail.com,+919000000715,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-16,Company15,Note for row 715
+Kiara Malhotra,kiara.malhotra716@gmail.com,+919000000716,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-17,Company16,Note for row 716
+Riya Chauhan,riya.chauhan717@gmail.com,+919000000717,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-18,Company17,Note for row 717
+Pari Bhat,pari.bhat718@gmail.com,+919000000718,Kochi,Leads on Demand,SALE_DONE,2026-06-19,Company18,Note for row 718
+Aanya Shetty,aanya.shetty719@gmail.com,+919000000719,Jaipur,General Inquiry,,2026-06-20,Company19,Note for row 719
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-21,Company20,Note for row 720
+Vivaan Patel,vivaan.patel721@gmail.com,+919000000721,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-22,Company21,Note for row 721
+Aditya Kumar,aditya.kumar722@gmail.com,+919000000722,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-23,Company22,Note for row 722
+Vihaan Singh,vihaan.singh723@gmail.com,+919000000723,Chennai,Varah Swamy,SALE_DONE,2026-06-24,Company23,Note for row 723
+Arjun Reddy,arjun.reddy724@gmail.com,+919000000724,Hyderabad,Leads on Demand,,2026-06-25,Company24,Note for row 724
+Sai Gupta,sai.gupta725@gmail.com,+919000000725,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-26,Company25,Note for row 725
+Reyansh Nair,reyansh.nair726@gmail.com,+919000000726,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-27,Company26,Note for row 726
+Ayaan Joshi,ayaan.joshi727@gmail.com,+919000000727,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-28,Company27,Note for row 727
+Krishna Desai,krishna.desai728@gmail.com,+919000000728,Kochi,Sarjapur Plots,SALE_DONE,2026-06-01,Company28,Note for row 728
+Ishaan Shah,ishaan.shah729@gmail.com,+919000000729,Jaipur,Varah Swamy,,2026-06-02,Company29,Note for row 729
+Ananya Rao,ananya.rao730@gmail.com,+919000000730,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-03,Company30,Note for row 730
+Diya Menon,diya.menon731@gmail.com,+919000000731,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-04,Company31,Note for row 731
+Myra Das,myra.das732@gmail.com,+919000000732,Delhi,Eden Park,BAD_LEAD,2026-06-05,Company32,Note for row 732
+Sara Iyer,sara.iyer733@gmail.com,+919000000733,Chennai,Meridian Tower,SALE_DONE,2026-06-06,Company33,Note for row 733
+Aadhya Pillai,aadhya.pillai734@gmail.com,+919000000734,Hyderabad,Sarjapur Plots,,2026-06-07,Company34,Note for row 734
+Isha Verma,,+919000000735,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-08,Company35,Note for row 735
+Kiara Malhotra,kiara.malhotra736@gmail.com,+919000000736,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-09,Company36,Note for row 736
+Riya Chauhan,riya.chauhan737@gmail.com,+919000000737,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-10,Company37,Note for row 737
+Pari Bhat,pari.bhat738@gmail.com,+919000000738,Kochi,Eden Park,SALE_DONE,2026-06-11,Company38,Note for row 738
+Aanya Shetty,aanya.shetty739@gmail.com,+919000000739,Jaipur,Meridian Tower,,2026-06-12,Company39,Note for row 739
+Aarav Sharma,aarav.sharma740@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-13,Company40,Note for row 740
+Vivaan Patel,vivaan.patel741@gmail.com,+919000000741,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-14,Company41,Note for row 741
+Aditya Kumar,aditya.kumar742@gmail.com,+919000000742,Delhi,Leads on Demand,BAD_LEAD,2026-06-15,Company42,Note for row 742
+Vihaan Singh,vihaan.singh743@gmail.com,+919000000743,Chennai,General Inquiry,SALE_DONE,2026-06-16,Company43,Note for row 743
+Arjun Reddy,arjun.reddy744@gmail.com,+919000000744,Hyderabad,Eden Park,,2026-06-17,Company44,Note for row 744
+Sai Gupta,sai.gupta745@gmail.com,+919000000745,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-18,Company45,Note for row 745
+Reyansh Nair,reyansh.nair746@gmail.com,+919000000746,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-19,Company46,Note for row 746
+Ayaan Joshi,ayaan.joshi747@gmail.com,+919000000747,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-20,Company47,Note for row 747
+Krishna Desai,krishna.desai748@gmail.com,+919000000748,Kochi,Leads on Demand,SALE_DONE,2026-06-21,Company48,Note for row 748
+Ishaan Shah,ishaan.shah749@gmail.com,+919000000749,Jaipur,General Inquiry,,2026-06-22,Company49,Note for row 749
+Ananya Rao,,+919000000750,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-23,Company50,Note for row 750
+Diya Menon,diya.menon751@gmail.com,+919000000751,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-24,Company51,Note for row 751
+Myra Das,myra.das752@gmail.com,+919000000752,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-25,Company52,Note for row 752
+Sara Iyer,sara.iyer753@gmail.com,+919000000753,Chennai,Varah Swamy,SALE_DONE,2026-06-26,Company53,Note for row 753
+Aadhya Pillai,aadhya.pillai754@gmail.com,+919000000754,Hyderabad,Leads on Demand,,2026-06-27,Company54,Note for row 754
+Isha Verma,isha.verma755@gmail.com,+919000000755,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-28,Company55,Note for row 755
+Kiara Malhotra,kiara.malhotra756@gmail.com,+919000000756,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-01,Company56,Note for row 756
+Riya Chauhan,riya.chauhan757@gmail.com,+919000000757,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-02,Company57,Note for row 757
+Pari Bhat,pari.bhat758@gmail.com,+919000000758,Kochi,Sarjapur Plots,SALE_DONE,2026-06-03,Company58,Note for row 758
+Aanya Shetty,aanya.shetty759@gmail.com,+919000000759,Jaipur,Varah Swamy,,2026-06-04,Company59,Note for row 759
+Aarav Sharma,aarav.sharma760@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-05,Company60,Note for row 760
+Vivaan Patel,vivaan.patel761@gmail.com,+919000000761,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-06,Company61,Note for row 761
+Aditya Kumar,aditya.kumar762@gmail.com,+919000000762,Delhi,Eden Park,BAD_LEAD,2026-06-07,Company62,Note for row 762
+Vihaan Singh,vihaan.singh763@gmail.com,+919000000763,Chennai,Meridian Tower,SALE_DONE,2026-06-08,Company63,Note for row 763
+Arjun Reddy,arjun.reddy764@gmail.com,+919000000764,Hyderabad,Sarjapur Plots,,2026-06-09,Company64,Note for row 764
+Sai Gupta,,+919000000765,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-10,Company65,Note for row 765
+Reyansh Nair,reyansh.nair766@gmail.com,+919000000766,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-11,Company66,Note for row 766
+Ayaan Joshi,ayaan.joshi767@gmail.com,+919000000767,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-12,Company67,Note for row 767
+Krishna Desai,krishna.desai768@gmail.com,+919000000768,Kochi,Eden Park,SALE_DONE,2026-06-13,Company68,Note for row 768
+Ishaan Shah,ishaan.shah769@gmail.com,+919000000769,Jaipur,Meridian Tower,,2026-06-14,Company69,Note for row 769
+Ananya Rao,ananya.rao770@gmail.com,+919000000770,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-15,Company70,Note for row 770
+Diya Menon,diya.menon771@gmail.com,+919000000771,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-16,Company71,Note for row 771
+Myra Das,myra.das772@gmail.com,+919000000772,Delhi,Leads on Demand,BAD_LEAD,2026-06-17,Company72,Note for row 772
+Sara Iyer,sara.iyer773@gmail.com,+919000000773,Chennai,General Inquiry,SALE_DONE,2026-06-18,Company73,Note for row 773
+Aadhya Pillai,aadhya.pillai774@gmail.com,+919000000774,Hyderabad,Eden Park,,2026-06-19,Company74,Note for row 774
+Isha Verma,isha.verma775@gmail.com,+919000000775,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-20,Company75,Note for row 775
+Kiara Malhotra,kiara.malhotra776@gmail.com,+919000000776,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-21,Company76,Note for row 776
+Riya Chauhan,riya.chauhan777@gmail.com,+919000000777,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-22,Company77,Note for row 777
+Pari Bhat,pari.bhat778@gmail.com,+919000000778,Kochi,Leads on Demand,SALE_DONE,2026-06-23,Company78,Note for row 778
+Aanya Shetty,aanya.shetty779@gmail.com,+919000000779,Jaipur,General Inquiry,,2026-06-24,Company79,Note for row 779
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-25,Company80,Note for row 780
+Vivaan Patel,vivaan.patel781@gmail.com,+919000000781,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-26,Company81,Note for row 781
+Aditya Kumar,aditya.kumar782@gmail.com,+919000000782,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-27,Company82,Note for row 782
+Vihaan Singh,vihaan.singh783@gmail.com,+919000000783,Chennai,Varah Swamy,SALE_DONE,2026-06-28,Company83,Note for row 783
+Arjun Reddy,arjun.reddy784@gmail.com,+919000000784,Hyderabad,Leads on Demand,,2026-06-01,Company84,Note for row 784
+Sai Gupta,sai.gupta785@gmail.com,+919000000785,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-02,Company85,Note for row 785
+Reyansh Nair,reyansh.nair786@gmail.com,+919000000786,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-03,Company86,Note for row 786
+Ayaan Joshi,ayaan.joshi787@gmail.com,+919000000787,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-04,Company87,Note for row 787
+Krishna Desai,krishna.desai788@gmail.com,+919000000788,Kochi,Sarjapur Plots,SALE_DONE,2026-06-05,Company88,Note for row 788
+Ishaan Shah,ishaan.shah789@gmail.com,+919000000789,Jaipur,Varah Swamy,,2026-06-06,Company89,Note for row 789
+Ananya Rao,ananya.rao790@gmail.com,+919000000790,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-07,Company90,Note for row 790
+Diya Menon,diya.menon791@gmail.com,+919000000791,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-08,Company91,Note for row 791
+Myra Das,myra.das792@gmail.com,+919000000792,Delhi,Eden Park,BAD_LEAD,2026-06-09,Company92,Note for row 792
+Sara Iyer,sara.iyer793@gmail.com,+919000000793,Chennai,Meridian Tower,SALE_DONE,2026-06-10,Company93,Note for row 793
+Aadhya Pillai,aadhya.pillai794@gmail.com,+919000000794,Hyderabad,Sarjapur Plots,,2026-06-11,Company94,Note for row 794
+Isha Verma,,+919000000795,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-12,Company95,Note for row 795
+Kiara Malhotra,kiara.malhotra796@gmail.com,+919000000796,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-13,Company96,Note for row 796
+Riya Chauhan,riya.chauhan797@gmail.com,+919000000797,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-14,Company97,Note for row 797
+Pari Bhat,pari.bhat798@gmail.com,+919000000798,Kochi,Eden Park,SALE_DONE,2026-06-15,Company98,Note for row 798
+Aanya Shetty,aanya.shetty799@gmail.com,+919000000799,Jaipur,Meridian Tower,,2026-06-16,Company99,Note for row 799
+Aarav Sharma,aarav.sharma800@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-17,Company0,Note for row 800
+Vivaan Patel,vivaan.patel801@gmail.com,+919000000801,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-18,Company1,Note for row 801
+Aditya Kumar,aditya.kumar802@gmail.com,+919000000802,Delhi,Leads on Demand,BAD_LEAD,2026-06-19,Company2,Note for row 802
+Vihaan Singh,vihaan.singh803@gmail.com,+919000000803,Chennai,General Inquiry,SALE_DONE,2026-06-20,Company3,Note for row 803
+Arjun Reddy,arjun.reddy804@gmail.com,+919000000804,Hyderabad,Eden Park,,2026-06-21,Company4,Note for row 804
+Sai Gupta,sai.gupta805@gmail.com,+919000000805,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-22,Company5,Note for row 805
+Reyansh Nair,reyansh.nair806@gmail.com,+919000000806,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-23,Company6,Note for row 806
+Ayaan Joshi,ayaan.joshi807@gmail.com,+919000000807,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-24,Company7,Note for row 807
+Krishna Desai,krishna.desai808@gmail.com,+919000000808,Kochi,Leads on Demand,SALE_DONE,2026-06-25,Company8,Note for row 808
+Ishaan Shah,ishaan.shah809@gmail.com,+919000000809,Jaipur,General Inquiry,,2026-06-26,Company9,Note for row 809
+Ananya Rao,,+919000000810,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-27,Company10,Note for row 810
+Diya Menon,diya.menon811@gmail.com,+919000000811,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-28,Company11,Note for row 811
+Myra Das,myra.das812@gmail.com,+919000000812,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-01,Company12,Note for row 812
+Sara Iyer,sara.iyer813@gmail.com,+919000000813,Chennai,Varah Swamy,SALE_DONE,2026-06-02,Company13,Note for row 813
+Aadhya Pillai,aadhya.pillai814@gmail.com,+919000000814,Hyderabad,Leads on Demand,,2026-06-03,Company14,Note for row 814
+Isha Verma,isha.verma815@gmail.com,+919000000815,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-04,Company15,Note for row 815
+Kiara Malhotra,kiara.malhotra816@gmail.com,+919000000816,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-05,Company16,Note for row 816
+Riya Chauhan,riya.chauhan817@gmail.com,+919000000817,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-06,Company17,Note for row 817
+Pari Bhat,pari.bhat818@gmail.com,+919000000818,Kochi,Sarjapur Plots,SALE_DONE,2026-06-07,Company18,Note for row 818
+Aanya Shetty,aanya.shetty819@gmail.com,+919000000819,Jaipur,Varah Swamy,,2026-06-08,Company19,Note for row 819
+Aarav Sharma,aarav.sharma820@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-09,Company20,Note for row 820
+Vivaan Patel,vivaan.patel821@gmail.com,+919000000821,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-10,Company21,Note for row 821
+Aditya Kumar,aditya.kumar822@gmail.com,+919000000822,Delhi,Eden Park,BAD_LEAD,2026-06-11,Company22,Note for row 822
+Vihaan Singh,vihaan.singh823@gmail.com,+919000000823,Chennai,Meridian Tower,SALE_DONE,2026-06-12,Company23,Note for row 823
+Arjun Reddy,arjun.reddy824@gmail.com,+919000000824,Hyderabad,Sarjapur Plots,,2026-06-13,Company24,Note for row 824
+Sai Gupta,,+919000000825,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-14,Company25,Note for row 825
+Reyansh Nair,reyansh.nair826@gmail.com,+919000000826,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-15,Company26,Note for row 826
+Ayaan Joshi,ayaan.joshi827@gmail.com,+919000000827,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-16,Company27,Note for row 827
+Krishna Desai,krishna.desai828@gmail.com,+919000000828,Kochi,Eden Park,SALE_DONE,2026-06-17,Company28,Note for row 828
+Ishaan Shah,ishaan.shah829@gmail.com,+919000000829,Jaipur,Meridian Tower,,2026-06-18,Company29,Note for row 829
+Ananya Rao,ananya.rao830@gmail.com,+919000000830,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-19,Company30,Note for row 830
+Diya Menon,diya.menon831@gmail.com,+919000000831,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-20,Company31,Note for row 831
+Myra Das,myra.das832@gmail.com,+919000000832,Delhi,Leads on Demand,BAD_LEAD,2026-06-21,Company32,Note for row 832
+Sara Iyer,sara.iyer833@gmail.com,+919000000833,Chennai,General Inquiry,SALE_DONE,2026-06-22,Company33,Note for row 833
+Aadhya Pillai,aadhya.pillai834@gmail.com,+919000000834,Hyderabad,Eden Park,,2026-06-23,Company34,Note for row 834
+Isha Verma,isha.verma835@gmail.com,+919000000835,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-24,Company35,Note for row 835
+Kiara Malhotra,kiara.malhotra836@gmail.com,+919000000836,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-25,Company36,Note for row 836
+Riya Chauhan,riya.chauhan837@gmail.com,+919000000837,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-26,Company37,Note for row 837
+Pari Bhat,pari.bhat838@gmail.com,+919000000838,Kochi,Leads on Demand,SALE_DONE,2026-06-27,Company38,Note for row 838
+Aanya Shetty,aanya.shetty839@gmail.com,+919000000839,Jaipur,General Inquiry,,2026-06-28,Company39,Note for row 839
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-01,Company40,Note for row 840
+Vivaan Patel,vivaan.patel841@gmail.com,+919000000841,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-02,Company41,Note for row 841
+Aditya Kumar,aditya.kumar842@gmail.com,+919000000842,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-03,Company42,Note for row 842
+Vihaan Singh,vihaan.singh843@gmail.com,+919000000843,Chennai,Varah Swamy,SALE_DONE,2026-06-04,Company43,Note for row 843
+Arjun Reddy,arjun.reddy844@gmail.com,+919000000844,Hyderabad,Leads on Demand,,2026-06-05,Company44,Note for row 844
+Sai Gupta,sai.gupta845@gmail.com,+919000000845,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-06,Company45,Note for row 845
+Reyansh Nair,reyansh.nair846@gmail.com,+919000000846,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-07,Company46,Note for row 846
+Ayaan Joshi,ayaan.joshi847@gmail.com,+919000000847,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-08,Company47,Note for row 847
+Krishna Desai,krishna.desai848@gmail.com,+919000000848,Kochi,Sarjapur Plots,SALE_DONE,2026-06-09,Company48,Note for row 848
+Ishaan Shah,ishaan.shah849@gmail.com,+919000000849,Jaipur,Varah Swamy,,2026-06-10,Company49,Note for row 849
+Ananya Rao,ananya.rao850@gmail.com,+919000000850,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-11,Company50,Note for row 850
+Diya Menon,diya.menon851@gmail.com,+919000000851,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-12,Company51,Note for row 851
+Myra Das,myra.das852@gmail.com,+919000000852,Delhi,Eden Park,BAD_LEAD,2026-06-13,Company52,Note for row 852
+Sara Iyer,sara.iyer853@gmail.com,+919000000853,Chennai,Meridian Tower,SALE_DONE,2026-06-14,Company53,Note for row 853
+Aadhya Pillai,aadhya.pillai854@gmail.com,+919000000854,Hyderabad,Sarjapur Plots,,2026-06-15,Company54,Note for row 854
+Isha Verma,,+919000000855,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-16,Company55,Note for row 855
+Kiara Malhotra,kiara.malhotra856@gmail.com,+919000000856,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-17,Company56,Note for row 856
+Riya Chauhan,riya.chauhan857@gmail.com,+919000000857,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-18,Company57,Note for row 857
+Pari Bhat,pari.bhat858@gmail.com,+919000000858,Kochi,Eden Park,SALE_DONE,2026-06-19,Company58,Note for row 858
+Aanya Shetty,aanya.shetty859@gmail.com,+919000000859,Jaipur,Meridian Tower,,2026-06-20,Company59,Note for row 859
+Aarav Sharma,aarav.sharma860@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-21,Company60,Note for row 860
+Vivaan Patel,vivaan.patel861@gmail.com,+919000000861,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-22,Company61,Note for row 861
+Aditya Kumar,aditya.kumar862@gmail.com,+919000000862,Delhi,Leads on Demand,BAD_LEAD,2026-06-23,Company62,Note for row 862
+Vihaan Singh,vihaan.singh863@gmail.com,+919000000863,Chennai,General Inquiry,SALE_DONE,2026-06-24,Company63,Note for row 863
+Arjun Reddy,arjun.reddy864@gmail.com,+919000000864,Hyderabad,Eden Park,,2026-06-25,Company64,Note for row 864
+Sai Gupta,sai.gupta865@gmail.com,+919000000865,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-26,Company65,Note for row 865
+Reyansh Nair,reyansh.nair866@gmail.com,+919000000866,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-27,Company66,Note for row 866
+Ayaan Joshi,ayaan.joshi867@gmail.com,+919000000867,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-28,Company67,Note for row 867
+Krishna Desai,krishna.desai868@gmail.com,+919000000868,Kochi,Leads on Demand,SALE_DONE,2026-06-01,Company68,Note for row 868
+Ishaan Shah,ishaan.shah869@gmail.com,+919000000869,Jaipur,General Inquiry,,2026-06-02,Company69,Note for row 869
+Ananya Rao,,+919000000870,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-03,Company70,Note for row 870
+Diya Menon,diya.menon871@gmail.com,+919000000871,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-04,Company71,Note for row 871
+Myra Das,myra.das872@gmail.com,+919000000872,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-05,Company72,Note for row 872
+Sara Iyer,sara.iyer873@gmail.com,+919000000873,Chennai,Varah Swamy,SALE_DONE,2026-06-06,Company73,Note for row 873
+Aadhya Pillai,aadhya.pillai874@gmail.com,+919000000874,Hyderabad,Leads on Demand,,2026-06-07,Company74,Note for row 874
+Isha Verma,isha.verma875@gmail.com,+919000000875,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-08,Company75,Note for row 875
+Kiara Malhotra,kiara.malhotra876@gmail.com,+919000000876,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-09,Company76,Note for row 876
+Riya Chauhan,riya.chauhan877@gmail.com,+919000000877,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-10,Company77,Note for row 877
+Pari Bhat,pari.bhat878@gmail.com,+919000000878,Kochi,Sarjapur Plots,SALE_DONE,2026-06-11,Company78,Note for row 878
+Aanya Shetty,aanya.shetty879@gmail.com,+919000000879,Jaipur,Varah Swamy,,2026-06-12,Company79,Note for row 879
+Aarav Sharma,aarav.sharma880@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-13,Company80,Note for row 880
+Vivaan Patel,vivaan.patel881@gmail.com,+919000000881,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-14,Company81,Note for row 881
+Aditya Kumar,aditya.kumar882@gmail.com,+919000000882,Delhi,Eden Park,BAD_LEAD,2026-06-15,Company82,Note for row 882
+Vihaan Singh,vihaan.singh883@gmail.com,+919000000883,Chennai,Meridian Tower,SALE_DONE,2026-06-16,Company83,Note for row 883
+Arjun Reddy,arjun.reddy884@gmail.com,+919000000884,Hyderabad,Sarjapur Plots,,2026-06-17,Company84,Note for row 884
+Sai Gupta,,+919000000885,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-18,Company85,Note for row 885
+Reyansh Nair,reyansh.nair886@gmail.com,+919000000886,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-19,Company86,Note for row 886
+Ayaan Joshi,ayaan.joshi887@gmail.com,+919000000887,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-20,Company87,Note for row 887
+Krishna Desai,krishna.desai888@gmail.com,+919000000888,Kochi,Eden Park,SALE_DONE,2026-06-21,Company88,Note for row 888
+Ishaan Shah,ishaan.shah889@gmail.com,+919000000889,Jaipur,Meridian Tower,,2026-06-22,Company89,Note for row 889
+Ananya Rao,ananya.rao890@gmail.com,+919000000890,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-23,Company90,Note for row 890
+Diya Menon,diya.menon891@gmail.com,+919000000891,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-24,Company91,Note for row 891
+Myra Das,myra.das892@gmail.com,+919000000892,Delhi,Leads on Demand,BAD_LEAD,2026-06-25,Company92,Note for row 892
+Sara Iyer,sara.iyer893@gmail.com,+919000000893,Chennai,General Inquiry,SALE_DONE,2026-06-26,Company93,Note for row 893
+Aadhya Pillai,aadhya.pillai894@gmail.com,+919000000894,Hyderabad,Eden Park,,2026-06-27,Company94,Note for row 894
+Isha Verma,isha.verma895@gmail.com,+919000000895,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-28,Company95,Note for row 895
+Kiara Malhotra,kiara.malhotra896@gmail.com,+919000000896,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-01,Company96,Note for row 896
+Riya Chauhan,riya.chauhan897@gmail.com,+919000000897,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-02,Company97,Note for row 897
+Pari Bhat,pari.bhat898@gmail.com,+919000000898,Kochi,Leads on Demand,SALE_DONE,2026-06-03,Company98,Note for row 898
+Aanya Shetty,aanya.shetty899@gmail.com,+919000000899,Jaipur,General Inquiry,,2026-06-04,Company99,Note for row 899
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-05,Company0,Note for row 900
+Vivaan Patel,vivaan.patel901@gmail.com,+919000000901,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-06,Company1,Note for row 901
+Aditya Kumar,aditya.kumar902@gmail.com,+919000000902,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-07,Company2,Note for row 902
+Vihaan Singh,vihaan.singh903@gmail.com,+919000000903,Chennai,Varah Swamy,SALE_DONE,2026-06-08,Company3,Note for row 903
+Arjun Reddy,arjun.reddy904@gmail.com,+919000000904,Hyderabad,Leads on Demand,,2026-06-09,Company4,Note for row 904
+Sai Gupta,sai.gupta905@gmail.com,+919000000905,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-10,Company5,Note for row 905
+Reyansh Nair,reyansh.nair906@gmail.com,+919000000906,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-11,Company6,Note for row 906
+Ayaan Joshi,ayaan.joshi907@gmail.com,+919000000907,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-12,Company7,Note for row 907
+Krishna Desai,krishna.desai908@gmail.com,+919000000908,Kochi,Sarjapur Plots,SALE_DONE,2026-06-13,Company8,Note for row 908
+Ishaan Shah,ishaan.shah909@gmail.com,+919000000909,Jaipur,Varah Swamy,,2026-06-14,Company9,Note for row 909
+Ananya Rao,ananya.rao910@gmail.com,+919000000910,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-15,Company10,Note for row 910
+Diya Menon,diya.menon911@gmail.com,+919000000911,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-16,Company11,Note for row 911
+Myra Das,myra.das912@gmail.com,+919000000912,Delhi,Eden Park,BAD_LEAD,2026-06-17,Company12,Note for row 912
+Sara Iyer,sara.iyer913@gmail.com,+919000000913,Chennai,Meridian Tower,SALE_DONE,2026-06-18,Company13,Note for row 913
+Aadhya Pillai,aadhya.pillai914@gmail.com,+919000000914,Hyderabad,Sarjapur Plots,,2026-06-19,Company14,Note for row 914
+Isha Verma,,+919000000915,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-20,Company15,Note for row 915
+Kiara Malhotra,kiara.malhotra916@gmail.com,+919000000916,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-21,Company16,Note for row 916
+Riya Chauhan,riya.chauhan917@gmail.com,+919000000917,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-22,Company17,Note for row 917
+Pari Bhat,pari.bhat918@gmail.com,+919000000918,Kochi,Eden Park,SALE_DONE,2026-06-23,Company18,Note for row 918
+Aanya Shetty,aanya.shetty919@gmail.com,+919000000919,Jaipur,Meridian Tower,,2026-06-24,Company19,Note for row 919
+Aarav Sharma,aarav.sharma920@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-25,Company20,Note for row 920
+Vivaan Patel,vivaan.patel921@gmail.com,+919000000921,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-26,Company21,Note for row 921
+Aditya Kumar,aditya.kumar922@gmail.com,+919000000922,Delhi,Leads on Demand,BAD_LEAD,2026-06-27,Company22,Note for row 922
+Vihaan Singh,vihaan.singh923@gmail.com,+919000000923,Chennai,General Inquiry,SALE_DONE,2026-06-28,Company23,Note for row 923
+Arjun Reddy,arjun.reddy924@gmail.com,+919000000924,Hyderabad,Eden Park,,2026-06-01,Company24,Note for row 924
+Sai Gupta,sai.gupta925@gmail.com,+919000000925,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-02,Company25,Note for row 925
+Reyansh Nair,reyansh.nair926@gmail.com,+919000000926,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-03,Company26,Note for row 926
+Ayaan Joshi,ayaan.joshi927@gmail.com,+919000000927,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-04,Company27,Note for row 927
+Krishna Desai,krishna.desai928@gmail.com,+919000000928,Kochi,Leads on Demand,SALE_DONE,2026-06-05,Company28,Note for row 928
+Ishaan Shah,ishaan.shah929@gmail.com,+919000000929,Jaipur,General Inquiry,,2026-06-06,Company29,Note for row 929
+Ananya Rao,,+919000000930,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-07,Company30,Note for row 930
+Diya Menon,diya.menon931@gmail.com,+919000000931,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-08,Company31,Note for row 931
+Myra Das,myra.das932@gmail.com,+919000000932,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-09,Company32,Note for row 932
+Sara Iyer,sara.iyer933@gmail.com,+919000000933,Chennai,Varah Swamy,SALE_DONE,2026-06-10,Company33,Note for row 933
+Aadhya Pillai,aadhya.pillai934@gmail.com,+919000000934,Hyderabad,Leads on Demand,,2026-06-11,Company34,Note for row 934
+Isha Verma,isha.verma935@gmail.com,+919000000935,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-12,Company35,Note for row 935
+Kiara Malhotra,kiara.malhotra936@gmail.com,+919000000936,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-13,Company36,Note for row 936
+Riya Chauhan,riya.chauhan937@gmail.com,+919000000937,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-14,Company37,Note for row 937
+Pari Bhat,pari.bhat938@gmail.com,+919000000938,Kochi,Sarjapur Plots,SALE_DONE,2026-06-15,Company38,Note for row 938
+Aanya Shetty,aanya.shetty939@gmail.com,+919000000939,Jaipur,Varah Swamy,,2026-06-16,Company39,Note for row 939
+Aarav Sharma,aarav.sharma940@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-17,Company40,Note for row 940
+Vivaan Patel,vivaan.patel941@gmail.com,+919000000941,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-18,Company41,Note for row 941
+Aditya Kumar,aditya.kumar942@gmail.com,+919000000942,Delhi,Eden Park,BAD_LEAD,2026-06-19,Company42,Note for row 942
+Vihaan Singh,vihaan.singh943@gmail.com,+919000000943,Chennai,Meridian Tower,SALE_DONE,2026-06-20,Company43,Note for row 943
+Arjun Reddy,arjun.reddy944@gmail.com,+919000000944,Hyderabad,Sarjapur Plots,,2026-06-21,Company44,Note for row 944
+Sai Gupta,,+919000000945,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-22,Company45,Note for row 945
+Reyansh Nair,reyansh.nair946@gmail.com,+919000000946,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-23,Company46,Note for row 946
+Ayaan Joshi,ayaan.joshi947@gmail.com,+919000000947,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-24,Company47,Note for row 947
+Krishna Desai,krishna.desai948@gmail.com,+919000000948,Kochi,Eden Park,SALE_DONE,2026-06-25,Company48,Note for row 948
+Ishaan Shah,ishaan.shah949@gmail.com,+919000000949,Jaipur,Meridian Tower,,2026-06-26,Company49,Note for row 949
+Ananya Rao,ananya.rao950@gmail.com,+919000000950,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-27,Company50,Note for row 950
+Diya Menon,diya.menon951@gmail.com,+919000000951,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-28,Company51,Note for row 951
+Myra Das,myra.das952@gmail.com,+919000000952,Delhi,Leads on Demand,BAD_LEAD,2026-06-01,Company52,Note for row 952
+Sara Iyer,sara.iyer953@gmail.com,+919000000953,Chennai,General Inquiry,SALE_DONE,2026-06-02,Company53,Note for row 953
+Aadhya Pillai,aadhya.pillai954@gmail.com,+919000000954,Hyderabad,Eden Park,,2026-06-03,Company54,Note for row 954
+Isha Verma,isha.verma955@gmail.com,+919000000955,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-04,Company55,Note for row 955
+Kiara Malhotra,kiara.malhotra956@gmail.com,+919000000956,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-05,Company56,Note for row 956
+Riya Chauhan,riya.chauhan957@gmail.com,+919000000957,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-06,Company57,Note for row 957
+Pari Bhat,pari.bhat958@gmail.com,+919000000958,Kochi,Leads on Demand,SALE_DONE,2026-06-07,Company58,Note for row 958
+Aanya Shetty,aanya.shetty959@gmail.com,+919000000959,Jaipur,General Inquiry,,2026-06-08,Company59,Note for row 959
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-09,Company60,Note for row 960
+Vivaan Patel,vivaan.patel961@gmail.com,+919000000961,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-10,Company61,Note for row 961
+Aditya Kumar,aditya.kumar962@gmail.com,+919000000962,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-11,Company62,Note for row 962
+Vihaan Singh,vihaan.singh963@gmail.com,+919000000963,Chennai,Varah Swamy,SALE_DONE,2026-06-12,Company63,Note for row 963
+Arjun Reddy,arjun.reddy964@gmail.com,+919000000964,Hyderabad,Leads on Demand,,2026-06-13,Company64,Note for row 964
+Sai Gupta,sai.gupta965@gmail.com,+919000000965,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-14,Company65,Note for row 965
+Reyansh Nair,reyansh.nair966@gmail.com,+919000000966,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-15,Company66,Note for row 966
+Ayaan Joshi,ayaan.joshi967@gmail.com,+919000000967,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-16,Company67,Note for row 967
+Krishna Desai,krishna.desai968@gmail.com,+919000000968,Kochi,Sarjapur Plots,SALE_DONE,2026-06-17,Company68,Note for row 968
+Ishaan Shah,ishaan.shah969@gmail.com,+919000000969,Jaipur,Varah Swamy,,2026-06-18,Company69,Note for row 969
+Ananya Rao,ananya.rao970@gmail.com,+919000000970,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-19,Company70,Note for row 970
+Diya Menon,diya.menon971@gmail.com,+919000000971,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-20,Company71,Note for row 971
+Myra Das,myra.das972@gmail.com,+919000000972,Delhi,Eden Park,BAD_LEAD,2026-06-21,Company72,Note for row 972
+Sara Iyer,sara.iyer973@gmail.com,+919000000973,Chennai,Meridian Tower,SALE_DONE,2026-06-22,Company73,Note for row 973
+Aadhya Pillai,aadhya.pillai974@gmail.com,+919000000974,Hyderabad,Sarjapur Plots,,2026-06-23,Company74,Note for row 974
+Isha Verma,,+919000000975,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-24,Company75,Note for row 975
+Kiara Malhotra,kiara.malhotra976@gmail.com,+919000000976,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-25,Company76,Note for row 976
+Riya Chauhan,riya.chauhan977@gmail.com,+919000000977,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-26,Company77,Note for row 977
+Pari Bhat,pari.bhat978@gmail.com,+919000000978,Kochi,Eden Park,SALE_DONE,2026-06-27,Company78,Note for row 978
+Aanya Shetty,aanya.shetty979@gmail.com,+919000000979,Jaipur,Meridian Tower,,2026-06-28,Company79,Note for row 979
+Aarav Sharma,aarav.sharma980@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-01,Company80,Note for row 980
+Vivaan Patel,vivaan.patel981@gmail.com,+919000000981,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-02,Company81,Note for row 981
+Aditya Kumar,aditya.kumar982@gmail.com,+919000000982,Delhi,Leads on Demand,BAD_LEAD,2026-06-03,Company82,Note for row 982
+Vihaan Singh,vihaan.singh983@gmail.com,+919000000983,Chennai,General Inquiry,SALE_DONE,2026-06-04,Company83,Note for row 983
+Arjun Reddy,arjun.reddy984@gmail.com,+919000000984,Hyderabad,Eden Park,,2026-06-05,Company84,Note for row 984
+Sai Gupta,sai.gupta985@gmail.com,+919000000985,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-06,Company85,Note for row 985
+Reyansh Nair,reyansh.nair986@gmail.com,+919000000986,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-07,Company86,Note for row 986
+Ayaan Joshi,ayaan.joshi987@gmail.com,+919000000987,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-08,Company87,Note for row 987
+Krishna Desai,krishna.desai988@gmail.com,+919000000988,Kochi,Leads on Demand,SALE_DONE,2026-06-09,Company88,Note for row 988
+Ishaan Shah,ishaan.shah989@gmail.com,+919000000989,Jaipur,General Inquiry,,2026-06-10,Company89,Note for row 989
+Ananya Rao,,+919000000990,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-11,Company90,Note for row 990
+Diya Menon,diya.menon991@gmail.com,+919000000991,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-12,Company91,Note for row 991
+Myra Das,myra.das992@gmail.com,+919000000992,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-13,Company92,Note for row 992
+Sara Iyer,sara.iyer993@gmail.com,+919000000993,Chennai,Varah Swamy,SALE_DONE,2026-06-14,Company93,Note for row 993
+Aadhya Pillai,aadhya.pillai994@gmail.com,+919000000994,Hyderabad,Leads on Demand,,2026-06-15,Company94,Note for row 994
+Isha Verma,isha.verma995@gmail.com,+919000000995,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-16,Company95,Note for row 995
+Kiara Malhotra,kiara.malhotra996@gmail.com,+919000000996,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-17,Company96,Note for row 996
+Riya Chauhan,riya.chauhan997@gmail.com,+919000000997,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-18,Company97,Note for row 997
+Pari Bhat,pari.bhat998@gmail.com,+919000000998,Kochi,Sarjapur Plots,SALE_DONE,2026-06-19,Company98,Note for row 998
+Aanya Shetty,aanya.shetty999@gmail.com,+919000000999,Jaipur,Varah Swamy,,2026-06-20,Company99,Note for row 999
+Aarav Sharma,aarav.sharma1000@gmail.com,,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-21,Company0,Note for row 1000
+Vivaan Patel,vivaan.patel1001@gmail.com,+919000001001,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-22,Company1,Note for row 1001
+Aditya Kumar,aditya.kumar1002@gmail.com,+919000001002,Delhi,Eden Park,BAD_LEAD,2026-06-23,Company2,Note for row 1002
+Vihaan Singh,vihaan.singh1003@gmail.com,+919000001003,Chennai,Meridian Tower,SALE_DONE,2026-06-24,Company3,Note for row 1003
+Arjun Reddy,arjun.reddy1004@gmail.com,+919000001004,Hyderabad,Sarjapur Plots,,2026-06-25,Company4,Note for row 1004
+Sai Gupta,,+919000001005,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-26,Company5,Note for row 1005
+Reyansh Nair,reyansh.nair1006@gmail.com,+919000001006,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-27,Company6,Note for row 1006
+Ayaan Joshi,ayaan.joshi1007@gmail.com,+919000001007,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-28,Company7,Note for row 1007
+Krishna Desai,krishna.desai1008@gmail.com,+919000001008,Kochi,Eden Park,SALE_DONE,2026-06-01,Company8,Note for row 1008
+Ishaan Shah,ishaan.shah1009@gmail.com,+919000001009,Jaipur,Meridian Tower,,2026-06-02,Company9,Note for row 1009
+Ananya Rao,ananya.rao1010@gmail.com,+919000001010,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-03,Company10,Note for row 1010
+Diya Menon,diya.menon1011@gmail.com,+919000001011,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-04,Company11,Note for row 1011
+Myra Das,myra.das1012@gmail.com,+919000001012,Delhi,Leads on Demand,BAD_LEAD,2026-06-05,Company12,Note for row 1012
+Sara Iyer,sara.iyer1013@gmail.com,+919000001013,Chennai,General Inquiry,SALE_DONE,2026-06-06,Company13,Note for row 1013
+Aadhya Pillai,aadhya.pillai1014@gmail.com,+919000001014,Hyderabad,Eden Park,,2026-06-07,Company14,Note for row 1014
+Isha Verma,isha.verma1015@gmail.com,+919000001015,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-08,Company15,Note for row 1015
+Kiara Malhotra,kiara.malhotra1016@gmail.com,+919000001016,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-09,Company16,Note for row 1016
+Riya Chauhan,riya.chauhan1017@gmail.com,+919000001017,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-10,Company17,Note for row 1017
+Pari Bhat,pari.bhat1018@gmail.com,+919000001018,Kochi,Leads on Demand,SALE_DONE,2026-06-11,Company18,Note for row 1018
+Aanya Shetty,aanya.shetty1019@gmail.com,+919000001019,Jaipur,General Inquiry,,2026-06-12,Company19,Note for row 1019
+Aarav Sharma,,,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-13,Company20,Note for row 1020
+Vivaan Patel,vivaan.patel1021@gmail.com,+919000001021,Mumbai,Meridian Tower,DID_NOT_CONNECT,2026-06-14,Company21,Note for row 1021
+Aditya Kumar,aditya.kumar1022@gmail.com,+919000001022,Delhi,Sarjapur Plots,BAD_LEAD,2026-06-15,Company22,Note for row 1022
+Vihaan Singh,vihaan.singh1023@gmail.com,+919000001023,Chennai,Varah Swamy,SALE_DONE,2026-06-16,Company23,Note for row 1023
+Arjun Reddy,arjun.reddy1024@gmail.com,+919000001024,Hyderabad,Leads on Demand,,2026-06-17,Company24,Note for row 1024
+Sai Gupta,sai.gupta1025@gmail.com,+919000001025,Pune,General Inquiry,GOOD_LEAD_FOLLOW_UP,2026-06-18,Company25,Note for row 1025
+Reyansh Nair,reyansh.nair1026@gmail.com,+919000001026,Kolkata,Eden Park,DID_NOT_CONNECT,2026-06-19,Company26,Note for row 1026
+Ayaan Joshi,ayaan.joshi1027@gmail.com,+919000001027,Ahmedabad,Meridian Tower,BAD_LEAD,2026-06-20,Company27,Note for row 1027
+Krishna Desai,krishna.desai1028@gmail.com,+919000001028,Kochi,Sarjapur Plots,SALE_DONE,2026-06-21,Company28,Note for row 1028
+Ishaan Shah,ishaan.shah1029@gmail.com,+919000001029,Jaipur,Varah Swamy,,2026-06-22,Company29,Note for row 1029
+Ananya Rao,ananya.rao1030@gmail.com,+919000001030,Bangalore,Leads on Demand,GOOD_LEAD_FOLLOW_UP,2026-06-23,Company30,Note for row 1030
+Diya Menon,diya.menon1031@gmail.com,+919000001031,Mumbai,General Inquiry,DID_NOT_CONNECT,2026-06-24,Company31,Note for row 1031
+Myra Das,myra.das1032@gmail.com,+919000001032,Delhi,Eden Park,BAD_LEAD,2026-06-25,Company32,Note for row 1032
+Sara Iyer,sara.iyer1033@gmail.com,+919000001033,Chennai,Meridian Tower,SALE_DONE,2026-06-26,Company33,Note for row 1033
+Aadhya Pillai,aadhya.pillai1034@gmail.com,+919000001034,Hyderabad,Sarjapur Plots,,2026-06-27,Company34,Note for row 1034
+Isha Verma,,+919000001035,Pune,Varah Swamy,GOOD_LEAD_FOLLOW_UP,2026-06-28,Company35,Note for row 1035
+Kiara Malhotra,kiara.malhotra1036@gmail.com,+919000001036,Kolkata,Leads on Demand,DID_NOT_CONNECT,2026-06-01,Company36,Note for row 1036
+Riya Chauhan,riya.chauhan1037@gmail.com,+919000001037,Ahmedabad,General Inquiry,BAD_LEAD,2026-06-02,Company37,Note for row 1037
+Pari Bhat,pari.bhat1038@gmail.com,+919000001038,Kochi,Eden Park,SALE_DONE,2026-06-03,Company38,Note for row 1038
+Aanya Shetty,aanya.shetty1039@gmail.com,+919000001039,Jaipur,Meridian Tower,,2026-06-04,Company39,Note for row 1039
+Aarav Sharma,aarav.sharma1040@gmail.com,,Bangalore,Sarjapur Plots,GOOD_LEAD_FOLLOW_UP,2026-06-05,Company40,Note for row 1040
+Vivaan Patel,vivaan.patel1041@gmail.com,+919000001041,Mumbai,Varah Swamy,DID_NOT_CONNECT,2026-06-06,Company41,Note for row 1041
+Aditya Kumar,aditya.kumar1042@gmail.com,+919000001042,Delhi,Leads on Demand,BAD_LEAD,2026-06-07,Company42,Note for row 1042
+Vihaan Singh,vihaan.singh1043@gmail.com,+919000001043,Chennai,General Inquiry,SALE_DONE,2026-06-08,Company43,Note for row 1043
+Arjun Reddy,arjun.reddy1044@gmail.com,+919000001044,Hyderabad,Eden Park,,2026-06-09,Company44,Note for row 1044
+Sai Gupta,sai.gupta1045@gmail.com,+919000001045,Pune,Meridian Tower,GOOD_LEAD_FOLLOW_UP,2026-06-10,Company45,Note for row 1045
+Reyansh Nair,reyansh.nair1046@gmail.com,+919000001046,Kolkata,Sarjapur Plots,DID_NOT_CONNECT,2026-06-11,Company46,Note for row 1046
+Ayaan Joshi,ayaan.joshi1047@gmail.com,+919000001047,Ahmedabad,Varah Swamy,BAD_LEAD,2026-06-12,Company47,Note for row 1047
+Krishna Desai,krishna.desai1048@gmail.com,+919000001048,Kochi,Leads on Demand,SALE_DONE,2026-06-13,Company48,Note for row 1048
+Ishaan Shah,ishaan.shah1049@gmail.com,+919000001049,Jaipur,General Inquiry,,2026-06-14,Company49,Note for row 1049
+Ananya Rao,,+919000001050,Bangalore,Eden Park,GOOD_LEAD_FOLLOW_UP,2026-06-15,Company50,Note for row 1050

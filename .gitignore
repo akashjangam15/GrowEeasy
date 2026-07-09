@@ -3,5 +3,9 @@
 /apps/api/node_modules
 /apps/web/node_modules
 /apps/web/.next
+/packages/*/node_modules
 /node_modules
 /.next
+.env
+.env.*
+!.env.example
