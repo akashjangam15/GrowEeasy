@@ -1,0 +1,322 @@
+/* ──────────────────────────────────────────────────────────
+   Home Page Styles — Phase 2 Upload + Preview Flow
+   ────────────────────────────────────────────────────────── */
+
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100dvh;
+  padding: 0 24px 40px;
+  overflow: hidden;
+}
+
+/* Ambient background glow */
+.page::before {
+  content: "";
+  position: fixed;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(
+    circle,
+    rgba(108, 92, 231, 0.1) 0%,
+    rgba(0, 206, 201, 0.05) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Header ──────────────────────────────────────────── */
+
+.header {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1100px;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+}
+
+.logoMark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--ge-radius-sm);
+  background: var(--ge-gradient-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: var(--ge-shadow-glow);
+}
+
+.logoText {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ge-text-primary);
+}
+
+/* ─── Hero ────────────────────────────────────────────── */
+
+.hero {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 640px;
+  padding: 40px 0 24px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.title {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  color: var(--ge-text-secondary);
+  line-height: 1.7;
+}
+
+/* ─── Main Content ────────────────────────────────────── */
+
+.main {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1100px;
+  flex: 1;
+}
+
+/* ─── Upload Section ──────────────────────────────────── */
+
+.uploadSection {
+  max-width: 600px;
+  margin: 24px auto 0;
+  animation: fadeInUp 0.6s ease-out 0.15s both;
+}
+
+/* ─── Preview Section ─────────────────────────────────── */
+
+.previewSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 8px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* ─── File Info Bar ───────────────────────────────────── */
+
+.fileInfoBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+.fileDetails {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.fileIcon {
+  font-size: 28px;
+}
+
+.fileName {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ge-text-primary);
+  margin-bottom: 2px;
+}
+
+.fileMeta {
+  font-size: 13px;
+  color: var(--ge-text-secondary);
+}
+
+/* ─── Confirm Bar ─────────────────────────────────────── */
+
+.confirmBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  gap: 16px;
+}
+
+.confirmHint {
+  font-size: 14px;
+  color: var(--ge-text-secondary);
+  flex: 1;
+}
+
+/* ─── Buttons ─────────────────────────────────────────── */
+
+.btnPrimary {
+  padding: 12px 28px;
+  border: none;
+  border-radius: var(--ge-radius-md);
+  background: var(--ge-gradient-brand);
+  color: #fff;
+  font-family: var(--ge-font);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--ge-transition);
+  box-shadow: var(--ge-shadow-glow);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 50px rgba(108, 92, 231, 0.25);
+}
+
+.btnConfirm {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border: none;
+  border-radius: var(--ge-radius-md);
+  background: var(--ge-gradient-brand);
+  color: #fff;
+  font-family: var(--ge-font);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--ge-transition);
+  box-shadow: var(--ge-shadow-glow);
+  white-space: nowrap;
+}
+
+.btnConfirm:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 60px rgba(108, 92, 231, 0.3);
+}
+
+.btnConfirm:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnConfirmIcon {
+  font-size: 18px;
+}
+
+.btnGhost {
+  padding: 8px 16px;
+  border: 1px solid var(--ge-border);
+  border-radius: var(--ge-radius-sm);
+  background: transparent;
+  color: var(--ge-text-secondary);
+  font-family: var(--ge-font);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--ge-transition);
+}
+
+.btnGhost:hover {
+  border-color: var(--ge-danger);
+  color: var(--ge-danger);
+  background: rgba(225, 112, 85, 0.08);
+}
+
+/* ─── Error Section ───────────────────────────────────── */
+
+.errorSection {
+  max-width: 480px;
+  margin: 60px auto 0;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.errorCard {
+  padding: 40px;
+  text-align: center;
+}
+
+.errorIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.errorTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ge-text-primary);
+  margin-bottom: 8px;
+}
+
+.errorMessage {
+  font-size: 14px;
+  color: var(--ge-danger);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+/* ─── Footer ──────────────────────────────────────────── */
+
+.footer {
+  position: relative;
+  z-index: 1;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.footerText {
+  font-size: 13px;
+  color: var(--ge-text-muted);
+}
+
+.footerText span {
+  color: var(--ge-primary-light);
+  font-weight: 600;
+}
+
+/* ─── Responsive ──────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .confirmBar {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .btnConfirm {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 0 16px 32px;
+  }
+
+  .fileInfoBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .btnGhost {
+    align-self: flex-end;
+  }
+}

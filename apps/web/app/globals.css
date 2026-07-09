@@ -1,0 +1,174 @@
+/* ──────────────────────────────────────────────────────────
+   GrowEasy Design System — CSS Custom Properties & Globals
+   ────────────────────────────────────────────────────────── */
+
+:root {
+  /* Brand palette */
+  --ge-primary: #6C5CE7;
+  --ge-primary-light: #a29bfe;
+  --ge-primary-dark: #4834d4;
+  --ge-accent: #00cec9;
+  --ge-accent-light: #81ecec;
+
+  /* Semantic */
+  --ge-success: #00b894;
+  --ge-warning: #fdcb6e;
+  --ge-danger: #e17055;
+
+  /* Dark theme surfaces */
+  --ge-bg-primary: #0a0b10;
+  --ge-bg-secondary: #12131a;
+  --ge-bg-elevated: #1a1b25;
+  --ge-bg-card: rgba(26, 27, 37, 0.7);
+
+  /* Text */
+  --ge-text-primary: #f0f0f5;
+  --ge-text-secondary: #8b8ca0;
+  --ge-text-muted: #5a5b6e;
+
+  /* Borders */
+  --ge-border: rgba(108, 92, 231, 0.15);
+  --ge-border-hover: rgba(108, 92, 231, 0.35);
+
+  /* Gradients */
+  --ge-gradient-brand: linear-gradient(135deg, #6C5CE7 0%, #00cec9 100%);
+  --ge-gradient-card: linear-gradient(135deg, rgba(108, 92, 231, 0.08) 0%, rgba(0, 206, 201, 0.05) 100%);
+  --ge-gradient-glow: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(108, 92, 231, 0.06), transparent 40%);
+
+  /* Shadows */
+  --ge-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --ge-shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --ge-shadow-glow: 0 0 40px rgba(108, 92, 231, 0.15);
+
+  /* Radius */
+  --ge-radius-sm: 8px;
+  --ge-radius-md: 12px;
+  --ge-radius-lg: 20px;
+  --ge-radius-xl: 28px;
+
+  /* Transitions */
+  --ge-transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ge-transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Font */
+  --ge-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ─── Reset & Base ────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ge-font);
+  background: var(--ge-bg-primary);
+  color: var(--ge-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--ge-primary-light);
+  text-decoration: none;
+  transition: color var(--ge-transition);
+}
+
+a:hover {
+  color: var(--ge-accent);
+}
+
+/* ─── Scrollbar ───────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ge-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ge-text-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ge-text-secondary);
+}
+
+/* ─── Utility: animated gradient text ─────────────────── */
+
+.gradient-text {
+  background: var(--ge-gradient-brand);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ─── Utility: glass card ─────────────────────────────── */
+
+.glass-card {
+  background: var(--ge-bg-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--ge-border);
+  border-radius: var(--ge-radius-lg);
+  transition: border-color var(--ge-transition), box-shadow var(--ge-transition);
+}
+
+.glass-card:hover {
+  border-color: var(--ge-border-hover);
+  box-shadow: var(--ge-shadow-glow);
+}
+
+/* ─── Keyframes ───────────────────────────────────────── */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
