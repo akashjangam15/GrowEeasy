@@ -27,7 +27,7 @@ function getGeminiClient(): GoogleGenAI {
       throw new Error("GEMINI_API_KEY is not set.");
     }
     console.log(
-      `[aiMapper] Using Gemini API key: ${apiKey.substring(0, 8)}... model: ${process.env.GEMINI_MODEL || "gemini-2.5-flash"}`
+      `[aiMapper] Using Gemini API key: ${apiKey.substring(0, 8)}... model: ${process.env.GEMINI_MODEL || "gemini-3.5-flash"}`
     );
     _geminiClient = new GoogleGenAI({ apiKey });
   }
@@ -86,7 +86,7 @@ async function mapBatchWithGemini(
   rows: Record<string, string>[]
 ): Promise<Partial<CrmRecord>[]> {
   const ai = getGeminiClient();
-  const modelName = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+  const modelName = process.env.GEMINI_MODEL || "gemini-3.5-flash";
 
   console.log(`[aiMapper] Attempting mapping with Gemini using model ${modelName}...`);
   const response = await ai.models.generateContent({

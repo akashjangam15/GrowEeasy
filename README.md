@@ -145,7 +145,7 @@ GROQ_API_KEY=your_groq_api_key_here
 GROQ_BASE_URL=https://api.groq.com/openai/v1
 
 # --- Optional configurations ---
-GEMINI_MODEL=gemini-2.5-flash
+GEMINI_MODEL=gemini-3.5-flash
 AI_MODEL=llama-3.3-70b-versatile
 PORT=3001
 FRONTEND_URL=http://localhost:3000

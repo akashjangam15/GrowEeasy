@@ -23,7 +23,7 @@ function getGeminiClient() {
         if (!apiKey) {
             throw new Error("GEMINI_API_KEY is not set.");
         }
-        console.log(`[aiMapper] Using Gemini API key: ${apiKey.substring(0, 8)}... model: ${process.env.GEMINI_MODEL || "gemini-2.5-flash"}`);
+        console.log(`[aiMapper] Using Gemini API key: ${apiKey.substring(0, 8)}... model: ${process.env.GEMINI_MODEL || "gemini-3.5-flash"}`);
         _geminiClient = new genai_1.GoogleGenAI({ apiKey });
     }
     return _geminiClient;
@@ -65,7 +65,7 @@ function parseAiResponse(text) {
 // ─── Single Batch Processing ─────────────────────────────
 async function mapBatchWithGemini(rows) {
     const ai = getGeminiClient();
-    const modelName = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+    const modelName = process.env.GEMINI_MODEL || "gemini-3.5-flash";
     console.log(`[aiMapper] Attempting mapping with Gemini using model ${modelName}...`);
     const response = await ai.models.generateContent({
         model: modelName,
