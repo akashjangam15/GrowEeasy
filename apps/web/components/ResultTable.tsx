@@ -13,14 +13,21 @@ interface ResultTableProps {
 
 /** Key CRM fields to display in the imported tab */
 const DISPLAY_FIELDS: { key: keyof CrmRecord; label: string }[] = [
+  { key: "created_at", label: "Date" },
   { key: "name", label: "Name" },
   { key: "email", label: "Email" },
+  { key: "country_code", label: "Code" },
   { key: "mobile_without_country_code", label: "Mobile" },
   { key: "company", label: "Company" },
   { key: "city", label: "City" },
   { key: "state", label: "State" },
+  { key: "country", label: "Country" },
+  { key: "lead_owner", label: "Owner" },
   { key: "crm_status", label: "Status" },
   { key: "data_source", label: "Source" },
+  { key: "possession_time", label: "Possession" },
+  { key: "crm_note", label: "Notes" },
+  { key: "description", label: "Description" },
 ];
 
 function getStatusClass(status: string): string {
