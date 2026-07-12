@@ -166,3 +166,51 @@
     font-size: 14px;
   }
 }
+
+/* ─── CSV Template Download Block ─────────────────────── */
+
+.metaTemplate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.templateHeaders {
+  font-size: 11px;
+  color: var(--ge-text-secondary);
+  opacity: 0.85;
+  text-align: center;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 10px 14px;
+  border-radius: var(--ge-radius-md);
+  border: 1px solid var(--ge-border);
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(108, 92, 231, 0.1);
+  border: 1px solid rgba(108, 92, 231, 0.2);
+  border-radius: var(--ge-radius-md);
+  color: var(--ge-primary-light);
+  font-family: var(--ge-font);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--ge-transition);
+}
+
+.downloadBtn:hover {
+  background: var(--ge-primary);
+  border-color: var(--ge-primary);
+  color: white;
+  box-shadow: 0 0 16px rgba(108, 92, 231, 0.4);
+}
+
