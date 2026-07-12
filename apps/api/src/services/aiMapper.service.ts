@@ -1,3 +1,4 @@
+import { GoogleGenAI } from "@google/genai";
 import OpenAI from "openai";
 import { CrmRecord, SkippedRecord } from "shared-types";
 import { batchArray } from "../utils/batchArray";
@@ -14,12 +15,27 @@ const BATCH_SIZE = Number(process.env.AI_BATCH_SIZE) || 500;
 const MAX_RETRIES = 3;
 const TEMPERATURE = 0.2;
 
-// ─── Client ──────────────────────────────────────────────
+// ─── Clients ─────────────────────────────────────────────
 
-let _client: OpenAI | null = null;
+let _groqClient: OpenAI | null = null;
+let _geminiClient: GoogleGenAI | null = null;
 
-function getClient(): OpenAI {
-  if (!_client) {
+function getGeminiClient(): GoogleGenAI {
+  if (!_geminiClient) {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+      throw new Error("GEMINI_API_KEY is not set.");
+    }
+    console.log(
+      `[aiMapper] Using Gemini API key: ${apiKey.substring(0, 8)}... model: ${process.env.GEMINI_MODEL || "gemini-2.5-flash"}`
+    );
+    _geminiClient = new GoogleGenAI({ apiKey });
+  }
+  return _geminiClient;
+}
+
+function getGroqClient(): OpenAI {
+  if (!_groqClient) {
     const apiKey = process.env.GROQ_API_KEY;
     if (!apiKey) {
       throw new Error(
@@ -29,12 +45,12 @@ function getClient(): OpenAI {
     console.log(
       `[aiMapper] Using Groq API key: ${apiKey.substring(0, 8)}... model: ${MODEL}`
     );
-    _client = new OpenAI({
+    _groqClient = new OpenAI({
       baseURL: process.env.GROQ_BASE_URL || "https://api.groq.com/openai/v1",
       apiKey,
     });
   }
-  return _client;
+  return _groqClient;
 }
 
 // ─── JSON Parsing ────────────────────────────────────────
@@ -66,11 +82,37 @@ function parseAiResponse(text: string): Partial<CrmRecord>[] {
 
 // ─── Single Batch Processing ─────────────────────────────
 
-async function mapBatch(
+async function mapBatchWithGemini(
   rows: Record<string, string>[]
 ): Promise<Partial<CrmRecord>[]> {
-  const client = getClient();
+  const ai = getGeminiClient();
+  const modelName = process.env.GEMINI_MODEL || "gemini-2.5-flash";
 
+  console.log(`[aiMapper] Attempting mapping with Gemini using model ${modelName}...`);
+  const response = await ai.models.generateContent({
+    model: modelName,
+    contents: buildUserPrompt(rows),
+    config: {
+      systemInstruction: CRM_MAPPING_SYSTEM_PROMPT,
+      responseMimeType: "application/json",
+      temperature: TEMPERATURE,
+    },
+  });
+
+  const text = response.text;
+  if (!text) {
+    throw new Error("Gemini AI response contains no text content");
+  }
+
+  return parseAiResponse(text);
+}
+
+async function mapBatchWithGroq(
+  rows: Record<string, string>[]
+): Promise<Partial<CrmRecord>[]> {
+  const client = getGroqClient();
+
+  console.log(`[aiMapper] Attempting mapping with Groq using model ${MODEL}...`);
   const response = await client.chat.completions.create({
     model: MODEL,
     messages: [
@@ -89,10 +131,40 @@ async function mapBatch(
 
   const text = response.choices[0]?.message?.content;
   if (!text) {
-    throw new Error("AI response contains no text content");
+    throw new Error("Groq AI response contains no text content");
   }
 
-  const records = parseAiResponse(text);
+  return parseAiResponse(text);
+}
+
+async function mapBatch(
+  rows: Record<string, string>[]
+): Promise<Partial<CrmRecord>[]> {
+  let records: Partial<CrmRecord>[] = [];
+  let geminiSuccess = false;
+
+  // 1. Try Gemini first if key is configured
+  if (process.env.GEMINI_API_KEY) {
+    try {
+      records = await mapBatchWithGemini(rows);
+      geminiSuccess = true;
+      console.log(`[aiMapper] Gemini mapping successful.`);
+    } catch (err) {
+      console.warn(
+        `[aiMapper] Gemini mapping failed. Falling back to Groq... Error: ${
+          err instanceof Error ? err.message : String(err)
+        }`
+      );
+    }
+  } else {
+    console.log(`[aiMapper] GEMINI_API_KEY not configured. Skipping Gemini...`);
+  }
+
+  // 2. Fallback to Groq if Gemini wasn't run or failed
+  if (!geminiSuccess) {
+    records = await mapBatchWithGroq(rows);
+    console.log(`[aiMapper] Groq mapping successful.`);
+  }
 
   // Reconstruct target schema fields with default empty strings to handle sparse output
   const filledRecords = records.map((record) => ({
@@ -133,6 +205,7 @@ function isFatalAiError(message: string): boolean {
     lowercase.includes("api_key_invalid") ||
     lowercase.includes("invalid api key") ||
     lowercase.includes("groq_api_key is not set") ||
+    lowercase.includes("gemini_api_key is not set") ||
     lowercase.includes("model not found") ||
     lowercase.includes("model_not_found") ||
     lowercase.includes("401") ||

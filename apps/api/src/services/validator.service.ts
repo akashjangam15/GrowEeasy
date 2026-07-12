@@ -35,6 +35,21 @@ function blankRecord(): CrmRecord {
   };
 }
 
+const MONTH_MAP: Record<string, number> = {
+  jan: 0, january: 0,
+  feb: 1, february: 1,
+  mar: 2, march: 2,
+  apr: 3, april: 3,
+  may: 4,
+  jun: 5, june: 5,
+  jul: 6, july: 6,
+  aug: 7, august: 7,
+  sep: 8, september: 8, sept: 8,
+  oct: 9, october: 9,
+  nov: 10, november: 10,
+  dec: 11, december: 11
+};
+
 /**
  * Try to normalise an arbitrary date string to ISO 8601.
  * Returns the ISO string on success, or empty string on failure.
@@ -44,24 +59,33 @@ export function normalizeDate(raw: string): string {
 
   const trimmed = raw.trim();
 
-  // Handle dd/mm/yyyy and dd-mm-yyyy patterns
+  // Handle dd/mm/yyyy and dd-mm-yyyy patterns (prefer DD/MM/YYYY, fallback to MM/DD/YYYY in UTC)
   const ddmmyyyy = trimmed.match(
     /^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})$/
   );
   if (ddmmyyyy) {
-    const [, day, month, year] = ddmmyyyy;
-    const d = new Date(`${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}T00:00:00Z`);
+    const [, first, second, year] = ddmmyyyy;
+    // 1. Try first = day, second = month (DD/MM/YYYY)
+    const d = new Date(`${year}-${second.padStart(2, "0")}-${first.padStart(2, "0")}T00:00:00Z`);
     if (!isNaN(d.getTime())) return d.toISOString();
+
+    // 2. Try first = month, second = day (MM/DD/YYYY)
+    const d2 = new Date(`${year}-${first.padStart(2, "0")}-${second.padStart(2, "0")}T00:00:00Z`);
+    if (!isNaN(d2.getTime())) return d2.toISOString();
   }
 
-  // Handle ordinal dates like "29th June 2026", "1st Jan 2025"
+  // Handle ordinal dates like "29th June 2026", "1st Jan 2025" in UTC
   const ordinal = trimmed.match(
     /^(\d{1,2})(?:st|nd|rd|th)\s+(\w+)\s+(\d{4})$/i
   );
   if (ordinal) {
     const [, day, month, year] = ordinal;
-    const d = new Date(`${day} ${month} ${year}`);
-    if (!isNaN(d.getTime())) return d.toISOString();
+    const monthLower = month.toLowerCase();
+    const monthIndex = MONTH_MAP[monthLower];
+    if (monthIndex !== undefined) {
+      const d = new Date(Date.UTC(Number(year), monthIndex, Number(day)));
+      if (!isNaN(d.getTime())) return d.toISOString();
+    }
   }
 
   // Fallback: let Date() handle it

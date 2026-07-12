@@ -24,11 +24,11 @@ export function parseCsvBuffer(buffer: Buffer): ParsedCsv {
   if (result.errors.length > 0) {
     // Filter out only fatal errors (row-level warnings are common in messy CSVs)
     const fatalErrors = result.errors.filter(
-      (e) => e.type === "Delimiter" || e.type === "FieldMismatch"
+      (e: Papa.ParseError) => e.type === "Delimiter" || e.type === "FieldMismatch"
     );
     if (fatalErrors.length > 0 && result.data.length === 0) {
       throw new Error(
-        `CSV parsing failed: ${fatalErrors.map((e) => e.message).join("; ")}`
+        `CSV parsing failed: ${fatalErrors.map((e: Papa.ParseError) => e.message).join("; ")}`
       );
     }
   }

@@ -2,7 +2,12 @@
 
 > **Intelligent, AI-powered CSV lead ingestion for real-estate CRMs.**
 
-GrowEasy is a state-of-the-art AI-powered CSV Importer. Instead of forcing users to manually map columns in a complex UI, GrowEasy leverages Large Language Models (specifically **Llama-3.3-70b-versatile** via **Groq**) to dynamically map arbitrary columns from messy exports (e.g., Facebook Leads, Google Ads, manual spreadsheets) into a fixed, canonical CRM schema. The importer validates records against strict business rules, parses multiple inputs, normalizes values, and returns clean, structured datasets ready for CRM insertion.
+GrowEasy is a state-of-the-art AI-powered CSV Importer. Instead of forcing users to manually map columns in a complex UI, GrowEasy leverages Large Language Models (supporting both **Google Gemini 2.5** and **Llama-3.3 via Groq** with an automatic fallback) to dynamically map arbitrary columns from messy exports (e.g., Facebook Leads, Google Ads, manual spreadsheets) into a fixed, canonical CRM schema. The importer validates records against strict business rules, parses multiple inputs, normalizes values, and returns clean, structured datasets ready for CRM insertion.
+
+> [!IMPORTANT]
+> **Production Demo Limitation**: If you are testing the application using our live production deployment, please use the provided sample CSV files (available in the [sample-data](GrowEasy/sample-data) directory). Because we do not have paid/high-tier AI support on the production deployment, processing large CSV files online might exceed rate/token limits.
+> 
+> To import large datasets or run custom uploads without limitations, please **set up this project locally** and configure your own API keys.
 
 ---
 
@@ -47,7 +52,7 @@ GrowEasy/
 | **Backend** | Express.js (Node / TypeScript) | 5.1.0 |
 | **CSV Parsing** | PapaParse | 5.5.2 |
 | **File Handling** | Multer | 1.4.5-lts.2 |
-| **AI SDK & Model** | OpenAI Client Wrapper + Llama-3.3-70b-versatile | SDK v6.46.0 |
+| **AI SDK & Model** | Google Gen AI (Gemini 2.5) & OpenAI SDK (Llama 3.3 via Groq) | @google/genai & openai |
 | **Testing** | Vitest | 4.1.10 |
 | **Styling** | CSS Modules (Vanilla CSS) | Native |
 
@@ -106,6 +111,7 @@ To ensure high-quality data ingestion, the backend runs a rigorous validation pi
     *   If a row contains multiple phone numbers, the first is parsed for country code and number, while other numbers are appended to `crm_note`.
 4.  **Enum Safeguards**: Values mapping to `crm_status` or `data_source` that don't match the strict whitelists are set to `""`. The raw input values are appended to `crm_note` for auditing.
 5.  **Robust Error Batching**: Row mapping is sent to the LLM in configurable batches (default 20). If a batch fails (e.g. rate limit), it retries up to 3 times with exponential backoff. If it still fails, those rows are saved to `skipped` with the reason `"AI processing failed"`.
+6.  **Dual-Provider Fallback**: The app attempts to process mapping through **Gemini** (free/primary tier) if `GEMINI_API_KEY` is configured. If Gemini mapping fails or is unconfigured, it automatically falls back to **Groq** (`llama-3.3-70b-versatile`) to process the batch.
 
 ---
 
@@ -131,14 +137,18 @@ cp .env.example .env
 ```
 Open `apps/api/.env` and update the settings:
 ```ini
-# Get your API key from https://console.groq.com/keys
+# --- Required (At least one must be set. Gemini is primary, falling back to Groq) ---
+# Get your Gemini key from: https://aistudio.google.com/
+GEMINI_API_KEY=your_gemini_api_key_here
+# Get your Groq key from: https://console.groq.com/keys
 GROQ_API_KEY=your_groq_api_key_here
 GROQ_BASE_URL=https://api.groq.com/openai/v1
 
-# Optional configurations
+# --- Optional configurations ---
+GEMINI_MODEL=gemini-2.5-flash
+AI_MODEL=llama-3.3-70b-versatile
 PORT=3001
 FRONTEND_URL=http://localhost:3000
-AI_MODEL=llama-3.3-70b-versatile
 AI_BATCH_SIZE=20
 NODE_ENV=development
 ```

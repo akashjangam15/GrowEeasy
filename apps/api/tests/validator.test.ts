@@ -44,7 +44,7 @@ describe("normalizeDate", () => {
     const result = normalizeDate("29th June 2026");
     expect(result).toBeTruthy();
     const d = new Date(result);
-    expect(d.getDate()).toBe(29);
+    expect(d.getUTCDate()).toBe(29);
   });
 
   it("should return empty string for invalid date", () => {
@@ -54,6 +54,20 @@ describe("normalizeDate", () => {
 
   it("should return empty string for blank input", () => {
     expect(normalizeDate("   ")).toBe("");
+  });
+
+  it("should handle mixed ambiguous and unambiguous formats (dd/mm/yyyy vs mm/dd/yyyy)", () => {
+    // 12/07/2026 -> ambiguous, parses as DD/MM/YYYY (July 12)
+    const resultAmbiguous = normalizeDate("12/07/2026");
+    const dAmbiguous = new Date(resultAmbiguous);
+    expect(dAmbiguous.getUTCDate()).toBe(12);
+    expect(dAmbiguous.getUTCMonth()).toBe(6); // July = 6
+
+    // 06/29/2026 -> unambiguous MM/DD/YYYY, falls back and parses as June 29
+    const resultUnambiguous = normalizeDate("06/29/2026");
+    const dUnambiguous = new Date(resultUnambiguous);
+    expect(dUnambiguous.getUTCDate()).toBe(29);
+    expect(dUnambiguous.getUTCMonth()).toBe(5); // June = 5
   });
 });
 
