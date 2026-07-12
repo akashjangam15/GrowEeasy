@@ -1,0 +1,1 @@
+{"version":3,"file":"crm.types.js","sourceRoot":"","sources":["../src/crm.types.ts"],"names":[],"mappings":";AAAA,4DAA4D;AAC5D,yDAAyD;;;AAY5C,QAAA,iBAAiB,GAAwB,IAAI,GAAG,CAAY;IACvE,qBAAqB;IACrB,iBAAiB;IACjB,UAAU;IACV,WAAW;IACX,EAAE;CACH,CAAC,CAAC;AAaU,QAAA,kBAAkB,GAAwB,IAAI,GAAG,CAAa;IACzE,iBAAiB;IACjB,gBAAgB;IAChB,WAAW;IACX,aAAa;IACb,gBAAgB;IAChB,EAAE;CACH,CAAC,CAAC"}
