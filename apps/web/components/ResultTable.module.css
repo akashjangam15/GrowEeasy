@@ -284,3 +284,214 @@
   opacity: 0.8;
 }
 
+/* ─── Edit Record Button ──────────────────────────────── */
+
+.editBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: rgba(108, 92, 231, 0.08);
+  border: 1px solid rgba(108, 92, 231, 0.15);
+  border-radius: 6px;
+  color: var(--ge-primary-light);
+  cursor: pointer;
+  transition: all var(--ge-transition);
+}
+
+.editBtn:hover {
+  background: var(--ge-primary);
+  border-color: var(--ge-primary);
+  color: white;
+  box-shadow: 0 0 10px rgba(108, 92, 231, 0.3);
+}
+
+/* ─── Modal Overlay & Card ────────────────────────────── */
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modalCard {
+  width: 100%;
+  max-width: 680px;
+  max-height: 85vh;
+  background: var(--ge-bg-card);
+  border: 1px solid var(--ge-border);
+  border-radius: var(--ge-radius-xl);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--ge-shadow-lg);
+  animation: scaleIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--ge-border);
+}
+
+.modalTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ge-text-primary);
+}
+
+.modalCloseBtn {
+  background: none;
+  border: none;
+  color: var(--ge-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--ge-transition);
+  padding: 4px;
+}
+
+.modalCloseBtn:hover {
+  color: var(--ge-text-primary);
+}
+
+/* ─── Modal Form Controls ─────────────────────────────── */
+
+.modalForm {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ge-text-secondary);
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--ge-border);
+  border-radius: var(--ge-radius-md);
+  color: var(--ge-text-primary);
+  font-family: var(--ge-font);
+  font-size: 13px;
+  outline: none;
+  transition: all var(--ge-transition);
+  width: 100%;
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  border-color: var(--ge-primary);
+  background: rgba(108, 92, 231, 0.03);
+}
+
+.formSelect {
+  cursor: pointer;
+}
+
+.formTextarea {
+  resize: vertical;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+  border-top: 1px solid var(--ge-border);
+  padding-top: 16px;
+}
+
+.cancelBtn {
+  padding: 8px 16px;
+  background: none;
+  border: 1px solid var(--ge-border);
+  border-radius: var(--ge-radius-md);
+  color: var(--ge-text-secondary);
+  font-family: var(--ge-font);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--ge-transition);
+}
+
+.cancelBtn:hover {
+  border-color: var(--ge-text-primary);
+  color: var(--ge-text-primary);
+}
+
+.saveBtn {
+  padding: 8px 16px;
+  background: var(--ge-primary);
+  border: 1px solid var(--ge-primary);
+  border-radius: var(--ge-radius-md);
+  color: white;
+  font-family: var(--ge-font);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--ge-transition);
+}
+
+.saveBtn:hover {
+  background: var(--ge-primary-hover);
+  border-color: var(--ge-primary-hover);
+  box-shadow: 0 0 16px rgba(108, 92, 231, 0.4);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.96); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 640px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .formGroup[style*="span 2"] {
+    grid-column: span 1 !important;
+  }
+}
+
+

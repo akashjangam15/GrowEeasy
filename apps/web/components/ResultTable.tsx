@@ -3,13 +3,14 @@
 import { useState } from "react";
 import type { CrmRecord, SkippedRecord } from "../lib/api";
 import styles from "./ResultTable.module.css";
-import { CheckCircle2, AlertTriangle, Inbox, Check, Calendar } from "lucide-react";
+import { CheckCircle2, AlertTriangle, Inbox, Check, Calendar, Pencil, X } from "lucide-react";
 
 type Tab = "imported" | "skipped";
 
 interface ResultTableProps {
   parsed: CrmRecord[];
   skipped: SkippedRecord[];
+  onUpdateRecord?: (index: number, updatedRecord: CrmRecord) => void;
 }
 
 /** Key CRM fields to display in the imported tab */
@@ -73,8 +74,24 @@ function formatDate(dateStr: string): string {
  * Tabbed result table showing imported (parsed) records
  * and skipped records with their skip reasons.
  */
-export default function ResultTable({ parsed, skipped }: ResultTableProps) {
+export default function ResultTable({ parsed, skipped, onUpdateRecord }: ResultTableProps) {
   const [activeTab, setActiveTab] = useState<Tab>("imported");
+  const [editingIndex, setEditingIndex] = useState<number | null>(null);
+  const [editingRecord, setEditingRecord] = useState<CrmRecord | null>(null);
+
+  const handleEditClick = (index: number, record: CrmRecord) => {
+    setEditingIndex(index);
+    setEditingRecord({ ...record });
+  };
+
+  const handleSave = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (editingIndex !== null && editingRecord !== null) {
+      onUpdateRecord?.(editingIndex, editingRecord);
+    }
+    setEditingIndex(null);
+    setEditingRecord(null);
+  };
 
   return (
     <div className={styles.wrapper} id="result-table">
@@ -128,6 +145,7 @@ export default function ResultTable({ parsed, skipped }: ResultTableProps) {
                         {f.label}
                       </th>
                     ))}
+                    {onUpdateRecord && <th className={styles.th} style={{ textAlign: "center" }}>Actions</th>}
                   </tr>
                 </thead>
                 <tbody>
@@ -185,6 +203,18 @@ export default function ResultTable({ parsed, skipped }: ResultTableProps) {
                           </td>
                         );
                       })}
+                      {onUpdateRecord && (
+                        <td className={styles.td} style={{ textAlign: "center" }}>
+                          <button
+                            className={styles.editBtn}
+                            onClick={() => handleEditClick(i, record)}
+                            type="button"
+                            title="Edit Record"
+                          >
+                            <Pencil size={12} />
+                          </button>
+                        </td>
+                      )}
                     </tr>
                   ))}
                 </tbody>
@@ -247,6 +277,209 @@ export default function ResultTable({ parsed, skipped }: ResultTableProps) {
             </div>
           )}
         </>
+      )}
+
+      {/* Edit Modal Dialog */}
+      {editingRecord !== null && (
+        <div className={styles.modalOverlay}>
+          <div className={`${styles.modalCard} glass-card`}>
+            <div className={styles.modalHeader}>
+              <h3 className={styles.modalTitle}>Edit Lead Record</h3>
+              <button
+                className={styles.modalCloseBtn}
+                onClick={() => {
+                  setEditingIndex(null);
+                  setEditingRecord(null);
+                }}
+                type="button"
+              >
+                <X size={18} />
+              </button>
+            </div>
+            
+            <form onSubmit={handleSave} className={styles.modalForm}>
+              <div className={styles.formGrid}>
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Lead Name</label>
+                  <input
+                    type="text"
+                    value={editingRecord.name || ""}
+                    onChange={(e) => setEditingRecord({ ...editingRecord, name: e.target.value })}
+                    className={styles.formInput}
+                  />
+                </div>
+                
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Email</label>
+                  <input
+                    type="email"
+                    value={editingRecord.email || ""}
+                    onChange={(e) => setEditingRecord({ ...editingRecord, email: e.target.value })}
+                    className={styles.formInput}
+                  />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Country Code</label>
+                  <input
+                    type="text"
+                    value={editingRecord.country_code || ""}
+                    onChange={(e) => setEditingRecord({ ...editingRecord, country_code: e.target.value })}
+                    className={styles.formInput}
+                  />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Mobile Number</label>
+                  <input
+                    type="text"
+                    value={editingRecord.mobile_without_country_code || ""}
+                    onChange={(e) => setEditingRecord({ ...editingRecord, mobile_without_country_code: e.target.value })}
+                    className={styles.formInput}
+                  />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Company</label>
+                  <input
+                    type="text"
+                    value={editingRecord.company || ""}
+                    onChange={(e) => setEditingRecord({ ...editingRecord, company: e.target.value })}
+                    className={styles.formInput}
+                  />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>City</label>
+                  <input
+                    type="text"
+                    value={editingRecord.city || ""}
+                    onChange={(e) => setEditingRecord({ ...editingRecord, city: e.target.value })}
+                    className={styles.formInput}
+                  />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>State</label>
+                  <input
+                    type="text"
+                    value={editingRecord.state || ""}
+                    onChange={(e) => setEditingRecord({ ...editingRecord, state: e.target.value })}
+                    className={styles.formInput}
+                  />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Country</label>
+                  <input
+                    type="text"
+                    value={editingRecord.country || ""}
+                    onChange={(e) => setEditingRecord({ ...editingRecord, country: e.target.value })}
+                    className={styles.formInput}
+                  />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Owner</label>
+                  <input
+                    type="text"
+                    value={editingRecord.lead_owner || ""}
+                    onChange={(e) => setEditingRecord({ ...editingRecord, lead_owner: e.target.value })}
+                    className={styles.formInput}
+                  />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Lead Status</label>
+                  <select
+                    value={editingRecord.crm_status || ""}
+                    onChange={(e) => setEditingRecord({ ...editingRecord, crm_status: e.target.value })}
+                    className={styles.formSelect}
+                  >
+                    <option value="">Select Status</option>
+                    <option value="GOOD_LEAD_FOLLOW_UP">GOOD LEAD FOLLOW UP</option>
+                    <option value="DID_NOT_CONNECT">DID NOT CONNECT</option>
+                    <option value="BAD_LEAD">BAD LEAD</option>
+                    <option value="SALE_DONE">SALE DONE</option>
+                  </select>
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Source</label>
+                  <select
+                    value={editingRecord.data_source || ""}
+                    onChange={(e) => setEditingRecord({ ...editingRecord, data_source: e.target.value })}
+                    className={styles.formSelect}
+                  >
+                    <option value="">Select Source</option>
+                    <option value="leads_on_demand">leads_on_demand</option>
+                    <option value="meridian_tower">meridian_tower</option>
+                    <option value="eden_park">eden_park</option>
+                    <option value="varah_swamy">varah_swamy</option>
+                    <option value="sarjapur_plots">sarjapur_plots</option>
+                  </select>
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Date (created_at)</label>
+                  <input
+                    type="text"
+                    placeholder="YYYY-MM-DD HH:MM:SS"
+                    value={editingRecord.created_at || ""}
+                    onChange={(e) => setEditingRecord({ ...editingRecord, created_at: e.target.value })}
+                    className={styles.formInput}
+                  />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Possession Time</label>
+                  <input
+                    type="text"
+                    value={editingRecord.possession_time || ""}
+                    onChange={(e) => setEditingRecord({ ...editingRecord, possession_time: e.target.value })}
+                    className={styles.formInput}
+                  />
+                </div>
+
+                <div className={styles.formGroup} style={{ gridColumn: "span 2" }}>
+                  <label className={styles.formLabel}>Notes (crm_note)</label>
+                  <textarea
+                    value={editingRecord.crm_note || ""}
+                    onChange={(e) => setEditingRecord({ ...editingRecord, crm_note: e.target.value })}
+                    className={styles.formTextarea}
+                    rows={2}
+                  />
+                </div>
+
+                <div className={styles.formGroup} style={{ gridColumn: "span 2" }}>
+                  <label className={styles.formLabel}>Description</label>
+                  <textarea
+                    value={editingRecord.description || ""}
+                    onChange={(e) => setEditingRecord({ ...editingRecord, description: e.target.value })}
+                    className={styles.formTextarea}
+                    rows={2}
+                  />
+                </div>
+              </div>
+
+              <div className={styles.formActions}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setEditingIndex(null);
+                    setEditingRecord(null);
+                  }}
+                  className={styles.cancelBtn}
+                >
+                  Cancel
+                </button>
+                <button type="submit" className={styles.saveBtn}>
+                  Save Changes
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       )}
     </div>
   );

@@ -27,6 +27,7 @@ export interface UseCsvImportReturn {
   handleFile: (file: File) => void;
   confirmImport: () => void;
   reset: () => void;
+  updateImportedRecord: (index: number, updatedRecord: any) => void;
 }
 
 /**
@@ -118,6 +119,28 @@ export function useCsvImport(): UseCsvImportReturn {
     setError(null);
   }, []);
 
-  return { step, fileInfo, csvData, importResult, error, handleFile, confirmImport, reset };
+  const updateImportedRecord = useCallback((index: number, updatedRecord: any) => {
+    setImportResult((prev) => {
+      if (!prev) return null;
+      const updatedParsed = [...prev.parsed];
+      updatedParsed[index] = updatedRecord;
+      return {
+        ...prev,
+        parsed: updatedParsed,
+      };
+    });
+  }, []);
+
+  return {
+    step,
+    fileInfo,
+    csvData,
+    importResult,
+    error,
+    handleFile,
+    confirmImport,
+    reset,
+    updateImportedRecord,
+  };
 }
 

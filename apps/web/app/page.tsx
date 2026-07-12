@@ -26,6 +26,7 @@ export default function Home() {
     handleFile,
     confirmImport,
     reset,
+    updateImportedRecord,
   } = useCsvImport();
 
   const [theme, setTheme] = useState<"light" | "dark">("dark");
@@ -224,6 +225,7 @@ export default function Home() {
             <ResultTable
               parsed={importResult.parsed}
               skipped={importResult.skipped}
+              onUpdateRecord={updateImportedRecord}
             />
           </div>
         )}
