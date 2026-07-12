@@ -2,7 +2,7 @@
 
 > **Intelligent, AI-powered CSV lead ingestion for real-estate CRMs.**
 
-GrowEasy is a state-of-the-art AI-powered CSV Importer. Instead of forcing users to manually map columns in a complex UI, GrowEasy leverages Large Language Models (supporting both **Google Gemini 2.5** and **Llama-3.3 via Groq** with an automatic fallback) to dynamically map arbitrary columns from messy exports (e.g., Facebook Leads, Google Ads, manual spreadsheets) into a fixed, canonical CRM schema. The importer validates records against strict business rules, parses multiple inputs, normalizes values, and returns clean, structured datasets ready for CRM insertion.
+GrowEasy is a state-of-the-art AI-powered CSV Importer. Instead of forcing users to manually map columns in a complex UI, GrowEasy leverages Large Language Models (supporting both **Google Gemini 3.5** and **Llama-3.3 via Groq** with an automatic fallback) to dynamically map arbitrary columns from messy exports (e.g., Facebook Leads, Google Ads, manual spreadsheets) into a fixed, canonical CRM schema. The importer features a built-in **CSV template downloader**, a **real-time progress indicator**, and a **record-level editor modal** to allow users to inspect and refine parsed leads before final ingestion. The backend validates records against strict business rules, parses multiple inputs, normalizes values, and returns clean, structured datasets ready for CRM insertion.
 
 > [!IMPORTANT]
 > **Production Demo Limitation**: If you are testing the application using our live production deployment, please use the provided sample CSV files (available in the [sample-data](GrowEasy/sample-data) directory). Because we do not have paid/high-tier AI support on the production deployment, processing large CSV files online might exceed rate/token limits.
@@ -112,6 +112,7 @@ To ensure high-quality data ingestion, the backend runs a rigorous validation pi
 4.  **Enum Safeguards**: Values mapping to `crm_status` or `data_source` that don't match the strict whitelists are set to `""`. The raw input values are appended to `crm_note` for auditing.
 5.  **Robust Error Batching**: Row mapping is sent to the LLM in configurable batches (default 20). If a batch fails (e.g. rate limit), it retries up to 3 times with exponential backoff. If it still fails, those rows are saved to `skipped` with the reason `"AI processing failed"`.
 6.  **Dual-Provider Fallback**: The app attempts to process mapping through **Gemini** (free/primary tier) if `GEMINI_API_KEY` is configured. If Gemini mapping fails or is unconfigured, it automatically falls back to **Groq** (`llama-3.3-70b-versatile`) to process the batch.
+7.  **Interactive Edit Option**: After processing, users can click the Pencil icon (✏️) next to any imported record row to open a custom grid form modal. This allows them to manually adjust any fields, select strict enums (Lead Status, Data Source) via dropdown selects, and save corrections directly to the state before completing the import.
 
 ---
 
@@ -163,6 +164,19 @@ This single command fires up:
 *   **Next.js Web App**: `http://localhost:3000`
 *   **Express API Server**: `http://localhost:3001`
 
+### 🐳 Alternative: Running with Docker Compose
+
+If you have Docker installed, you can launch the entire frontend and backend containerized stack with:
+
+```bash
+docker-compose up --build
+```
+
+This orchestrates:
+*   **Express API Server** container listening on `http://localhost:3001`
+*   **Next.js Frontend Web App** container listening on `http://localhost:3000`
+*   *Make sure you populate `apps/api/.env` with your API keys before running.*
+
 ---
 
 ## 🧪 Testing the Application
@@ -186,8 +200,30 @@ Sample CSV files are provided in `sample-data/` to test against the system's dyn
 
 ## ☁️ Deployment
 
-For cloud hosting, you can deploy the stack on PaaS options. See the full [PaaS Deployment Guide](file:///c:/Users/ASUS/OneDrive/Desktop/GrowEasy/docs/paas-deployment-guide.md) for detailed step-by-step instructions.
+The GrowEasy application is configured and deployed on modern cloud hosting services:
 
-### Quick Recommendations
-*   **Frontend (Next.js)**: Host on **Vercel Hobby** or **Netlify Starter** (Free tier). Set root directory to `apps/web` and add the `NEXT_PUBLIC_API_URL` environment variable.
-*   **Backend (Express API)**: Host on **Render** as a web service. Set the build command to `pnpm install && pnpm run build --filter=api` and start command to `pnpm run start --filter=api`. Ensure `GROQ_API_KEY` is added to the backend environment configurations.
+### 🚀 Live Deployments
+*   **Frontend (Next.js)**: Deployed on **Vercel**
+*   **Backend (Express API)**: Deployed on **Railway** (live service: `https://groweeasy-production-8527.up.railway.app`)
+
+### 🔧 Cloud Configuration Guidelines
+
+#### 1. Frontend on Vercel
+*   **Root Directory**: `apps/web`
+*   **Build Settings**: Next.js custom build pipeline is automatically detected.
+*   **Environment Variables**:
+    *   `NEXT_PUBLIC_API_URL`: Set to your live Railway backend API URL.
+
+#### 2. Backend on Railway
+*   **Start Configuration**: Railway automatically detects the root-level start script to run the API workspace:
+    ```bash
+    pnpm --filter api start
+    ```
+*   **Environment Variables**:
+    *   `NODE_ENV`: `production`
+    *   `PORT`: Port binding (e.g. `3001` or managed by Railway)
+    *   `GEMINI_API_KEY`: Google Gemini AI studio keys.
+    *   `GROQ_API_KEY`: Groq API keys.
+    *   `GEMINI_MODEL`: `gemini-3.5-flash`
+    *   `AI_MODEL`: `llama-3.3-70b-versatile`
+
