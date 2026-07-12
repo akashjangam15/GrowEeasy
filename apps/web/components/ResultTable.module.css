@@ -267,3 +267,20 @@
     padding: 6px 12px;
   }
 }
+
+/* ─── Custom Date Cell ────────────────────────────────── */
+
+.dateCell {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ge-text-primary);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.dateIcon {
+  color: var(--ge-primary-light);
+  opacity: 0.8;
+}
+

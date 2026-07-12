@@ -3,7 +3,7 @@
 import { useState } from "react";
 import type { CrmRecord, SkippedRecord } from "../lib/api";
 import styles from "./ResultTable.module.css";
-import { CheckCircle2, AlertTriangle, Inbox, Check } from "lucide-react";
+import { CheckCircle2, AlertTriangle, Inbox, Check, Calendar } from "lucide-react";
 
 type Tab = "imported" | "skipped";
 
@@ -53,6 +53,22 @@ function formatStatus(status: string): string {
 function formatSource(source: string): string {
   if (!source) return "—";
   return source.replace(/_/g, " ");
+}
+
+function formatDate(dateStr: string): string {
+  if (!dateStr) return "—";
+  try {
+    const date = new Date(dateStr);
+    if (isNaN(date.getTime())) return dateStr;
+    return date.toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+      timeZone: "UTC",
+    });
+  } catch {
+    return dateStr;
+  }
 }
 
 /**
@@ -142,6 +158,20 @@ export default function ResultTable({ parsed, skipped }: ResultTableProps) {
                               >
                                 {formatSource(val)}
                               </span>
+                            </td>
+                          );
+                        }
+                        if (f.key === "created_at") {
+                          return (
+                            <td key={f.key} className={styles.td} title={val || ""}>
+                              {val ? (
+                                <span className={styles.dateCell}>
+                                  <Calendar size={13} className={styles.dateIcon} />
+                                  {formatDate(val)}
+                                </span>
+                              ) : (
+                                <span className={styles.empty}>—</span>
+                              )}
                             </td>
                           );
                         }
