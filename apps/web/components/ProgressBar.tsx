@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./ProgressBar.module.css";
+import { Sparkles } from "lucide-react";
 
 /**
  * Full-screen loading overlay shown while the backend
@@ -14,7 +15,9 @@ export default function ProgressBar() {
         <div className={styles.spinnerContainer}>
           <div className={styles.spinnerGlow} />
           <div className={styles.spinner} />
-          <span className={styles.spinnerIcon}>⚡</span>
+          <span className={styles.spinnerIcon}>
+            <Sparkles size={16} />
+          </span>
         </div>
 
         {/* Text */}

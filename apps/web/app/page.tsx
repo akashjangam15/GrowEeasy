@@ -8,6 +8,7 @@ import ProgressBar from "../components/ProgressBar";
 import ImportSummaryCards from "../components/ImportSummaryCards";
 import ResultTable from "../components/ResultTable";
 import styles from "./page.module.css";
+import { Sparkles, Moon, Sun, AlertTriangle, FileSpreadsheet, CheckCircle2, RefreshCw } from "lucide-react";
 
 function formatFileSize(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -51,7 +52,7 @@ export default function Home() {
       {/* Header */}
       <header className={styles.header}>
         <div className={styles.logoMark}>
-          <div className={styles.logoIcon}>⚡</div>
+          <Sparkles className={styles.logoIcon} size={20} />
           <span className={styles.logoText}>GrowEasy</span>
         </div>
         <button
@@ -60,7 +61,15 @@ export default function Home() {
           type="button"
           title="Toggle light/dark mode"
         >
-          {theme === "light" ? "🌙 Night Mode" : "☀️ Light Mode"}
+          {theme === "light" ? (
+            <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
+              <Moon size={14} /> Night Mode
+            </span>
+          ) : (
+            <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
+              <Sun size={14} /> Light Mode
+            </span>
+          )}
         </button>
       </header>
 
@@ -90,7 +99,9 @@ export default function Home() {
         {step === "error" && (
           <div className={styles.errorSection}>
             <div className={`${styles.errorCard} glass-card`}>
-              <div className={styles.errorIcon}>⚠️</div>
+              <div className={styles.errorIcon}>
+                <AlertTriangle size={48} color="var(--error)" />
+              </div>
               <h2 className={styles.errorTitle}>Something went wrong</h2>
               <p className={styles.errorMessage}>{error}</p>
               <button
@@ -127,7 +138,7 @@ export default function Home() {
               {/* Selected File Card */}
               <div className={styles.fileCard}>
                 <div className={styles.fileIconWrapper}>
-                  <span>📄</span>
+                  <FileSpreadsheet size={24} color="var(--text-primary)" />
                   <span className={styles.fileIconLabel}>CSV</span>
                 </div>
                 <div className={styles.fileTextInfo}>
@@ -181,8 +192,9 @@ export default function Home() {
             {/* Result header */}
             <div className={styles.resultHeader}>
               <div>
-                <h2 className={styles.resultTitle}>
-                  <span className="gradient-text">Import Complete</span> 🎉
+                <h2 className={styles.resultTitle} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                  <CheckCircle2 size={24} color="var(--success)" />
+                  <span className="gradient-text">Import Complete</span>
                 </h2>
                 <p className={styles.resultSubtitle}>
                   {fileInfo?.name
@@ -195,8 +207,9 @@ export default function Home() {
                 onClick={reset}
                 type="button"
                 id="btn-import-another"
+                style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}
               >
-                ↻ Import Another
+                <RefreshCw size={16} /> Import Another
               </button>
             </div>
 

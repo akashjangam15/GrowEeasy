@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./ImportSummaryCards.module.css";
+import { FileText, CheckCircle2, AlertTriangle } from "lucide-react";
 
 interface ImportSummaryCardsProps {
   totalRows: number;
@@ -21,7 +22,9 @@ export default function ImportSummaryCards({
     <div className={styles.grid} id="import-summary">
       {/* Total */}
       <div className={styles.card}>
-        <div className={`${styles.iconWrap} ${styles.iconTotal}`}>📋</div>
+        <div className={`${styles.iconWrap} ${styles.iconTotal}`}>
+          <FileText size={18} />
+        </div>
         <div className={styles.textGroup}>
           <span className={`${styles.value} ${styles.valueTotal}`}>
             {totalRows}
@@ -32,7 +35,9 @@ export default function ImportSummaryCards({
 
       {/* Imported */}
       <div className={styles.card}>
-        <div className={`${styles.iconWrap} ${styles.iconImported}`}>✅</div>
+        <div className={`${styles.iconWrap} ${styles.iconImported}`}>
+          <CheckCircle2 size={18} />
+        </div>
         <div className={styles.textGroup}>
           <span className={`${styles.value} ${styles.valueImported}`}>
             {totalImported}
@@ -43,7 +48,9 @@ export default function ImportSummaryCards({
 
       {/* Skipped */}
       <div className={styles.card}>
-        <div className={`${styles.iconWrap} ${styles.iconSkipped}`}>⚠️</div>
+        <div className={`${styles.iconWrap} ${styles.iconSkipped}`}>
+          <AlertTriangle size={18} />
+        </div>
         <div className={styles.textGroup}>
           <span className={`${styles.value} ${styles.valueSkipped}`}>
             {totalSkipped}

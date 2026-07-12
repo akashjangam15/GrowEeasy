@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { CrmRecord, SkippedRecord } from "../lib/api";
 import styles from "./ResultTable.module.css";
+import { CheckCircle2, AlertTriangle, Inbox, Check } from "lucide-react";
 
 type Tab = "imported" | "skipped";
 
@@ -70,8 +71,9 @@ export default function ResultTable({ parsed, skipped }: ResultTableProps) {
           onClick={() => setActiveTab("imported")}
           type="button"
           id="tab-imported"
+          style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}
         >
-          ✅ Imported
+          <CheckCircle2 size={16} /> Imported
           <span className={`${styles.tabBadge} ${styles.badgeImported}`}>
             {parsed.length}
           </span>
@@ -81,8 +83,9 @@ export default function ResultTable({ parsed, skipped }: ResultTableProps) {
           onClick={() => setActiveTab("skipped")}
           type="button"
           id="tab-skipped"
+          style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}
         >
-          ⚠️ Skipped
+          <AlertTriangle size={16} /> Skipped
           <span className={`${styles.tabBadge} ${styles.badgeSkipped}`}>
             {skipped.length}
           </span>
@@ -94,7 +97,7 @@ export default function ResultTable({ parsed, skipped }: ResultTableProps) {
         <>
           {parsed.length === 0 ? (
             <div className={styles.emptyState}>
-              <span className={styles.emptyIcon}>📭</span>
+              <Inbox size={48} className={styles.emptyIcon} color="var(--text-secondary)" style={{ marginBottom: "12px" }} />
               <p className={styles.emptyText}>No imported records</p>
               <p className={styles.emptySubtext}>
                 All rows were skipped during processing
@@ -168,7 +171,7 @@ export default function ResultTable({ parsed, skipped }: ResultTableProps) {
         <>
           {skipped.length === 0 ? (
             <div className={styles.emptyState}>
-              <span className={styles.emptyIcon}>🎉</span>
+              <Check size={48} className={styles.emptyIcon} color="var(--success)" style={{ marginBottom: "12px" }} />
               <p className={styles.emptyText}>No skipped records</p>
               <p className={styles.emptySubtext}>
                 All rows were successfully imported!

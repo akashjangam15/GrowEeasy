@@ -2,6 +2,7 @@
 
 import { useRef, useState, useCallback } from "react";
 import styles from "./FileDropzone.module.css";
+import { UploadCloud } from "lucide-react";
 
 interface FileDropzoneProps {
   onFile: (file: File) => void;
@@ -84,27 +85,7 @@ export default function FileDropzone({ onFile, disabled }: FileDropzoneProps) {
 
       {/* Upload icon */}
       <div className={styles.iconWrapper}>
-        <svg
-          className={styles.icon}
-          viewBox="0 0 48 48"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M24 32V16M24 16L18 22M24 16L30 22"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M8 32V36C8 38.2091 9.79086 40 12 40H36C38.2091 40 40 38.2091 40 36V32"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <UploadCloud size={40} className={styles.icon} />
       </div>
 
       <div className={styles.text}>
