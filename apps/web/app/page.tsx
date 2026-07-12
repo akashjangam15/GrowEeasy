@@ -8,7 +8,7 @@ import ProgressBar from "../components/ProgressBar";
 import ImportSummaryCards from "../components/ImportSummaryCards";
 import ResultTable from "../components/ResultTable";
 import styles from "./page.module.css";
-import { Sparkles, Moon, Sun, AlertTriangle, FileSpreadsheet, CheckCircle2, RefreshCw } from "lucide-react";
+import { Layers, Moon, Sun, AlertTriangle, FileSpreadsheet, CheckCircle2, RefreshCw } from "lucide-react";
 
 function formatFileSize(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -52,7 +52,7 @@ export default function Home() {
       {/* Header */}
       <header className={styles.header}>
         <div className={styles.logoMark}>
-          <Sparkles className={styles.logoIcon} size={20} />
+          <Layers className={styles.logoIcon} size={20} />
           <span className={styles.logoText}>GrowEasy</span>
         </div>
         <button
