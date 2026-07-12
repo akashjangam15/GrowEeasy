@@ -402,7 +402,7 @@
 .formSelect,
 .formTextarea {
   padding: 8px 12px;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--ge-bg-secondary);
   border: 1px solid var(--ge-border);
   border-radius: var(--ge-radius-md);
   color: var(--ge-text-primary);
@@ -422,6 +422,11 @@
 
 .formSelect {
   cursor: pointer;
+}
+
+.formSelect option {
+  background: var(--ge-bg-secondary);
+  color: var(--ge-text-primary);
 }
 
 .formTextarea {
