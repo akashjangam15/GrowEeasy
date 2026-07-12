@@ -1,159 +1,183 @@
-# Turborepo starter
+# 🚀 GrowEasy AI CSV Importer
 
-This Turborepo starter is maintained by the Turborepo core team.
+> **Intelligent, AI-powered CSV lead ingestion for real-estate CRMs.**
 
-## Using this example
+GrowEasy is a state-of-the-art AI-powered CSV Importer. Instead of forcing users to manually map columns in a complex UI, GrowEasy leverages Large Language Models (specifically **Llama-3.3-70b-versatile** via **Groq**) to dynamically map arbitrary columns from messy exports (e.g., Facebook Leads, Google Ads, manual spreadsheets) into a fixed, canonical CRM schema. The importer validates records against strict business rules, parses multiple inputs, normalizes values, and returns clean, structured datasets ready for CRM insertion.
 
-Run the following command:
+---
 
-```sh
-npx create-turbo@latest
+## 🏗️ Technical Architecture & Monorepo Structure
+
+GrowEasy is managed as a high-performance monorepo using **Turborepo** and **pnpm workspaces**.
+
+```text
+GrowEasy/
+├── apps/
+│   ├── web/                     # Next.js 16 Frontend (App Router, Port 3000)
+│   │   ├── app/                 # Upload -> Preview -> Validation flow pages
+│   │   ├── components/          # Reusable UI (Dropzone, Tables, Cards, Progress)
+│   │   ├── hooks/               # useCsvImport client state-machine hook
+│   │   └── lib/                 # API client wrapper
+│   └── api/                     # Express 5 Backend (Port 3001)
+│       ├── src/
+│       │   ├── index.ts         # Server entry, health endpoint & routing
+│       │   ├── controllers/     # Import flow control & error handling
+│       │   ├── services/        # CSV Parsing, AI Mapping, Validator services
+│       │   ├── prompts/         # CRM Mapping system/user prompts
+│       │   └── utils/           # Helper scripts (Batching, Exponential backoff retry)
+│       └── tests/               # Vitest unit test suite (validator & mapper)
+├── packages/
+│   └── shared-types/            # Shared TypeScript CRM definitions (Lints & Schemas)
+└── sample-data/                 # CSV files representing messy formats for testing
 ```
 
-## What's inside?
+### 🛡️ Architectural Rules
+1. **Separation of Concerns**: The frontend and backend communicate strictly via HTTP APIs.
+2. **AI Location**: All LLM processing lives on the backend. The frontend never makes direct model calls, and API secrets are never exposed to the client.
+3. **Shared Types**: Shared CRM definitions and schemas are maintained in the `shared-types` local workspace package to ensure type-safety across both ends.
 
-This Turborepo includes the following packages/apps:
+---
 
-### Apps and Packages
+## 🛠️ Technology Stack
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+| Layer | Technology | Version |
+| :--- | :--- | :--- |
+| **Monorepo Manager** | Turborepo + pnpm workspaces | pnpm 9.0.0+ |
+| **Frontend** | Next.js (App Router, React 19) | 16.2.0 |
+| **Backend** | Express.js (Node / TypeScript) | 5.1.0 |
+| **CSV Parsing** | PapaParse | 5.5.2 |
+| **File Handling** | Multer | 1.4.5-lts.2 |
+| **AI SDK & Model** | OpenAI Client Wrapper + Llama-3.3-70b-versatile | SDK v6.46.0 |
+| **Testing** | Vitest | 4.1.10 |
+| **Styling** | CSS Modules (Vanilla CSS) | Native |
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+---
 
-### Utilities
+## 📋 Target CRM Schema Specifications
 
-This Turborepo has some additional tools already setup for you:
+Messy columns from the CSV are dynamically mapped into the following canonical CRM format:
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+### 1. Data Fields
 
-### Build
+| Field Name | Type | Allowed Values / Formatting | Description |
+| :--- | :--- | :--- | :--- |
+| `created_at` | `string` | ISO 8601 DateTime (or `""` if blank) | Record creation date, auto-normalized |
+| `name` | `string` | Free text | Lead name |
+| `email` | `string` | Single valid email | Primary email address |
+| `country_code` | `string` | e.g. `+91`, `+1` | Extracted country code from mobile number |
+| `mobile_without_country_code` | `string` | Numbers only | Cleaned phone number |
+| `company` | `string` | Free text | User's company |
+| `city` | `string` | Free text | City |
+| `state` | `string` | Free text | State |
+| `country` | `string` | Free text | Country |
+| `lead_owner` | `string` | Free text | Assigned sales agent |
+| `crm_status` | `string` | See Status Enums below | Lead quality tag |
+| `crm_note` | `string` | Free text (accumulated) | Overflow data and validator comments |
+| `data_source` | `string` | See Source Enums below | Origin project or platform |
+| `possession_time` | `string` | Free text | Expected real estate possession timeframe |
+| `description` | `string` | Free text | General notes or user comments |
 
-To build all apps and packages, run the following command:
+### 2. Supported Enums
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
+*   **`crm_status`**:
+    *   `GOOD_LEAD_FOLLOW_UP`
+    *   `DID_NOT_CONNECT`
+    *   `BAD_LEAD`
+    *   `SALE_DONE`
+    *   `""` (Unspecified)
+*   **`data_source`**:
+    *   `leads_on_demand`
+    *   `meridian_tower`
+    *   `eden_park`
+    *   `varah_swamy`
+    *   `sarjapur_plots`
+    *   `""` (Unspecified)
 
-```sh
-cd my-turborepo
-turbo build
+---
+
+## ⚡ Core Business & Validation Rules
+
+To ensure high-quality data ingestion, the backend runs a rigorous validation pipeline on the AI-mapped output:
+
+1.  **Skip Rule (Essential Contacts)**: Any lead row that contains **neither** a valid email **nor** a valid mobile number is automatically flagged as **skipped** and excluded from the main import.
+2.  **Date Normalization**: Raw dates like `"29th June 2026"` or `"12-07-2026"` are normalized into standard ISO 8601 strings. If parsing fails, the field is set to empty and the original date is stored in the notes.
+3.  **Multi-Item Separation**:
+    *   If a row contains multiple email addresses, the first is kept as primary. Remaining emails are appended to `crm_note`.
+    *   If a row contains multiple phone numbers, the first is parsed for country code and number, while other numbers are appended to `crm_note`.
+4.  **Enum Safeguards**: Values mapping to `crm_status` or `data_source` that don't match the strict whitelists are set to `""`. The raw input values are appended to `crm_note` for auditing.
+5.  **Robust Error Batching**: Row mapping is sent to the LLM in configurable batches (default 20). If a batch fails (e.g. rate limit), it retries up to 3 times with exponential backoff. If it still fails, those rows are saved to `skipped` with the reason `"AI processing failed"`.
+
+---
+
+## 💻 Local Setup & Development
+
+Follow these steps to run the frontend and backend servers locally on your machine.
+
+### 📋 Prerequisites
+*   [Node.js](https://nodejs.org/) (Version >= 18.0.0)
+*   [pnpm](https://pnpm.io/) (Version >= 9.0.0)
+
+### 🏃 Step 1: Install Dependencies
+From the root of the project directory, run:
+```bash
+pnpm install
 ```
 
-Without global `turbo`, use your package manager:
+### 🔑 Step 2: Configure Environment Variables
+Navigate to the API folder and clone the example environment file:
+```bash
+cd apps/api
+cp .env.example .env
+```
+Open `apps/api/.env` and update the settings:
+```ini
+# Get your API key from https://console.groq.com/keys
+GROQ_API_KEY=your_groq_api_key_here
+GROQ_BASE_URL=https://api.groq.com/openai/v1
 
-```sh
-cd my-turborepo
-npx turbo build
-pnpm dlx turbo build
-pnpm exec turbo build
+# Optional configurations
+PORT=3001
+FRONTEND_URL=http://localhost:3000
+AI_MODEL=llama-3.3-70b-versatile
+AI_BATCH_SIZE=20
+NODE_ENV=development
 ```
 
-You can build a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
+### 🚀 Step 3: Run the Application
+Navigate back to the root of the repository and launch both the Next.js app and the Express API in development mode:
+```bash
+cd ../..
+pnpm dev
+```
+This single command fires up:
+*   **Next.js Web App**: `http://localhost:3000`
+*   **Express API Server**: `http://localhost:3001`
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
+---
 
-```sh
-turbo build --filter=docs
+## 🧪 Testing the Application
+
+GrowEasy uses **Vitest** for server-side business validation and mapping logic verification.
+
+### Run API Unit Tests
+To execute tests for date normalization, splitting logic, enum guards, and parsing rules:
+```bash
+pnpm --filter api test
 ```
 
-Without global `turbo`:
+### Test Datasets
+Sample CSV files are provided in `sample-data/` to test against the system's dynamic mapping capabilities:
+*   [facebook_leads_export.csv](file:///c:/Users/ASUS/OneDrive/Desktop/GrowEasy/sample-data/facebook_leads_export.csv): Standard raw export with custom Facebook form columns.
+*   [google_ads_export.csv](file:///c:/Users/ASUS/OneDrive/Desktop/GrowEasy/sample-data/google_ads_export.csv): CSV using structured columns from Google campaigns.
+*   [messy_manual_sheet.csv](file:///c:/Users/ASUS/OneDrive/Desktop/GrowEasy/sample-data/messy_manual_sheet.csv): Manually input data with typos in headers (e.g., `Nmae`, `Ph no.`).
+*   [real_estate_crm_export.csv](file:///c:/Users/ASUS/OneDrive/Desktop/GrowEasy/sample-data/real_estate_crm_export.csv): Large dataset with 1000+ entries.
 
-```sh
-npx turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-```
+---
 
-### Develop
+## ☁️ Deployment
 
-To develop all apps and packages, run the following command:
+For cloud hosting, you can deploy the stack on PaaS options. See the full [PaaS Deployment Guide](file:///c:/Users/ASUS/OneDrive/Desktop/GrowEasy/docs/paas-deployment-guide.md) for detailed step-by-step instructions.
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo dev
-```
-
-Without global `turbo`, use your package manager:
-
-```sh
-cd my-turborepo
-npx turbo dev
-pnpm exec turbo dev
-pnpm exec turbo dev
-```
-
-You can develop a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo dev --filter=web
-```
-
-Without global `turbo`:
-
-```sh
-npx turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo login
-```
-
-Without global `turbo`, use your package manager:
-
-```sh
-cd my-turborepo
-npx turbo login
-pnpm exec turbo login
-pnpm exec turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo link
-```
-
-Without global `turbo`:
-
-```sh
-npx turbo link
-pnpm exec turbo link
-pnpm exec turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.dev/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.dev/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.dev/docs/reference/configuration)
-- [CLI Usage](https://turborepo.dev/docs/reference/command-line-reference)
+### Quick Recommendations
+*   **Frontend (Next.js)**: Host on **Vercel Hobby** or **Netlify Starter** (Free tier). Set root directory to `apps/web` and add the `NEXT_PUBLIC_API_URL` environment variable.
+*   **Backend (Express API)**: Host on **Render** as a web service. Set the build command to `pnpm install && pnpm run build --filter=api` and start command to `pnpm run start --filter=api`. Ensure `GROQ_API_KEY` is added to the backend environment configurations.
