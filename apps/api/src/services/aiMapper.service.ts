@@ -1,4 +1,4 @@
-import Anthropic from "@anthropic-ai/sdk";
+import OpenAI from "openai";
 import { CrmRecord, SkippedRecord } from "shared-types";
 import { batchArray } from "../utils/batchArray";
 import { retry } from "../utils/retry";
@@ -9,24 +9,30 @@ import {
 
 // ─── Configuration ───────────────────────────────────────
 
-const MODEL = process.env.AI_MODEL || "claude-haiku-4-5-20251001";
-const BATCH_SIZE = Number(process.env.AI_BATCH_SIZE) || 20;
+const MODEL = process.env.AI_MODEL || "llama-3.3-70b-versatile";
+const BATCH_SIZE = Number(process.env.AI_BATCH_SIZE) || 500;
 const MAX_RETRIES = 3;
 const TEMPERATURE = 0.2;
 
 // ─── Client ──────────────────────────────────────────────
 
-let _client: Anthropic | null = null;
+let _client: OpenAI | null = null;
 
-function getClient(): Anthropic {
+function getClient(): OpenAI {
   if (!_client) {
-    const apiKey = process.env.ANTHROPIC_API_KEY;
+    const apiKey = process.env.GROQ_API_KEY;
     if (!apiKey) {
       throw new Error(
-        "ANTHROPIC_API_KEY is not set. Add it to your .env file."
+        "GROQ_API_KEY is not set. Get a key from https://console.groq.com/keys and add it to your .env file."
       );
     }
-    _client = new Anthropic({ apiKey });
+    console.log(
+      `[aiMapper] Using Groq API key: ${apiKey.substring(0, 8)}... model: ${MODEL}`
+    );
+    _client = new OpenAI({
+      baseURL: process.env.GROQ_BASE_URL || "https://api.groq.com/openai/v1",
+      apiKey,
+    });
   }
   return _client;
 }
@@ -47,53 +53,93 @@ function parseAiResponse(text: string): Partial<CrmRecord>[] {
 
   const parsed = JSON.parse(cleaned);
 
-  if (!Array.isArray(parsed)) {
-    throw new Error("AI response is not a JSON array");
+  if (Array.isArray(parsed)) {
+    return parsed;
   }
 
-  return parsed;
+  if (parsed && typeof parsed === "object" && Array.isArray(parsed.records)) {
+    return parsed.records;
+  }
+
+  throw new Error("AI response is not a valid JSON array or object containing 'records'");
 }
 
 // ─── Single Batch Processing ─────────────────────────────
 
-/**
- * Send a single batch of rows to Claude for mapping.
- * Returns an array of partially-typed CRM records.
- */
 async function mapBatch(
   rows: Record<string, string>[]
 ): Promise<Partial<CrmRecord>[]> {
   const client = getClient();
 
-  const response = await client.messages.create({
+  const response = await client.chat.completions.create({
     model: MODEL,
-    max_tokens: 4096,
-    temperature: TEMPERATURE,
-    system: CRM_MAPPING_SYSTEM_PROMPT,
     messages: [
+      {
+        role: "system",
+        content: CRM_MAPPING_SYSTEM_PROMPT,
+      },
       {
         role: "user",
         content: buildUserPrompt(rows),
       },
     ],
+    temperature: TEMPERATURE,
+    response_format: { type: "json_object" },
   });
 
-  // Extract text content
-  const textBlock = response.content.find((block) => block.type === "text");
-  if (!textBlock || textBlock.type !== "text") {
+  const text = response.choices[0]?.message?.content;
+  if (!text) {
     throw new Error("AI response contains no text content");
   }
 
-  const records = parseAiResponse(textBlock.text);
+  const records = parseAiResponse(text);
+
+  // Reconstruct target schema fields with default empty strings to handle sparse output
+  const filledRecords = records.map((record) => ({
+    created_at: record.created_at || "",
+    name: record.name || "",
+    email: record.email || "",
+    country_code: record.country_code || "",
+    mobile_without_country_code: record.mobile_without_country_code || "",
+    company: record.company || "",
+    city: record.city || "",
+    state: record.state || "",
+    country: record.country || "",
+    lead_owner: record.lead_owner || "",
+    crm_status: record.crm_status || "",
+    crm_note: record.crm_note || "",
+    data_source: record.data_source || "",
+    possession_time: record.possession_time || "",
+    description: record.description || "",
+  })) as Partial<CrmRecord>[];
 
   // Sanity check: AI should return same number of rows as input
-  if (records.length !== rows.length) {
+  if (filledRecords.length !== rows.length) {
     console.warn(
-      `[aiMapper] Batch size mismatch: sent ${rows.length} rows, got ${records.length} back`
+      `[aiMapper] Batch size mismatch: sent ${rows.length} rows, got ${filledRecords.length} back`
     );
   }
 
-  return records;
+  return filledRecords;
+}
+
+function isFatalAiError(message: string): boolean {
+  const lowercase = message.toLowerCase();
+  return (
+    lowercase.includes("resource_exhausted") ||
+    lowercase.includes("quota exceeded") ||
+    lowercase.includes("429") ||
+    lowercase.includes("api key not valid") ||
+    lowercase.includes("api_key_invalid") ||
+    lowercase.includes("invalid api key") ||
+    lowercase.includes("groq_api_key is not set") ||
+    lowercase.includes("model not found") ||
+    lowercase.includes("model_not_found") ||
+    lowercase.includes("401") ||
+    lowercase.includes("authentication") ||
+    lowercase.includes("unauthorized") ||
+    (lowercase.includes("not found") && lowercase.includes("model"))
+  );
 }
 
 // ─── Public API ──────────────────────────────────────────
@@ -104,10 +150,10 @@ export interface AiMapperResult {
 }
 
 /**
- * Map an array of raw CSV rows into CRM records using Claude.
+ * Map an array of raw CSV rows into CRM records using Groq.
  *
  * 1. Splits rows into batches of BATCH_SIZE
- * 2. Each batch is sent to Claude with retry (3x, exponential backoff)
+ * 2. Each batch is sent to Groq with retry (3x, exponential backoff)
  * 3. On final failure, batch rows go to skipped[]
  * 4. Returns all mapped records + any skipped rows
  */
@@ -136,26 +182,35 @@ export async function mapRowsWithAi(
       const mapped = await retry(() => mapBatch(batch), MAX_RETRIES);
       allMapped.push(...mapped);
     } catch (err) {
-      // All retries exhausted — mark entire batch as skipped
       const reason =
         err instanceof Error
-          ? `AI processing failed: ${err.message}`
+          ? err.message
           : "AI processing failed";
 
+      if (err instanceof Error && isFatalAiError(reason)) {
+        throw err;
+      }
+
       console.error(
-        `[aiMapper] Batch ${batchIndex + 1} failed after ${MAX_RETRIES} retries: ${reason}`
+        `[aiMapper] Batch ${batchIndex + 1} failed after ${MAX_RETRIES} retries: AI processing failed: ${reason}`
       );
 
       for (let i = 0; i < batch.length; i++) {
         allSkipped.push({
           row_index: batchStartIndex + i + 1, // 1-indexed
-          reason,
+          reason: `AI processing failed: ${reason}`,
           raw: batch[i],
         });
       }
     }
 
     globalRowIndex += batch.length;
+
+    // Add a delay between batches to stay within rate limits (e.g. 4 seconds)
+    if (batchIndex < batches.length - 1) {
+      console.log(`[aiMapper] Rate limiting: sleeping for 4000ms...`);
+      await new Promise((resolve) => setTimeout(resolve, 4000));
+    }
   }
 
   return { mapped: allMapped, skipped: allSkipped };

@@ -291,6 +291,37 @@
   font-weight: 600;
 }
 
+/* ─── Result Section (Done state) ─────────────────────── */
+
+.resultSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 8px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.resultHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.resultTitle {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.resultSubtitle {
+  font-size: 14px;
+  color: var(--ge-text-secondary);
+}
+
 /* ─── Responsive ──────────────────────────────────────── */
 
 @media (max-width: 768px) {
@@ -302,6 +333,12 @@
 
   .btnConfirm {
     justify-content: center;
+  }
+
+  .resultHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
 }
 
@@ -320,3 +357,230 @@
     align-self: flex-end;
   }
 }
+
+/* ─── Theme Switcher Toggle ───────────────────────────── */
+.themeToggle {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--ge-bg-secondary);
+  border: 1px solid var(--ge-border);
+  color: var(--ge-text-primary);
+  border-radius: var(--ge-radius-sm);
+  font-family: var(--ge-font);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--ge-transition);
+}
+
+.themeToggle:hover {
+  border-color: var(--ge-primary-light);
+  box-shadow: var(--ge-shadow-glow);
+}
+
+/* ─── Modal Layout ────────────────────────────────────── */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 24px;
+}
+
+.modalContainer {
+  width: 100%;
+  max-width: 800px;
+  background: var(--ge-bg-secondary);
+  border: 1px solid var(--ge-border);
+  border-radius: var(--ge-radius-lg);
+  box-shadow: var(--ge-shadow-md);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modalCloseBtn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: var(--ge-text-muted);
+  cursor: pointer;
+  transition: color var(--ge-transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.modalCloseBtn:hover {
+  color: var(--ge-text-primary);
+  background: var(--ge-bg-elevated);
+}
+
+.modalHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 40px;
+}
+
+.modalTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ge-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.modalSubtitle {
+  font-size: 14px;
+  color: var(--ge-text-secondary);
+  line-height: 1.4;
+}
+
+/* Selected File card */
+.fileCard {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  background: var(--ge-bg-card);
+  border: 1px solid var(--ge-border);
+  border-radius: var(--ge-radius-md);
+  gap: 16px;
+  position: relative;
+}
+
+.fileIconWrapper {
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 206, 201, 0.08);
+  border: 1px dashed var(--ge-accent);
+  border-radius: var(--ge-radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--ge-accent);
+}
+
+.fileIconLabel {
+  font-size: 8px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.fileTextInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.modalFileName {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ge-text-primary);
+}
+
+.fileSize {
+  font-size: 13px;
+  color: var(--ge-text-secondary);
+}
+
+.fileRemoveBtn {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: var(--ge-text-muted);
+  cursor: pointer;
+  transition: color var(--ge-transition);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fileRemoveBtn:hover {
+  color: var(--ge-danger);
+}
+
+/* Modal actions footer */
+.modalFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.btnCancel {
+  flex: 1;
+  max-width: 180px;
+  padding: 12px 24px;
+  border: 1px solid var(--ge-border);
+  background: var(--ge-bg-secondary);
+  color: var(--ge-text-primary);
+  border-radius: var(--ge-radius-sm);
+  font-family: var(--ge-font);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--ge-transition);
+  text-align: center;
+}
+
+.btnCancel:hover {
+  background: var(--ge-bg-elevated);
+  border-color: var(--ge-text-secondary);
+}
+
+.btnUpload {
+  flex: 1;
+  max-width: 180px;
+  padding: 12px 24px;
+  border: none;
+  background: #ff7675; /* Orange/Coral matching user design */
+  color: #fff;
+  border-radius: var(--ge-radius-sm);
+  font-family: var(--ge-font);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--ge-transition);
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(255, 118, 117, 0.2);
+}
+
+.btnUpload:hover {
+  background: #ff6b6b;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(255, 118, 117, 0.3);
+}
+
+.btnUpload:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+

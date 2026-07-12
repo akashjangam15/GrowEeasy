@@ -1,0 +1,154 @@
+/* ──────────────────────────────────────────────────────────
+   ImportSummaryCards — 3-card stats row
+   ────────────────────────────────────────────────────────── */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* ─── Card ────────────────────────────────────────────── */
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: var(--ge-bg-card);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--ge-border);
+  border-radius: var(--ge-radius-lg);
+  overflow: hidden;
+  transition: border-color var(--ge-transition), box-shadow var(--ge-transition), transform var(--ge-transition);
+}
+
+.card:hover {
+  border-color: var(--ge-border-hover);
+  box-shadow: var(--ge-shadow-glow);
+  transform: translateY(-2px);
+}
+
+/* Entrance animation — staggered */
+.card:nth-child(1) { animation: cardSlideIn 0.5s ease-out 0.1s both; }
+.card:nth-child(2) { animation: cardSlideIn 0.5s ease-out 0.2s both; }
+.card:nth-child(3) { animation: cardSlideIn 0.5s ease-out 0.3s both; }
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ─── Icon ────────────────────────────────────────────── */
+
+.iconWrap {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--ge-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.iconTotal {
+  background: rgba(108, 92, 231, 0.12);
+}
+
+.iconImported {
+  background: rgba(0, 184, 148, 0.12);
+}
+
+.iconSkipped {
+  background: rgba(253, 203, 110, 0.12);
+}
+
+/* ─── Text ────────────────────────────────────────────── */
+
+.textGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.value {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--ge-text-primary);
+}
+
+.valueTotal {
+  color: var(--ge-primary-light);
+}
+
+.valueImported {
+  color: var(--ge-success);
+}
+
+.valueSkipped {
+  color: var(--ge-warning);
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ge-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ─── Decorative glow behind each card ────────────────── */
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -20%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.card:nth-child(1)::after {
+  background: var(--ge-primary);
+}
+
+.card:nth-child(2)::after {
+  background: var(--ge-success);
+}
+
+.card:nth-child(3)::after {
+  background: var(--ge-warning);
+}
+
+/* ─── Responsive ──────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .value {
+    font-size: 24px;
+  }
+}

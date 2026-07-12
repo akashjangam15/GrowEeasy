@@ -52,7 +52,7 @@ Each output record must be a JSON object with these exact fields:
 
 ## Output Format
 
-Return ONLY a valid JSON array of objects. No markdown, no code fences, no explanations, no extra text.
+Return ONLY a valid JSON object with a single key "records" pointing to the array of mapped objects. No markdown, no code fences, no explanations, no extra text.
 Every object in the array must have ALL 15 fields listed above.`;
 
 // ─── Few-Shot Example ────────────────────────────────────
@@ -69,25 +69,27 @@ export const FEW_SHOT_EXAMPLE = {
       city: "Bangalore",
     },
   ],
-  output: [
-    {
-      created_at: "2026-06-15T10:30:00+0530",
-      name: "Rahul Sharma",
-      email: "rahul.sharma@gmail.com",
-      country_code: "+91",
-      mobile_without_country_code: "9876543210",
-      company: "",
-      city: "Bangalore",
-      state: "",
-      country: "",
-      lead_owner: "",
-      crm_status: "",
-      crm_note: "ad_name: Eden Park 3BHK | form_name: Facebook Lead Form",
-      data_source: "eden_park",
-      possession_time: "",
-      description: "",
-    },
-  ],
+  output: {
+    records: [
+      {
+        created_at: "2026-06-15T10:30:00+0530",
+        name: "Rahul Sharma",
+        email: "rahul.sharma@gmail.com",
+        country_code: "+91",
+        mobile_without_country_code: "9876543210",
+        company: "",
+        city: "Bangalore",
+        state: "",
+        country: "",
+        lead_owner: "",
+        crm_status: "",
+        crm_note: "ad_name: Eden Park 3BHK | form_name: Facebook Lead Form",
+        data_source: "eden_park",
+        possession_time: "",
+        description: "",
+      },
+    ],
+  },
 };
 
 // ─── Build User Prompt ───────────────────────────────────
@@ -107,7 +109,7 @@ ${JSON.stringify(FEW_SHOT_EXAMPLE.output, null, 2)}
 
 ---
 
-Now map the following ${rows.length} row(s). Return ONLY a valid JSON array with ${rows.length} objects:
+Now map the following ${rows.length} row(s). Return ONLY a valid JSON object with a single key "records" containing ${rows.length} mapped objects:
 
 ${JSON.stringify(rows, null, 2)}`;
 }

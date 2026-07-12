@@ -1,8 +1,12 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useCsvImport } from "../hooks/useCsvImport";
 import FileDropzone from "../components/FileDropzone";
 import CsvPreviewTable from "../components/CsvPreviewTable";
+import ProgressBar from "../components/ProgressBar";
+import ImportSummaryCards from "../components/ImportSummaryCards";
+import ResultTable from "../components/ResultTable";
 import styles from "./page.module.css";
 
 function formatFileSize(bytes: number): string {
@@ -12,7 +16,35 @@ function formatFileSize(bytes: number): string {
 }
 
 export default function Home() {
-  const { step, fileInfo, csvData, error, handleFile, reset } = useCsvImport();
+  const {
+    step,
+    fileInfo,
+    csvData,
+    importResult,
+    error,
+    handleFile,
+    confirmImport,
+    reset,
+  } = useCsvImport();
+
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
 
   return (
     <div className={styles.page}>
@@ -22,6 +54,14 @@ export default function Home() {
           <div className={styles.logoIcon}>⚡</div>
           <span className={styles.logoText}>GrowEasy</span>
         </div>
+        <button
+          className={styles.themeToggle}
+          onClick={toggleTheme}
+          type="button"
+          title="Toggle light/dark mode"
+        >
+          {theme === "light" ? "🌙 Night Mode" : "☀️ Light Mode"}
+        </button>
       </header>
 
       {/* Hero (only on upload step) */}
@@ -64,51 +104,114 @@ export default function Home() {
           </div>
         )}
 
-        {/* Step 2: Preview */}
+        {/* Step 2: Preview modal overlay */}
         {step === "preview" && csvData && fileInfo && (
-          <div className={styles.previewSection}>
-            {/* File info bar */}
-            <div className={`${styles.fileInfoBar} glass-card`}>
-              <div className={styles.fileDetails}>
-                <span className={styles.fileIcon}>📄</span>
-                <div>
-                  <p className={styles.fileName}>{fileInfo.name}</p>
-                  <p className={styles.fileMeta}>
-                    {formatFileSize(fileInfo.size)} • {csvData.totalRows} rows •{" "}
-                    {csvData.headers.length} columns
-                  </p>
-                </div>
-              </div>
+          <div className={styles.modalOverlay}>
+            <div className={styles.modalContainer}>
               <button
-                className={styles.btnGhost}
+                className={styles.modalCloseBtn}
                 onClick={reset}
                 type="button"
+                aria-label="Close"
               >
-                ✕ Remove
+                ✕
+              </button>
+
+              <div className={styles.modalHeader}>
+                <h2 className={styles.modalTitle}>Import Leads via CSV</h2>
+                <p className={styles.modalSubtitle}>
+                  Upload a CSV file to bulk import leads into your system.
+                </p>
+              </div>
+
+              {/* Selected File Card */}
+              <div className={styles.fileCard}>
+                <div className={styles.fileIconWrapper}>
+                  <span>📄</span>
+                  <span className={styles.fileIconLabel}>CSV</span>
+                </div>
+                <div className={styles.fileTextInfo}>
+                  <p className={styles.modalFileName}>{fileInfo.name}</p>
+                  <p className={styles.fileSize}>{formatFileSize(fileInfo.size)}</p>
+                </div>
+                <button
+                  className={styles.fileRemoveBtn}
+                  onClick={reset}
+                  type="button"
+                  title="Remove file"
+                >
+                  ✕
+                </button>
+              </div>
+
+              {/* Preview table */}
+              <CsvPreviewTable
+                headers={csvData.headers}
+                rows={csvData.rows}
+              />
+
+              {/* Footer buttons */}
+              <div className={styles.modalFooter}>
+                <button
+                  className={styles.btnCancel}
+                  onClick={reset}
+                  type="button"
+                >
+                  Cancel
+                </button>
+                <button
+                  className={styles.btnUpload}
+                  onClick={confirmImport}
+                  type="button"
+                  id="btn-confirm-import"
+                >
+                  Upload File
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Step 3: Uploading — ProgressBar overlay */}
+        {step === "uploading" && <ProgressBar />}
+
+        {/* Step 4: Done — Results */}
+        {step === "done" && importResult && (
+          <div className={styles.resultSection}>
+            {/* Result header */}
+            <div className={styles.resultHeader}>
+              <div>
+                <h2 className={styles.resultTitle}>
+                  <span className="gradient-text">Import Complete</span> 🎉
+                </h2>
+                <p className={styles.resultSubtitle}>
+                  {fileInfo?.name
+                    ? `${fileInfo.name} — processed successfully`
+                    : "Your CSV has been processed successfully"}
+                </p>
+              </div>
+              <button
+                className={styles.btnPrimary}
+                onClick={reset}
+                type="button"
+                id="btn-import-another"
+              >
+                ↻ Import Another
               </button>
             </div>
 
-            {/* Preview table */}
-            <CsvPreviewTable
-              headers={csvData.headers}
-              rows={csvData.rows}
+            {/* Summary cards */}
+            <ImportSummaryCards
+              totalRows={importResult.summary.total_rows}
+              totalImported={importResult.summary.total_imported}
+              totalSkipped={importResult.summary.total_skipped}
             />
 
-            {/* Confirm button */}
-            <div className={styles.confirmBar}>
-              <p className={styles.confirmHint}>
-                Review your data above, then confirm to start AI mapping.
-              </p>
-              <button
-                className={styles.btnConfirm}
-                type="button"
-                disabled
-                title="AI mapping will be available in Phase 4"
-              >
-                <span className={styles.btnConfirmIcon}>🚀</span>
-                Confirm & Import
-              </button>
-            </div>
+            {/* Result table */}
+            <ResultTable
+              parsed={importResult.parsed}
+              skipped={importResult.skipped}
+            />
           </div>
         )}
       </main>

@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Papa from "papaparse";
+import { uploadCsv, type ImportResponse } from "../lib/api";
 
 export type ImportStep = "upload" | "preview" | "uploading" | "done" | "error";
 
@@ -21,20 +22,23 @@ export interface UseCsvImportReturn {
   step: ImportStep;
   fileInfo: FileInfo | null;
   csvData: CsvData | null;
+  importResult: ImportResponse | null;
   error: string | null;
   handleFile: (file: File) => void;
+  confirmImport: () => void;
   reset: () => void;
 }
 
 /**
  * Client-side CSV import hook.
- * Handles file selection, client-side parsing (preview), and state management.
- * The actual server upload is handled separately in Phase 5.
+ * Handles file selection, client-side parsing (preview), server upload,
+ * and the full state machine: upload → preview → uploading → done | error.
  */
 export function useCsvImport(): UseCsvImportReturn {
   const [step, setStep] = useState<ImportStep>("upload");
   const [fileInfo, setFileInfo] = useState<FileInfo | null>(null);
   const [csvData, setCsvData] = useState<CsvData | null>(null);
+  const [importResult, setImportResult] = useState<ImportResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const handleFile = useCallback((file: File) => {
@@ -84,12 +88,36 @@ export function useCsvImport(): UseCsvImportReturn {
     });
   }, []);
 
+  /**
+   * Send the file to the backend for AI mapping + validation.
+   * Transitions: preview → uploading → done | error
+   */
+  const confirmImport = useCallback(async () => {
+    if (!fileInfo) return;
+
+    setStep("uploading");
+    setError(null);
+
+    try {
+      const result = await uploadCsv(fileInfo.file);
+      setImportResult(result);
+      setStep("done");
+    } catch (err) {
+      const message =
+        err instanceof Error ? err.message : "Failed to import CSV";
+      setError(message);
+      setStep("error");
+    }
+  }, [fileInfo]);
+
   const reset = useCallback(() => {
     setStep("upload");
     setFileInfo(null);
     setCsvData(null);
+    setImportResult(null);
     setError(null);
   }, []);
 
-  return { step, fileInfo, csvData, error, handleFile, reset };
+  return { step, fileInfo, csvData, importResult, error, handleFile, confirmImport, reset };
 }
+

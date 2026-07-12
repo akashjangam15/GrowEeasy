@@ -14,6 +14,10 @@ import type { ImportResponse } from "shared-types";
  * 4. Return ImportResponse
  */
 export async function importCsv(req: Request, res: Response): Promise<void> {
+  // Disable request & response timeouts to support long-running imports
+  req.setTimeout(0);
+  res.setTimeout(0);
+
   try {
     const file = req.file;
 
@@ -79,11 +83,42 @@ export async function importCsv(req: Request, res: Response): Promise<void> {
     console.error("[import] Error:", message);
 
     // Check for missing API key specifically
-    if (message.includes("ANTHROPIC_API_KEY")) {
+    if (message.includes("GROQ_API_KEY")) {
       res.status(500).json({
         success: false,
-        error: "AI service is not configured. Please set ANTHROPIC_API_KEY.",
+        error: "AI service is not configured. Please set GROQ_API_KEY in your .env file.",
         code: "AI_NOT_CONFIGURED",
+      });
+      return;
+    }
+
+    // Check for Groq API quota limit / rate limits
+    if (
+      message.includes("RESOURCE_EXHAUSTED") ||
+      message.includes("quota exceeded") ||
+      message.includes("429")
+    ) {
+      res.status(429).json({
+        success: false,
+        error: "Your Groq API quota or rate limit has been exceeded. Please wait a minute before retrying, or verify your limits in your Groq Console.",
+        code: "AI_QUOTA_EXHAUSTED",
+      });
+      return;
+    }
+
+    // Check for invalid API key or authentication error
+    if (
+      message.includes("API_KEY_INVALID") ||
+      message.includes("API key not valid") ||
+      message.includes("invalid api key") ||
+      message.includes("401") ||
+      message.includes("Authentication") ||
+      message.includes("unauthorized")
+    ) {
+      res.status(401).json({
+        success: false,
+        error: "Your Groq API key is invalid or authentication failed. Please double check the GROQ_API_KEY set in your .env file.",
+        code: "AI_INVALID_KEY",
       });
       return;
     }
