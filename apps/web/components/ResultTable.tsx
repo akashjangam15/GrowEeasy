@@ -60,12 +60,10 @@ function formatDate(dateStr: string): string {
   try {
     const date = new Date(dateStr);
     if (isNaN(date.getTime())) return dateStr;
-    return date.toLocaleDateString("en-GB", {
-      day: "2-digit",
-      month: "short",
-      year: "numeric",
-      timeZone: "UTC",
-    });
+    const mm = String(date.getUTCMonth() + 1).padStart(2, "0");
+    const dd = String(date.getUTCDate()).padStart(2, "0");
+    const yyyy = date.getUTCFullYear();
+    return `${mm}/${dd}/${yyyy}`;
   } catch {
     return dateStr;
   }
