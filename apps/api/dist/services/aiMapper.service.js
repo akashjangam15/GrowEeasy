@@ -10,7 +10,7 @@ const batchArray_1 = require("../utils/batchArray");
 const retry_1 = require("../utils/retry");
 const crmMappingPrompt_1 = require("../prompts/crmMappingPrompt");
 // ─── Configuration ───────────────────────────────────────
-const MODEL = process.env.AI_MODEL || "llama-3.3-70b-versatile";
+const MODEL = (process.env.AI_MODEL || "llama-3.3-70b-versatile").trim();
 const BATCH_SIZE = Number(process.env.AI_BATCH_SIZE) || 500;
 const MAX_RETRIES = 3;
 const TEMPERATURE = 0.2;
@@ -65,7 +65,7 @@ function parseAiResponse(text) {
 // ─── Single Batch Processing ─────────────────────────────
 async function mapBatchWithGemini(rows) {
     const ai = getGeminiClient();
-    const modelName = process.env.GEMINI_MODEL || "gemini-3.5-flash";
+    const modelName = (process.env.GEMINI_MODEL || "gemini-3.5-flash").trim();
     console.log(`[aiMapper] Attempting mapping with Gemini using model ${modelName}...`);
     const response = await ai.models.generateContent({
         model: modelName,

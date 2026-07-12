@@ -10,7 +10,7 @@ import {
 
 // ─── Configuration ───────────────────────────────────────
 
-const MODEL = process.env.AI_MODEL || "llama-3.3-70b-versatile";
+const MODEL = (process.env.AI_MODEL || "llama-3.3-70b-versatile").trim();
 const BATCH_SIZE = Number(process.env.AI_BATCH_SIZE) || 500;
 const MAX_RETRIES = 3;
 const TEMPERATURE = 0.2;
@@ -86,7 +86,7 @@ async function mapBatchWithGemini(
   rows: Record<string, string>[]
 ): Promise<Partial<CrmRecord>[]> {
   const ai = getGeminiClient();
-  const modelName = process.env.GEMINI_MODEL || "gemini-3.5-flash";
+  const modelName = (process.env.GEMINI_MODEL || "gemini-3.5-flash").trim();
 
   console.log(`[aiMapper] Attempting mapping with Gemini using model ${modelName}...`);
   const response = await ai.models.generateContent({
