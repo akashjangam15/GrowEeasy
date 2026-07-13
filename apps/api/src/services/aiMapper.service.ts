@@ -1,18 +1,15 @@
 import { GoogleGenAI } from "@google/genai";
 import OpenAI from "openai";
 import { CrmRecord, SkippedRecord } from "shared-types";
-import { batchArray } from "../utils/batchArray";
 import { retry } from "../utils/retry";
 import {
-  CRM_MAPPING_SYSTEM_PROMPT,
-  buildUserPrompt,
-} from "../prompts/crmMappingPrompt";
+  CRM_SCHEMA_MAPPING_SYSTEM_PROMPT,
+  buildSchemaUserPrompt,
+} from "../prompts/crmSchemaPrompt";
 
 // ─── Configuration ───────────────────────────────────────
 
 const MODEL = (process.env.AI_MODEL || "llama-3.3-70b-versatile").trim();
-const BATCH_SIZE = Number(process.env.AI_BATCH_SIZE) || 500;
-const MAX_RETRIES = 3;
 const TEMPERATURE = 0.2;
 
 // ─── Clients ─────────────────────────────────────────────
@@ -55,11 +52,11 @@ function getGroqClient(): OpenAI {
 
 // ─── JSON Parsing ────────────────────────────────────────
 
-/**
- * Defensively parse AI response text into a JSON array.
- * Strips markdown code fences if the model wraps the output.
- */
-function parseAiResponse(text: string): Partial<CrmRecord>[] {
+interface SchemaMappingProposal {
+  mappings: { header: string; target: string | null }[];
+}
+
+function parseSchemaResponse(text: string): SchemaMappingProposal {
   let cleaned = text.trim();
 
   // Strip ```json ... ``` or ``` ... ``` wrappers
@@ -69,31 +66,31 @@ function parseAiResponse(text: string): Partial<CrmRecord>[] {
 
   const parsed = JSON.parse(cleaned);
 
-  if (Array.isArray(parsed)) {
+  if (parsed && Array.isArray(parsed.mappings)) {
     return parsed;
   }
 
-  if (parsed && typeof parsed === "object" && Array.isArray(parsed.records)) {
-    return parsed.records;
+  if (Array.isArray(parsed)) {
+    return { mappings: parsed };
   }
 
-  throw new Error("AI response is not a valid JSON array or object containing 'records'");
+  throw new Error("AI response is not a valid JSON object matching the expected schema");
 }
 
-// ─── Single Batch Processing ─────────────────────────────
+// ─── Schema Proposal Retrieval ───────────────────────────
 
-async function mapBatchWithGemini(
-  rows: Record<string, string>[]
-): Promise<Partial<CrmRecord>[]> {
+async function proposeSchemaMappingWithGemini(
+  columns: { header: string; samples: string[] }[]
+): Promise<SchemaMappingProposal> {
   const ai = getGeminiClient();
   const modelName = (process.env.GEMINI_MODEL || "gemini-3.5-flash").trim();
 
-  console.log(`[aiMapper] Attempting mapping with Gemini using model ${modelName}...`);
+  console.log(`[aiMapper] Attempting schema mapping with Gemini using model ${modelName}...`);
   const response = await ai.models.generateContent({
     model: modelName,
-    contents: buildUserPrompt(rows),
+    contents: buildSchemaUserPrompt(columns),
     config: {
-      systemInstruction: CRM_MAPPING_SYSTEM_PROMPT,
+      systemInstruction: CRM_SCHEMA_MAPPING_SYSTEM_PROMPT,
       responseMimeType: "application/json",
       temperature: TEMPERATURE,
     },
@@ -104,25 +101,25 @@ async function mapBatchWithGemini(
     throw new Error("Gemini AI response contains no text content");
   }
 
-  return parseAiResponse(text);
+  return parseSchemaResponse(text);
 }
 
-async function mapBatchWithGroq(
-  rows: Record<string, string>[]
-): Promise<Partial<CrmRecord>[]> {
+async function proposeSchemaMappingWithGroq(
+  columns: { header: string; samples: string[] }[]
+): Promise<SchemaMappingProposal> {
   const client = getGroqClient();
 
-  console.log(`[aiMapper] Attempting mapping with Groq using model ${MODEL}...`);
+  console.log(`[aiMapper] Attempting schema mapping with Groq using model ${MODEL}...`);
   const response = await client.chat.completions.create({
     model: MODEL,
     messages: [
       {
         role: "system",
-        content: CRM_MAPPING_SYSTEM_PROMPT,
+        content: CRM_SCHEMA_MAPPING_SYSTEM_PROMPT,
       },
       {
         role: "user",
-        content: buildUserPrompt(rows),
+        content: buildSchemaUserPrompt(columns),
       },
     ],
     temperature: TEMPERATURE,
@@ -134,24 +131,28 @@ async function mapBatchWithGroq(
     throw new Error("Groq AI response contains no text content");
   }
 
-  return parseAiResponse(text);
+  return parseSchemaResponse(text);
 }
 
-async function mapBatch(
-  rows: Record<string, string>[]
-): Promise<Partial<CrmRecord>[]> {
-  let records: Partial<CrmRecord>[] = [];
+async function proposeSchemaMapping(
+  columns: { header: string; samples: string[] }[]
+): Promise<Record<string, string | null>> {
+  const mapping: Record<string, string | null> = {};
+
+  if (columns.length === 0) return mapping;
+
+  let proposal: SchemaMappingProposal | null = null;
   let geminiSuccess = false;
 
   // 1. Try Gemini first if key is configured
   if (process.env.GEMINI_API_KEY) {
     try {
-      records = await mapBatchWithGemini(rows);
+      proposal = await retry(() => proposeSchemaMappingWithGemini(columns), 3);
       geminiSuccess = true;
-      console.log(`[aiMapper] Gemini mapping successful.`);
+      console.log(`[aiMapper] Gemini schema mapping proposal successful.`);
     } catch (err) {
       console.warn(
-        `[aiMapper] Gemini mapping failed. Falling back to Groq... Error: ${
+        `[aiMapper] Gemini schema mapping failed. Falling back to Groq... Error: ${
           err instanceof Error ? err.message : String(err)
         }`
       );
@@ -162,12 +163,106 @@ async function mapBatch(
 
   // 2. Fallback to Groq if Gemini wasn't run or failed
   if (!geminiSuccess) {
-    records = await mapBatchWithGroq(rows);
-    console.log(`[aiMapper] Groq mapping successful.`);
+    try {
+      proposal = await retry(() => proposeSchemaMappingWithGroq(columns), 3);
+      console.log(`[aiMapper] Groq schema mapping proposal successful.`);
+    } catch (err) {
+      console.error(
+        `[aiMapper] Groq schema mapping failed. Falling back to deterministic mapping only. Error: ${
+          err instanceof Error ? err.message : String(err)
+        }`
+      );
+    }
   }
 
-  // Reconstruct target schema fields with default empty strings to handle sparse output
-  const filledRecords = records.map((record) => ({
+  if (proposal && Array.isArray(proposal.mappings)) {
+    for (const item of proposal.mappings) {
+      mapping[item.header] = item.target || null;
+    }
+  }
+
+  return mapping;
+}
+
+// ─── Deterministic Alias Mapping ─────────────────────────
+
+const ALIASES: Record<string, string[]> = {
+  created_at: ["created_at", "created", "created_date", "date", "timestamp", "lead_date", "createdon"],
+  name: ["name", "full_name", "fullname", "contact_name", "lead_name", "customer_name", "client_name", "full_name_contact", "first_name", "last_name"],
+  email: ["email", "email_address", "e_mail", "mail", "emailid", "contact_email", "email_id"],
+  country_code: ["country_code", "countrycode", "dial_code", "isd", "isd_code"],
+  mobile_without_country_code: ["mobile", "phone", "phone_number", "mobile_number", "contact", "contact_number", "whatsapp", "number", "mob", "phone_no", "contact_phone", "cell", "cellphone"],
+  company: ["company", "company_name", "organization", "organisation", "org", "builder"],
+  city: ["city", "town"],
+  state: ["state", "region", "province"],
+  country: ["country", "nation"],
+  lead_owner: ["lead_owner", "owner", "assigned_to", "agent", "sales_owner", "salesperson"],
+  crm_status: ["crm_status", "status", "lead_status", "stage", "disposition"],
+  crm_note: ["crm_note", "note", "notes", "remark", "remarks", "comment", "comments"],
+  data_source: ["data_source", "source", "campaign", "lead_source", "utm_source", "channel", "campaign_name"],
+  possession_time: ["possession_time", "possession", "possession_date", "possessions"],
+  description: ["description", "desc", "details", "about", "requirement", "requirements", "message"],
+};
+
+function normalizeHeader(header: string): string {
+  return header.toLowerCase().trim().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
+}
+
+const ALIAS_TO_FIELD = new Map<string, string>();
+for (const field of Object.keys(ALIASES)) {
+  ALIAS_TO_FIELD.set(normalizeHeader(field), field);
+  for (const alias of ALIASES[field]) {
+    ALIAS_TO_FIELD.set(normalizeHeader(alias), field);
+  }
+}
+
+function autoMapHeader(header: string): string | null {
+  const norm = normalizeHeader(header);
+  return ALIAS_TO_FIELD.get(norm) || null;
+}
+
+// ─── Row Transformation Loop ─────────────────────────────
+
+function transformRowToCrmRecord(
+  row: Record<string, string>,
+  mapping: Record<string, string | null>
+): Partial<CrmRecord> {
+  const record: any = {};
+  const extraNotes: string[] = [];
+
+  for (const [header, val] of Object.entries(row)) {
+    const trimmedVal = (val || "").trim();
+    if (!trimmedVal) continue;
+
+    const targetField = mapping[header];
+
+    if (targetField) {
+      if (record[targetField]) {
+        if (targetField === "email" || targetField === "mobile_without_country_code") {
+          record[targetField] = `${record[targetField]} ${trimmedVal}`;
+        } else if (targetField === "crm_note") {
+          record[targetField] = `${record[targetField]} | ${trimmedVal}`;
+        } else {
+          record[targetField] = `${record[targetField]} ${trimmedVal}`;
+        }
+      } else {
+        record[targetField] = trimmedVal;
+      }
+    } else {
+      extraNotes.push(`${header}: ${trimmedVal}`);
+    }
+  }
+
+  if (extraNotes.length > 0) {
+    const extraNotesString = extraNotes.join(" | ");
+    if (record.crm_note) {
+      record.crm_note = `${record.crm_note} | ${extraNotesString}`;
+    } else {
+      record.crm_note = extraNotesString;
+    }
+  }
+
+  const filledRecord: Partial<CrmRecord> = {
     created_at: record.created_at || "",
     name: record.name || "",
     email: record.email || "",
@@ -183,36 +278,9 @@ async function mapBatch(
     data_source: record.data_source || "",
     possession_time: record.possession_time || "",
     description: record.description || "",
-  })) as Partial<CrmRecord>[];
+  };
 
-  // Sanity check: AI should return same number of rows as input
-  if (filledRecords.length !== rows.length) {
-    console.warn(
-      `[aiMapper] Batch size mismatch: sent ${rows.length} rows, got ${filledRecords.length} back`
-    );
-  }
-
-  return filledRecords;
-}
-
-function isFatalAiError(message: string): boolean {
-  const lowercase = message.toLowerCase();
-  return (
-    lowercase.includes("resource_exhausted") ||
-    lowercase.includes("quota exceeded") ||
-    lowercase.includes("429") ||
-    lowercase.includes("api key not valid") ||
-    lowercase.includes("api_key_invalid") ||
-    lowercase.includes("invalid api key") ||
-    lowercase.includes("groq_api_key is not set") ||
-    lowercase.includes("gemini_api_key is not set") ||
-    lowercase.includes("model not found") ||
-    lowercase.includes("model_not_found") ||
-    lowercase.includes("401") ||
-    lowercase.includes("authentication") ||
-    lowercase.includes("unauthorized") ||
-    (lowercase.includes("not found") && lowercase.includes("model"))
-  );
+  return filledRecord;
 }
 
 // ─── Public API ──────────────────────────────────────────
@@ -223,12 +291,9 @@ export interface AiMapperResult {
 }
 
 /**
- * Map an array of raw CSV rows into CRM records using Groq.
- *
- * 1. Splits rows into batches of BATCH_SIZE
- * 2. Each batch is sent to Groq with retry (3x, exponential backoff)
- * 3. On final failure, batch rows go to skipped[]
- * 4. Returns all mapped records + any skipped rows
+ * Map CSV rows to CRM records deterministically based on header mapping rules.
+ * Identifies column mapping rules using a deterministic alias matching combined with
+ * schema-level AI inference for any ambiguous remaining headers.
  */
 export async function mapRowsWithAi(
   rows: Record<string, string>[]
@@ -237,54 +302,47 @@ export async function mapRowsWithAi(
     return { mapped: [], skipped: [] };
   }
 
-  const batches = batchArray(rows, BATCH_SIZE);
-  const allMapped: Partial<CrmRecord>[] = [];
-  const allSkipped: SkippedRecord[] = [];
+  const headers = Object.keys(rows[0]);
+  const mapping: Record<string, string | null> = {};
+  const ambiguousHeaders: string[] = [];
 
-  let globalRowIndex = 0;
-
-  for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {
-    const batch = batches[batchIndex];
-    const batchStartIndex = globalRowIndex;
-
-    console.log(
-      `[aiMapper] Processing batch ${batchIndex + 1}/${batches.length} (${batch.length} rows)`
-    );
-
-    try {
-      const mapped = await retry(() => mapBatch(batch), MAX_RETRIES);
-      allMapped.push(...mapped);
-    } catch (err) {
-      const reason =
-        err instanceof Error
-          ? err.message
-          : "AI processing failed";
-
-      if (err instanceof Error && isFatalAiError(reason)) {
-        throw err;
-      }
-
-      console.error(
-        `[aiMapper] Batch ${batchIndex + 1} failed after ${MAX_RETRIES} retries: AI processing failed: ${reason}`
-      );
-
-      for (let i = 0; i < batch.length; i++) {
-        allSkipped.push({
-          row_index: batchStartIndex + i + 1, // 1-indexed
-          reason: `AI processing failed: ${reason}`,
-          raw: batch[i],
-        });
-      }
-    }
-
-    globalRowIndex += batch.length;
-
-    // Add a delay between batches to stay within rate limits (e.g. 4 seconds)
-    if (batchIndex < batches.length - 1) {
-      console.log(`[aiMapper] Rate limiting: sleeping for 4000ms...`);
-      await new Promise((resolve) => setTimeout(resolve, 4000));
+  // Step 1: Perform deterministic alias matching
+  for (const header of headers) {
+    const matched = autoMapHeader(header);
+    if (matched) {
+      mapping[header] = matched;
+    } else {
+      ambiguousHeaders.push(header);
     }
   }
 
-  return { mapped: allMapped, skipped: allSkipped };
+  // Step 2: Query AI only for ambiguous headers, if any exist
+  if (ambiguousHeaders.length > 0) {
+    const columnsWithSamples = ambiguousHeaders.map((header) => {
+      // Gather up to 5 unique non-empty sample values from rows
+      const samples: string[] = [];
+      for (const row of rows) {
+        const val = (row[header] || "").trim();
+        if (val && !samples.includes(val)) {
+          samples.push(val);
+          if (samples.length >= 5) break;
+        }
+      }
+      return { header, samples };
+    });
+
+    const aiProposal = await proposeSchemaMapping(columnsWithSamples);
+    
+    // Merge AI proposals
+    for (const header of ambiguousHeaders) {
+      mapping[header] = aiProposal[header] || null;
+    }
+  }
+
+  console.log("[aiMapper] Resolved schema mapping mappings:", mapping);
+
+  // Step 3: Run local row transformation loop
+  const mapped = rows.map((row) => transformRowToCrmRecord(row, mapping));
+
+  return { mapped, skipped: [] };
 }
